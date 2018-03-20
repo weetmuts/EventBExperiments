@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/SplitEvent/SimpleContext.bcc" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.seesContext#_qV-68CoAEeidf79Mr6dMZA"/>
+<org.eventb.core.scInternalContext name="SimpleContext">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm_0" org.eventb.core.predicate="AGES⊆ℕ" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_IQRJ8CnsEeiBeMYfOzNVkQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm_1" org.eventb.core.predicate="finite(AGES)" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_IQRJ8SnsEeiBeMYfOzNVkQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm_2" org.eventb.core.predicate="card(AGES)&lt;100" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_MlNw8CnsEeiBeMYfOzNVkQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="AGES" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.constant#_IQQi4CnsEeiBeMYfOzNVkQ" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="SimpleContexu" org.eventb.core.label="inv_0" org.eventb.core.predicate="from∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_AW3McinmEeiBeMYfOzNVkQ" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="SimpleContexv" org.eventb.core.label="inv_1" org.eventb.core.predicate="to∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="from" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.variable#_AW3McSnmEeiBeMYfOzNVkQ" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable name="to" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.variable#_Sprk0CqcEeigaN9Fe2Ez3A" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scEvent name="SimpleContexw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="from :∈ ℕ" org.eventb.core.label="init_0" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_AW3McCnmEeiBeMYfOzNVkQ"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="to ≔ 0" org.eventb.core.label="init_1" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_Spq9wCqcEeigaN9Fe2Ez3A"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="SimpleContexx" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="copy" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="to ≔ from" org.eventb.core.label="act_0" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A|org.eventb.core.action#_SpsL4CqcEeigaN9Fe2Ez3A"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

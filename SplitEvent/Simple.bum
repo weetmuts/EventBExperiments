@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521371698628" org.eventb.texttools.text_representation="machine Simple&#10;&#10;sees SimpleContext&#10;&#10;variables&#10;&#10;  from to&#10;&#10;invariants&#10;&#10;  @inv_0 from ∈ ℕ&#10;  @inv_1 to ∈ ℕ&#10;&#10;events&#10;&#10;  event INITIALISATION&#10;  then&#10;    @init_0 from :∈ ℕ&#10;    @init_1 to ≔ 0&#10;  end&#10;&#10;  event copy&#10;  then&#10;    @act_0 to ≔ from&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_qV-68CoAEeidf79Mr6dMZA" org.eventb.core.target="SimpleContext"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_AW3McCnmEeiBeMYfOzNVkQ" org.eventb.core.assignment="from :∈ ℕ" org.eventb.core.label="init_0"/>
+<org.eventb.core.action name="_Spq9wCqcEeigaN9Fe2Ez3A" org.eventb.core.assignment="to ≔ 0" org.eventb.core.label="init_1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_AW3McSnmEeiBeMYfOzNVkQ" org.eventb.core.identifier="from"/>
+<org.eventb.core.invariant name="_AW3McinmEeiBeMYfOzNVkQ" org.eventb.core.label="inv_0" org.eventb.core.predicate="from ∈ ℕ"/>
+<org.eventb.core.variable name="_Sprk0CqcEeigaN9Fe2Ez3A" org.eventb.core.identifier="to"/>
+<org.eventb.core.invariant name="_Sprk0SqcEeigaN9Fe2Ez3A" org.eventb.core.label="inv_1" org.eventb.core.predicate="to ∈ ℕ"/>
+<org.eventb.core.event name="_Sprk0iqcEeigaN9Fe2Ez3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="copy">
+<org.eventb.core.action name="_SpsL4CqcEeigaN9Fe2Ez3A" org.eventb.core.assignment="to ≔ from" org.eventb.core.label="act_0"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

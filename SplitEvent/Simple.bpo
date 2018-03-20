@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="AGES" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poPredicate name="AGET" org.eventb.core.predicate="AGES⊆ℕ" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_IQRJ8CnsEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poPredicate name="AGEU" org.eventb.core.predicate="finite(AGES)" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_IQRJ8SnsEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poPredicate name="AGEV" org.eventb.core.predicate="card(AGES)&lt;100" org.eventb.core.source="/SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_MlNw8CnsEeiBeMYfOzNVkQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="from" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="to" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv_0/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexw">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="from'∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_AW3McCnmEeiBeMYfOzNVkQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="from'∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_AW3McinmEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_AW3McinmEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poSequent#INITIALISATION\/inv_0\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poSequent#INITIALISATION\/inv_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/init_0/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℕ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_AW3McCnmEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_AW3McCnmEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSimpleContexw" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="from'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="to'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleContexw" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTIDENTSimpleContexw" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="copy/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="from∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poSequent#copy\/inv_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTSimpleContexx" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="to'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleContexx" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#EVTIDENTSimpleContexx" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/SplitEvent/Simple.bpo|org.eventb.core.poFile#Simple|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="from∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_AW3McinmEeiBeMYfOzNVkQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="to∈ℕ" org.eventb.core.source="/SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

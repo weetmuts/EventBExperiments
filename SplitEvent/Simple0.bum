@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521372375792" org.eventb.texttools.text_representation="machine Simple0 refines Simple  sees SimpleContext&#10;&#10;variables from to tmp copying&#10;&#10;invariants&#10;&#10;  @inv0_1 tmp ∈ ℕ&#10;  @inv0_2 copying ∈ BOOL&#10;  @inv0_3 copying = TRUE ⇒  tmp = from&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  then&#10;    @init0_1 tmp :∈ ℕ&#10;    @init0_2 copying ≔ FALSE&#10;  end&#10;&#10;  event copyStart&#10;  when&#10;    @grd0_1 copying = FALSE&#10;  then&#10;    @act0_1 tmp ≔ from&#10;    @act0_2 copying ≔ TRUE&#10;  end&#10;&#10;  event copyDone refines copy&#10;  when&#10;    @grd0_1 copying = TRUE&#10;  then&#10;    @act0_1 to ≔ tmp&#10;    @grd0_2 copying ≔ FALSE&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Simple"/>
+<org.eventb.core.seesContext name="_qV-68CoAEeidf79Mr6dMZA" org.eventb.core.target="SimpleContext"/>
+<org.eventb.core.variable name="_AW3McSnmEeiBeMYfOzNVkQ" org.eventb.core.identifier="from"/>
+<org.eventb.core.variable name="_Sprk0CqcEeigaN9Fe2Ez3A" org.eventb.core.identifier="to"/>
+<org.eventb.core.event name="_qV-68CoAEeidf79Mr6dMZB" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_zvJJ0CqcEeigaN9Fe2Ez3A" org.eventb.core.assignment="tmp :∈ ℕ" org.eventb.core.label="init0_1"/>
+<org.eventb.core.action name="_5aF6cCqcEeigaN9Fe2Ez3A" org.eventb.core.assignment="copying ≔ FALSE" org.eventb.core.label="init0_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_qV-68CoAEeidf79Mr6dMZC" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="copyStart">
+<org.eventb.core.guard name="_FwlWACqdEeigaN9Fe2Ez3A" org.eventb.core.label="grd0_1" org.eventb.core.predicate="copying = FALSE"/>
+<org.eventb.core.action name="_Fwl9ECqdEeigaN9Fe2Ez3A" org.eventb.core.assignment="tmp ≔ from" org.eventb.core.label="act0_1"/>
+<org.eventb.core.action name="_Fwl9ESqdEeigaN9Fe2Ez3A" org.eventb.core.assignment="copying ≔ TRUE" org.eventb.core.label="act0_2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_zvJw4CqcEeigaN9Fe2Ez3A" org.eventb.core.identifier="tmp"/>
+<org.eventb.core.invariant name="_zvJw4SqcEeigaN9Fe2Ez3A" org.eventb.core.label="inv0_1" org.eventb.core.predicate="tmp ∈ ℕ"/>
+<org.eventb.core.variable name="_26u8ECqcEeigaN9Fe2Ez3A" org.eventb.core.identifier="copying"/>
+<org.eventb.core.invariant name="_26u8ESqcEeigaN9Fe2Ez3A" org.eventb.core.label="inv0_2" org.eventb.core.predicate="copying ∈ BOOL"/>
+<org.eventb.core.event name="_FwmkICqdEeigaN9Fe2Ez3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="copyDone">
+<org.eventb.core.refinesEvent name="_FwmkISqdEeigaN9Fe2Ez3A" org.eventb.core.target="copy"/>
+<org.eventb.core.guard name="_FwmkIiqdEeigaN9Fe2Ez3A" org.eventb.core.label="grd0_1" org.eventb.core.predicate="copying = TRUE"/>
+<org.eventb.core.action name="_FwmkIyqdEeigaN9Fe2Ez3A" org.eventb.core.assignment="to ≔ tmp" org.eventb.core.label="act0_1"/>
+<org.eventb.core.action name="_FwmkJCqdEeigaN9Fe2Ez3A" org.eventb.core.assignment="copying ≔ FALSE" org.eventb.core.label="grd0_2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_K9AssCqfEeiBL7Lexk3pHg" org.eventb.core.label="inv0_3" org.eventb.core.predicate="copying = TRUE ⇒  tmp = from"/>
+</org.eventb.core.machineFile>

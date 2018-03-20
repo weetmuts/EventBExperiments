@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521304273481" org.eventb.texttools.text_representation="context SimpleContext&#10;&#10;constants&#10;&#10;  AGES&#10;&#10;axioms&#10;&#10;  @axm_0 AGES ⊆ ℕ&#10;  @axm_1 finite(AGES)&#10;  @axm_2 card(AGES) &lt; 100&#10;&#10;end&#10;" version="3">
+<org.eventb.core.constant name="_IQQi4CnsEeiBeMYfOzNVkQ" org.eventb.core.identifier="AGES"/>
+<org.eventb.core.axiom name="_IQRJ8CnsEeiBeMYfOzNVkQ" org.eventb.core.label="axm_0" org.eventb.core.predicate="AGES ⊆ ℕ"/>
+<org.eventb.core.axiom name="_IQRJ8SnsEeiBeMYfOzNVkQ" org.eventb.core.label="axm_1" org.eventb.core.predicate="finite(AGES)"/>
+<org.eventb.core.axiom name="_MlNw8CnsEeiBeMYfOzNVkQ" org.eventb.core.label="axm_2" org.eventb.core.predicate="card(AGES) &lt; 100"/>
+</org.eventb.core.contextFile>
