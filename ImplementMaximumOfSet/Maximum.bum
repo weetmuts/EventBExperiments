@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521540312533" org.eventb.texttools.text_representation="machine Maximum&#10;&#10;variables&#10;&#10;&#9;points max_point&#10;&#10;invariants&#10;&#10;&#9;@inv_0 points ⊆ ℕ&#10;&#9;@inv_1 finite(points)&#10;&#9;@inv_2 max_point ∈ ℕ&#10;&#10;events&#10;  event INITIALISATION&#10;  then&#10;    @init_0 points ≔ ∅&#10;    @init_1 max_point ≔ 0&#10;  end&#10;&#10;  event addPoint&#10;  any p&#10;  where&#10;    @grd_0 p ∈ ℕ&#10;    @grd_1 p &gt; 0&#10;  then&#10;    @act_0 points ≔ points ∪ {p}&#10;  end&#10;&#10;  event maxPoint&#10;  any m&#10;  where&#10;    @grd_0 points ≠ ∅&#10;    @grd_1 m = max(points)&#10;  then&#10;    @act_0 max_point ≔ m&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_yXj5sCkZEeiBeMYfOzNVkQ" org.eventb.core.assignment="points ≔ ∅" org.eventb.core.label="init_0"/>
+<org.eventb.core.action name="_96g_gikZEeiBeMYfOzNVkQ" org.eventb.core.assignment="max_point ≔ 0" org.eventb.core.label="init_1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_yXkgwCkZEeiBeMYfOzNVkQ" org.eventb.core.identifier="points"/>
+<org.eventb.core.invariant name="_yXkgwSkZEeiBeMYfOzNVkQ" org.eventb.core.label="inv_0" org.eventb.core.predicate="points ⊆ ℕ"/>
+<org.eventb.core.event name="_96gYcCkZEeiBeMYfOzNVkQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addPoint">
+<org.eventb.core.parameter name="_96gYcSkZEeiBeMYfOzNVkQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_96g_gCkZEeiBeMYfOzNVkQ" org.eventb.core.label="grd_0" org.eventb.core.predicate="p ∈ ℕ"/>
+<org.eventb.core.guard name="_96g_gSkZEeiBeMYfOzNVkQ" org.eventb.core.label="grd_1" org.eventb.core.predicate="p &gt; 0"/>
+<org.eventb.core.action name="_KKvbAykaEeiBeMYfOzNVkQ" org.eventb.core.assignment="points ≔ points ∪ {p}" org.eventb.core.label="act_0"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_KKuz8CkaEeiBeMYfOzNVkQ" org.eventb.core.identifier="max_point"/>
+<org.eventb.core.invariant name="_KKuz8SkaEeiBeMYfOzNVkQ" org.eventb.core.label="inv_1" org.eventb.core.predicate="finite(points)"/>
+<org.eventb.core.event name="_KKuz8ikaEeiBeMYfOzNVkQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="maxPoint">
+<org.eventb.core.parameter name="_KKvbACkaEeiBeMYfOzNVkQ" org.eventb.core.identifier="m"/>
+<org.eventb.core.guard name="_KKvbASkaEeiBeMYfOzNVkQ" org.eventb.core.label="grd_0" org.eventb.core.predicate="points ≠ ∅"/>
+<org.eventb.core.guard name="_KKvbAikaEeiBeMYfOzNVkQ" org.eventb.core.label="grd_1" org.eventb.core.predicate="m = max(points)"/>
+<org.eventb.core.action name="_SqrbwCkaEeiBeMYfOzNVkQ" org.eventb.core.assignment="max_point ≔ m" org.eventb.core.label="act_0"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_i2RgoCkaEeiBeMYfOzNVkQ" org.eventb.core.label="inv_2" org.eventb.core.predicate="max_point ∈ ℕ"/>
+</org.eventb.core.machineFile>
