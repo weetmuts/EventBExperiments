@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521711753266" org.eventb.texttools.text_representation="machine Collect&#10;&#10;variables coins oddcoins&#10;&#10;invariants&#10;&#10;  @inv_1 coins ⊆ ℕ&#10;  @inv_2 finite(coins)&#10;  @inv_3 oddcoins ⊆ ℕ&#10;  @inv_4 oddcoins ⊆ coins&#10;&#10;events&#10;  event INITIALISATION&#10;  then&#10;    @init_1 coins ≔ ∅&#10;    @init_2 oddcoins ≔ ∅&#10;  end&#10;&#10;  event add&#10;  any c&#10;  where&#10;    @grd_1 c ∈ ℕ&#10;  then&#10;    @act_1 coins ≔ coins ∪ {c}&#10;  end&#10;&#10;  event collectOddCoins&#10;  when&#10;    @grd_1 coins ≠ ∅&#10;  then&#10;    @act_1 oddcoins ≔ { x·x∈coins ∧ (x mod 2) = 1 ∣ x }&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_QkYQ8C0oEeiUhZiwu5DbfQ" org.eventb.core.assignment="coins ≔ ∅" org.eventb.core.label="init_1"/>
+<org.eventb.core.action name="_aPdPIC0oEeiUhZiwu5DbfQ" org.eventb.core.assignment="oddcoins ≔ ∅" org.eventb.core.label="init_2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_QkY4AC0oEeiUhZiwu5DbfQ" org.eventb.core.identifier="coins"/>
+<org.eventb.core.variable name="_QkY4AS0oEeiUhZiwu5DbfQ" org.eventb.core.identifier="oddcoins"/>
+<org.eventb.core.invariant name="_QkY4Ai0oEeiUhZiwu5DbfQ" org.eventb.core.label="inv_1" org.eventb.core.predicate="coins ⊆ ℕ"/>
+<org.eventb.core.invariant name="_QkY4Ay0oEeiUhZiwu5DbfQ" org.eventb.core.label="inv_2" org.eventb.core.predicate="finite(coins)"/>
+<org.eventb.core.invariant name="_QkZfEC0oEeiUhZiwu5DbfQ" org.eventb.core.label="inv_3" org.eventb.core.predicate="oddcoins ⊆ ℕ"/>
+<org.eventb.core.invariant name="_QkZfES0oEeiUhZiwu5DbfQ" org.eventb.core.label="inv_4" org.eventb.core.predicate="oddcoins ⊆ coins"/>
+<org.eventb.core.event name="_fx488C0oEeiUhZiwu5DbfQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add">
+<org.eventb.core.parameter name="_fx5kAC0oEeiUhZiwu5DbfQ" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="_fx5kAS0oEeiUhZiwu5DbfQ" org.eventb.core.label="grd_1" org.eventb.core.predicate="c ∈ ℕ"/>
+<org.eventb.core.action name="_fx5kAi0oEeiUhZiwu5DbfQ" org.eventb.core.assignment="coins ≔ coins ∪ {c}" org.eventb.core.label="act_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_rUjH0C0oEeiUhZiwu5DbfQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="collectOddCoins">
+<org.eventb.core.guard name="_rUjH0S0oEeiUhZiwu5DbfQ" org.eventb.core.label="grd_1" org.eventb.core.predicate="coins ≠ ∅"/>
+<org.eventb.core.action name="_rUjH0i0oEeiUhZiwu5DbfQ" org.eventb.core.assignment="oddcoins ≔ { x·x∈coins ∧ (x mod 2) = 1 ∣ x }" org.eventb.core.label="act_1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
