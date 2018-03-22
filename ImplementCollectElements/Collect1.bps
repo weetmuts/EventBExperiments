@@ -55,6 +55,7 @@
 <org.eventb.core.psStatus name="collectSingleOddCoin/inv1_12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="collectSingleOddCoin/inv1_13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="collectSingleOddCoin/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="collectOddCoins/thm1_1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="collectOddCoins/act_1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="26" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="collectOddCoins/thm1_1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="collectOddCoins/inv1_11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="collectOddCoins/act_1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="29" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

@@ -76,5 +76,6 @@
 <org.eventb.core.scGuard name="*" org.eventb.core.label="grd1_3" org.eventb.core.predicate="tobecollected=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_Gns7QC2-EeiANdSrm6dbEg" org.eventb.core.theorem="false"/>
 <org.eventb.core.scGuard name="+" org.eventb.core.label="thm1_1" org.eventb.core.predicate="checked=coins" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_TLL0gC2_EeiANdSrm6dbEg" org.eventb.core.theorem="true"/>
 <org.eventb.core.scAction name="," org.eventb.core.assignment="oddcoins ≔ collected" org.eventb.core.label="act1_1" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.action#_dBZEoC2_EeiANdSrm6dbEg"/>
+<org.eventb.core.scAction name="-" org.eventb.core.assignment="collecting ≔ FALSE" org.eventb.core.label="act1_2" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.action#_dQYQ8C3BEeiANdSrm6dbEg"/>
 </org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>

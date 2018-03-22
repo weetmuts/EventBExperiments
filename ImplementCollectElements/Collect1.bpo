@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="26">
+<org.eventb.core.poFile org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="21">
 <org.eventb.core.poIdentifier name="checked" org.eventb.core.type="ℙ(ℤ)"/>
@@ -511,13 +511,22 @@
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c mod 2=1" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-LAy20EeiUhZiwu5DbfQ|org.eventb.core.guard#_16xaAS20EeiUhZiwu5DbfQ"/>
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c∈coins" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-LAy20EeiUhZiwu5DbfQ|org.eventb.core.guard#_7Y_9QC20EeiUhZiwu5DbfQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="collectOddCoins/thm1_1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="26">
+<org.eventb.core.poSequent name="collectOddCoins/thm1_1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPtobecollectek*"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="checked=coins" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_TLL0gC2_EeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_TLL0gC2_EeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPtobecollectek*"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="collectOddCoins/act_1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="26">
+<org.eventb.core.poSequent name="collectOddCoins/inv1_11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPtobecollectek"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE=TRUE⇒tobecollected∪checked=coins" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#__WI8sy2-EeiANdSrm6dbEg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ImplementCollectElements/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_rUjH0C0oEeiUhZiwu5DbfQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#__WI8sy2-EeiANdSrm6dbEg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#collectOddCoins\/inv1_11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP6|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="collectOddCoins/act_1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPtobecollectek"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="collected={x⦂ℤ·x∈coins∧x mod 2=1 ∣ x}" org.eventb.core.source="/ImplementCollectElements/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_rUjH0C0oEeiUhZiwu5DbfQ|org.eventb.core.action#_rUjH0i0oEeiUhZiwu5DbfQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ImplementCollectElements/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_rUjH0C0oEeiUhZiwu5DbfQ"/>
@@ -525,15 +534,16 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#collectOddCoins\/act_1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTtobecollectek" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="EVTIDENTtobecollectek" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="29">
+<org.eventb.core.poIdentifier name="collecting'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="oddcoins'" org.eventb.core.type="ℙ(ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPtobecollectek*" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTtobecollectek" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="EVTHYPtobecollectek*" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTtobecollectek" org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="collecting=TRUE" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_-EWJMC20EeiUhZiwu5DbfQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="coins≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_qQ00AC23EeiANdSrm6dbEg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="tobecollected=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_Gns7QC2-EeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPtobecollectek" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPtobecollectek*" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="EVTALLHYPtobecollectek" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPtobecollectek*" org.eventb.core.poStamp="29">
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="checked=coins" org.eventb.core.source="/ImplementCollectElements/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_gZ-yES20EeiUhZiwu5DbfQ|org.eventb.core.guard#_TLL0gC2_EeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/ImplementCollectElements/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="21">
