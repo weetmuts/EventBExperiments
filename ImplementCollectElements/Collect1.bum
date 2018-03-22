@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521716954989" org.eventb.texttools.text_representation="machine Collect1 refines Collect&#10;&#10;variables coins oddcoins collecting tobecollected checked collected&#10;&#10;invariants&#10;  @inv1_1 collecting ∈ BOOL&#10;  @inv1_2 tobecollected ⊆ ℕ&#10;  @inv1_3 finite(tobecollected)&#10;  @inv1_4 tobecollected ⊆ coins&#10;  @inv1_5 collected ⊆ ℕ&#10;  @inv1_6 finite(collected)&#10;  @inv1_7 collected ⊆ coins&#10;  @inv1_8 ∀x·x∈collected ⇒ x mod 2=1&#10;  @inv1_9 checked ⊆  ℕ&#10;  @inv1_10 checked ⊆ coins&#10;  @inv1_11 collecting = TRUE ⇒  tobecollected∪checked = coins&#10;  @inv1_12 collected ⊆ checked&#10;  @inv1_13 ∀x·x∈checked ∧ x mod 2=1 ⇒ x∈collected&#10;&#10;variant&#10;&#10;  tobecollected&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @init1_1 collecting ≔ FALSE&#10;      @init1_2 tobecollected ≔ ∅&#10;      @init1_3 collected ≔ ∅&#10;      @init1_4 checked ≔ ∅&#10;  end&#10;&#10;  event add extends add&#10;    where&#10;      @grd1_1 collecting = FALSE&#10;  end&#10;&#10;  event startCollecting&#10;    where&#10;      @grd1_1 collecting = FALSE&#10;      @grd1_2 coins ≠ ∅&#10;    then&#10;      @act1_1 collecting ≔ TRUE&#10;      @act1_2 tobecollected ≔ coins&#10;      @act1_3 checked ≔ ∅&#10;      @act1_4 collected ≔ ∅&#10;  end&#10;&#10;  convergent event ignoreSingleEvenCoin&#10;    any c&#10;    where&#10;      @grd1_1 collecting = TRUE&#10;      @grd1_2 tobecollected ≠ ∅&#10;      @grd1_3 c ∈ tobecollected&#10;      @grd1_4 (c mod 2) = 0&#10;    then&#10;      @act1_1 tobecollected ≔ tobecollected ∖  {c}&#10;      @act1_2 checked ≔ checked ∪ {c}&#10;  end&#10;&#10;  convergent event collectSingleOddCoin&#10;    any c&#10;    where&#10;      @grd1_1 collecting = TRUE&#10;      @grd1_2 tobecollected ≠ ∅&#10;      @grd1_3 c ∈ tobecollected&#10;      @grd1_4 (c mod 2) = 1&#10;      @gtd1_5 c ∈ coins&#10;    then&#10;      @act1_1 tobecollected ≔ tobecollected ∖  {c}&#10;      @act1_2 checked ≔ checked ∪ {c}&#10;      @act1_3 collected ≔ collected ∪ {c}&#10;  end&#10;&#10;  event collectOddCoins refines collectOddCoins&#10;    where&#10;      @grd1_1 collecting = TRUE&#10;      @grd1_2 coins ≠ ∅&#10;      @grd1_3 tobecollected = ∅&#10;    theorem&#10;      @thm1_1 checked = coins&#10;    then&#10;      @act1_1 oddcoins ≔ collected&#10;      @act1_2 collecting ≔ FALSE&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521717753837" org.eventb.texttools.text_representation="machine Collect1 refines Collect&#10;&#10;variables coins oddcoins collecting tobechecked checked collected&#10;&#10;invariants&#10;  @inv1_1 collecting ∈ BOOL&#10;  @inv1_2 tobechecked ⊆ ℕ&#10;  @inv1_3 finite(tobechecked)&#10;  @inv1_4 tobechecked ⊆ coins&#10;  @inv1_5 collected ⊆ ℕ&#10;  @inv1_6 finite(collected)&#10;  @inv1_7 collected ⊆ coins&#10;  @inv1_8 ∀x·x∈collected ⇒ x mod 2=1&#10;  @inv1_9 checked ⊆  ℕ&#10;  @inv1_10 checked ⊆ coins&#10;  @inv1_11 collecting = TRUE ⇒ tobechecked∪checked = coins&#10;  @inv1_12 collected ⊆ checked&#10;  @inv1_13 ∀x·x∈checked ∧ x mod 2=1 ⇒ x∈collected&#10;&#10;variant&#10;&#10;  tobechecked&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @init1_1 collecting ≔ FALSE&#10;      @init1_2 tobechecked ≔ ∅&#10;      @init1_3 collected ≔ ∅&#10;      @init1_4 checked ≔ ∅&#10;  end&#10;&#10;  event add extends add&#10;    when&#10;      @grd1_1 collecting = FALSE&#10;  end&#10;&#10;  event startCollecting&#10;    where&#10;      @grd1_1 collecting = FALSE&#10;      @grd1_2 coins ≠ ∅&#10;    then&#10;      @act1_1 collecting ≔ TRUE&#10;      @act1_2 tobechecked ≔ coins&#10;      @act1_3 checked ≔ ∅&#10;      @act1_4 collected ≔ ∅&#10;  end&#10;&#10;  convergent event ignoreSingleEvenCoin&#10;    any c&#10;    where&#10;      @grd1_1 collecting = TRUE&#10;      @grd1_2 tobechecked ≠ ∅&#10;      @grd1_3 c ∈ tobechecked&#10;      @grd1_4 (c mod 2) = 0&#10;    then&#10;      @act1_1 tobechecked ≔ tobechecked ∖  {c}&#10;      @act1_2 checked ≔ checked ∪ {c}&#10;  end&#10;&#10;  convergent event collectSingleOddCoin&#10;    any c&#10;    where&#10;      @grd1_1 collecting = TRUE&#10;      @grd1_2 tobechecked ≠ ∅&#10;      @grd1_3 c ∈ tobechecked&#10;      @grd1_4 (c mod 2) = 1&#10;      @gtd1_5 c ∈ coins&#10;    then&#10;      @act1_1 tobechecked ≔ tobechecked ∖  {c}&#10;      @act1_2 checked ≔ checked ∪ {c}&#10;      @act1_3 collected ≔ collected ∪ {c}&#10;  end&#10;&#10;  event collectOddCoins refines collectOddCoins&#10;    where&#10;      @grd1_1 collecting = TRUE&#10;      @grd1_2 coins ≠ ∅&#10;      @grd1_3 tobechecked = ∅&#10;    theorem&#10;      @thm1_1 checked = coins // Nice to show that we have checked all coins&#10;    then&#10;      @act1_1 oddcoins ≔ collected&#10;      @act1_2 collecting ≔ FALSE&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="Collect"/>
 <org.eventb.core.variable name="_QkY4AC0oEeiUhZiwu5DbfQ" org.eventb.core.identifier="coins"/>
 <org.eventb.core.variable name="_QkY4AS0oEeiUhZiwu5DbfQ" org.eventb.core.identifier="oddcoins"/>
 <org.eventb.core.event name="_QkY4AS0oEeiUhZiwu5DbfR" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="_4SWW0C0vEeiUhZiwu5DbfQ" org.eventb.core.assignment="collecting ≔ FALSE" org.eventb.core.label="init1_1"/>
-<org.eventb.core.action name="_KkQb8C20EeiUhZiwu5DbfQ" org.eventb.core.assignment="tobecollected ≔ ∅" org.eventb.core.label="init1_2"/>
+<org.eventb.core.action name="_KkQb8C20EeiUhZiwu5DbfQ" org.eventb.core.assignment="tobechecked ≔ ∅" org.eventb.core.label="init1_2"/>
 <org.eventb.core.action name="_PP3PcC20EeiUhZiwu5DbfQ" org.eventb.core.assignment="collected ≔ ∅" org.eventb.core.label="init1_3"/>
 <org.eventb.core.action name="_gZ-yEC20EeiUhZiwu5DbfQ" org.eventb.core.assignment="checked ≔ ∅" org.eventb.core.label="init1_4"/>
 </org.eventb.core.event>
@@ -17,32 +17,32 @@
 <org.eventb.core.guard name="_gZ-LAS20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_1" org.eventb.core.predicate="collecting = FALSE"/>
 <org.eventb.core.guard name="_gZ-LAi20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_2" org.eventb.core.predicate="coins ≠ ∅"/>
 <org.eventb.core.action name="_ohIfYi20EeiUhZiwu5DbfQ" org.eventb.core.assignment="collecting ≔ TRUE" org.eventb.core.label="act1_1"/>
-<org.eventb.core.action name="_M6T34C21EeiUhZiwu5DbfQ" org.eventb.core.assignment="tobecollected ≔ coins" org.eventb.core.label="act1_2"/>
+<org.eventb.core.action name="_M6T34C21EeiUhZiwu5DbfQ" org.eventb.core.assignment="tobechecked ≔ coins" org.eventb.core.label="act1_2"/>
 <org.eventb.core.action name="_gprlgC21EeiUhZiwu5DbfQ" org.eventb.core.assignment="checked ≔ ∅" org.eventb.core.label="act1_3"/>
 <org.eventb.core.action name="_xe0rwC23EeiANdSrm6dbEg" org.eventb.core.assignment="collected ≔ ∅" org.eventb.core.label="act1_4"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="_yia_kC0vEeiUhZiwu5DbfQ" org.eventb.core.identifier="collecting"/>
 <org.eventb.core.invariant name="_yia_kS0vEeiUhZiwu5DbfQ" org.eventb.core.label="inv1_1" org.eventb.core.predicate="collecting ∈ BOOL"/>
-<org.eventb.core.variable name="_KkQb8i20EeiUhZiwu5DbfQ" org.eventb.core.identifier="tobecollected"/>
-<org.eventb.core.invariant name="_KkQb8y20EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_2" org.eventb.core.predicate="tobecollected ⊆ ℕ"/>
-<org.eventb.core.invariant name="_KkRDAC20EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_3" org.eventb.core.predicate="finite(tobecollected)"/>
+<org.eventb.core.variable name="_KkQb8i20EeiUhZiwu5DbfQ" org.eventb.core.identifier="tobechecked"/>
+<org.eventb.core.invariant name="_KkQb8y20EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_2" org.eventb.core.predicate="tobechecked ⊆ ℕ"/>
+<org.eventb.core.invariant name="_KkRDAC20EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_3" org.eventb.core.predicate="finite(tobechecked)"/>
 <org.eventb.core.event name="_KkRDAS20EeiUhZiwu5DbfQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="ignoreSingleEvenCoin">
 <org.eventb.core.parameter name="_gZ-LAC20EeiUhZiwu5DbfQ" org.eventb.core.identifier="c"/>
 <org.eventb.core.guard name="_gZ-LBS20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_1" org.eventb.core.predicate="collecting = TRUE"/>
-<org.eventb.core.guard name="_gZ-LBi20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_2" org.eventb.core.predicate="tobecollected ≠ ∅"/>
-<org.eventb.core.guard name="_ohIfYC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_3" org.eventb.core.predicate="c ∈ tobecollected"/>
+<org.eventb.core.guard name="_gZ-LBi20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_2" org.eventb.core.predicate="tobechecked ≠ ∅"/>
+<org.eventb.core.guard name="_ohIfYC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_3" org.eventb.core.predicate="c ∈ tobechecked"/>
 <org.eventb.core.guard name="_ohIfYS20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_4" org.eventb.core.predicate="(c mod 2) = 0"/>
-<org.eventb.core.action name="_92wRwC23EeiANdSrm6dbEg" org.eventb.core.assignment="tobecollected ≔ tobecollected ∖  {c}" org.eventb.core.label="act1_1"/>
+<org.eventb.core.action name="_92wRwC23EeiANdSrm6dbEg" org.eventb.core.assignment="tobechecked ≔ tobechecked ∖  {c}" org.eventb.core.label="act1_1"/>
 <org.eventb.core.action name="_FSJBEC2_EeiANdSrm6dbEg" org.eventb.core.assignment="checked ≔ checked ∪ {c}" org.eventb.core.label="act1_2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_gZ-LAy20EeiUhZiwu5DbfQ" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="collectSingleOddCoin">
 <org.eventb.core.parameter name="_gZ-LBC20EeiUhZiwu5DbfQ" org.eventb.core.identifier="c"/>
 <org.eventb.core.guard name="_sRxfcC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_1" org.eventb.core.predicate="collecting = TRUE"/>
-<org.eventb.core.guard name="_sRyGgC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_2" org.eventb.core.predicate="tobecollected ≠ ∅"/>
-<org.eventb.core.guard name="_16xaAC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_3" org.eventb.core.predicate="c ∈ tobecollected"/>
+<org.eventb.core.guard name="_sRyGgC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_2" org.eventb.core.predicate="tobechecked ≠ ∅"/>
+<org.eventb.core.guard name="_16xaAC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_3" org.eventb.core.predicate="c ∈ tobechecked"/>
 <org.eventb.core.guard name="_16xaAS20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_4" org.eventb.core.predicate="(c mod 2) = 1"/>
 <org.eventb.core.guard name="_7Y_9QC20EeiUhZiwu5DbfQ" org.eventb.core.label="gtd1_5" org.eventb.core.predicate="c ∈ coins"/>
-<org.eventb.core.action name="_FSJoIC2_EeiANdSrm6dbEg" org.eventb.core.assignment="tobecollected ≔ tobecollected ∖  {c}" org.eventb.core.label="act1_1"/>
+<org.eventb.core.action name="_FSJoIC2_EeiANdSrm6dbEg" org.eventb.core.assignment="tobechecked ≔ tobechecked ∖  {c}" org.eventb.core.label="act1_1"/>
 <org.eventb.core.action name="_Ks-SEC2_EeiANdSrm6dbEg" org.eventb.core.assignment="checked ≔ checked ∪ {c}" org.eventb.core.label="act1_2"/>
 <org.eventb.core.action name="_MtfYUC2_EeiANdSrm6dbEg" org.eventb.core.assignment="collected ≔ collected ∪ {c}" org.eventb.core.label="act1_3"/>
 </org.eventb.core.event>
@@ -50,22 +50,22 @@
 <org.eventb.core.refinesEvent name="_gZ-yEi20EeiUhZiwu5DbfQ" org.eventb.core.target="collectOddCoins"/>
 <org.eventb.core.guard name="_-EWJMC20EeiUhZiwu5DbfQ" org.eventb.core.label="grd1_1" org.eventb.core.predicate="collecting = TRUE"/>
 <org.eventb.core.guard name="_qQ00AC23EeiANdSrm6dbEg" org.eventb.core.label="grd1_2" org.eventb.core.predicate="coins ≠ ∅"/>
-<org.eventb.core.guard name="_Gns7QC2-EeiANdSrm6dbEg" org.eventb.core.label="grd1_3" org.eventb.core.predicate="tobecollected = ∅"/>
-<org.eventb.core.guard name="_TLL0gC2_EeiANdSrm6dbEg" org.eventb.core.label="thm1_1" org.eventb.core.predicate="checked = coins" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="_Gns7QC2-EeiANdSrm6dbEg" org.eventb.core.label="grd1_3" org.eventb.core.predicate="tobechecked = ∅"/>
 <org.eventb.core.action name="_dBZEoC2_EeiANdSrm6dbEg" org.eventb.core.assignment="oddcoins ≔ collected" org.eventb.core.label="act1_1"/>
 <org.eventb.core.action name="_dQYQ8C3BEeiANdSrm6dbEg" org.eventb.core.assignment="collecting ≔ FALSE" org.eventb.core.label="act1_2"/>
+<org.eventb.core.guard name="_tQr2YC3CEeiANdSrm6dbEg" org.eventb.core.comment="Nice to show that we have checked all coins" org.eventb.core.label="thm1_1" org.eventb.core.predicate="checked = coins" org.eventb.core.theorem="true"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="_LuF8YC21EeiUhZiwu5DbfQ" org.eventb.core.identifier="checked"/>
-<org.eventb.core.invariant name="_LuF8YS21EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_4" org.eventb.core.predicate="tobecollected ⊆ coins"/>
+<org.eventb.core.invariant name="_LuF8YS21EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_4" org.eventb.core.predicate="tobechecked ⊆ coins"/>
 <org.eventb.core.invariant name="_LuF8Yi21EeiUhZiwu5DbfQ" org.eventb.core.label="inv1_5" org.eventb.core.predicate="collected ⊆ ℕ"/>
 <org.eventb.core.invariant name="_iOPTEC22EeiANdSrm6dbEg" org.eventb.core.label="inv1_6" org.eventb.core.predicate="finite(collected)"/>
 <org.eventb.core.invariant name="_TqL-UC23EeiANdSrm6dbEg" org.eventb.core.label="inv1_7" org.eventb.core.predicate="collected ⊆ coins"/>
 <org.eventb.core.invariant name="_seygYC23EeiANdSrm6dbEg" org.eventb.core.label="inv1_8" org.eventb.core.predicate="∀x·x∈collected ⇒ x mod 2=1"/>
-<org.eventb.core.variant name="_-L8h0C27EeiANdSrm6dbEg" org.eventb.core.expression="tobecollected"/>
+<org.eventb.core.variant name="_-L8h0C27EeiANdSrm6dbEg" org.eventb.core.expression="tobechecked"/>
 <org.eventb.core.variable name="__WI8sC2-EeiANdSrm6dbEg" org.eventb.core.identifier="collected"/>
 <org.eventb.core.invariant name="__WI8sS2-EeiANdSrm6dbEg" org.eventb.core.label="inv1_9" org.eventb.core.predicate="checked ⊆  ℕ"/>
 <org.eventb.core.invariant name="__WI8si2-EeiANdSrm6dbEg" org.eventb.core.label="inv1_10" org.eventb.core.predicate="checked ⊆ coins"/>
-<org.eventb.core.invariant name="__WI8sy2-EeiANdSrm6dbEg" org.eventb.core.label="inv1_11" org.eventb.core.predicate="collecting = TRUE ⇒  tobecollected∪checked = coins"/>
+<org.eventb.core.invariant name="__WI8sy2-EeiANdSrm6dbEg" org.eventb.core.label="inv1_11" org.eventb.core.predicate="collecting = TRUE ⇒ tobechecked∪checked = coins"/>
 <org.eventb.core.invariant name="_XqdcMC2_EeiANdSrm6dbEg" org.eventb.core.label="inv1_12" org.eventb.core.predicate="collected ⊆ checked"/>
-<org.eventb.core.invariant name="_A88tAC3AEeiANdSrm6dbEg" org.eventb.core.label="inv1_13" org.eventb.core.predicate="∀x·x∈checked ∧ x mod 2=1 ⇒ x∈collected"/>
+<org.eventb.core.invariant name="_hSK18C3CEeiANdSrm6dbEg" org.eventb.core.label="inv1_13" org.eventb.core.predicate="∀x·x∈checked ∧ x mod 2=1 ⇒ x∈collected"/>
 </org.eventb.core.machineFile>
