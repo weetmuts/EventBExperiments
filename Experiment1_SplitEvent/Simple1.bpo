@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.poFile org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="AGES" org.eventb.core.type="ℙ(ℤ)"/>
-<org.eventb.core.poPredicate name="AGET" org.eventb.core.predicate="AGES⊆ℕ" org.eventb.core.source="/Experiment1_SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_IQRJ8CnsEeiBeMYfOzNVkQ"/>
-<org.eventb.core.poPredicate name="AGEU" org.eventb.core.predicate="finite(AGES)" org.eventb.core.source="/Experiment1_SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_IQRJ8SnsEeiBeMYfOzNVkQ"/>
-<org.eventb.core.poPredicate name="AGEV" org.eventb.core.predicate="card(AGES)&lt;100" org.eventb.core.source="/Experiment1_SplitEvent/SimpleContext.buc|org.eventb.core.contextFile#SimpleContext|org.eventb.core.axiom#_MlNw8CnsEeiBeMYfOzNVkQ"/>
-</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="copying" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="from" org.eventb.core.type="ℤ"/>
@@ -15,7 +10,7 @@
 <org.eventb.core.poPredicate name="copyini" org.eventb.core.predicate="to∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.invariant#_Sprk0SqcEeigaN9Fe2Ez3A"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="INITIALISATION/inv1_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexz">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyinh">
 <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="tmp'∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZB|org.eventb.core.action#_zvJJ0CqcEeigaN9Fe2Ez3A"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tmp'∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#_zvJw4SqcEeigaN9Fe2Ez3A"/>
@@ -26,7 +21,7 @@
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poSequent name="INITIALISATION/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexz">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyinh">
 <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="from'∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_AW3McCnmEeiBeMYfOzNVkQ"/>
 <org.eventb.core.poPredicate name="(" org.eventb.core.predicate="tmp'∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZB|org.eventb.core.action#_zvJJ0CqcEeigaN9Fe2Ez3A"/>
 </org.eventb.core.poPredicateSet>
@@ -38,22 +33,22 @@
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poSequent name="INITIALISATION/init1_1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexz">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyinh">
 <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="from'∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#'|org.eventb.core.action#_AW3McCnmEeiBeMYfOzNVkQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℕ≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZB|org.eventb.core.action#_zvJJ0CqcEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZB|org.eventb.core.action#_zvJJ0CqcEeigaN9Fe2Ez3A"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContexz"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyinh"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTSimpleContexz" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTcopyinh" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="from'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="to'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="tmp'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="copying'" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleContexz" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTIDENTSimpleContexz" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcopyinh" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTIDENTcopyinh" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poSequent name="copyStart/inv1_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContex{"/>
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyini"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="from∈ℕ" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#_zvJw4SqcEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZC"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#_zvJw4SqcEeigaN9Fe2Ez3A"/>
@@ -61,22 +56,22 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poSequent name="copyStart/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContex{"/>
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyini"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TRUE=TRUE⇒from=from" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#_K9AssCqfEeiBL7Lexk3pHg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZC"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#_K9AssCqfEeiBL7Lexk3pHg"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poSequent#copyStart\/inv1_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTSimpleContex{" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTcopyini" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="copying'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="tmp'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleContex{" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTIDENTSimpleContex{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPcopyini" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTIDENTcopyini" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="copying=FALSE" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_qV-68CoAEeidf79Mr6dMZC|org.eventb.core.guard#_FwlWACqdEeigaN9Fe2Ez3A"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="copyDone/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContex\|"/>
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyinj"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE=TRUE⇒tmp=from" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.invariant#_K9AssCqfEeiBL7Lexk3pHg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_FwmkICqdEeigaN9Fe2Ez3A"/>
@@ -84,19 +79,19 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poSequent#copyDone\/inv1_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="copyDone/act_0/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPSimpleContex\|"/>
+<org.eventb.core.poSequent name="copyDone/act_0/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTALLHYPcopyinj"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="tmp=from" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A|org.eventb.core.action#_SpsL4CqcEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment1_SplitEvent/Simple.bum|org.eventb.core.machineFile#Simple|org.eventb.core.event#_Sprk0iqcEeigaN9Fe2Ez3A|org.eventb.core.action#_SpsL4CqcEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_FwmkICqdEeigaN9Fe2Ez3A"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poSequent#copyDone\/act_0\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTSimpleContex|" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTcopyinj" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="to'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="copying'" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPSimpleContex|" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTIDENTSimpleContex\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPcopyinj" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#EVTIDENTcopyinj" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="copying=TRUE" org.eventb.core.source="/Experiment1_SplitEvent/Simple1.bum|org.eventb.core.machineFile#Simple1|org.eventb.core.event#_FwmkICqdEeigaN9Fe2Ez3A|org.eventb.core.guard#_FwmkIiqdEeigaN9Fe2Ez3A"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment1_SplitEvent/Simple1.bpo|org.eventb.core.poFile#Simple1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">

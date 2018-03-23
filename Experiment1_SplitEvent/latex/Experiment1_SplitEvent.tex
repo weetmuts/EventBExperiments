@@ -2,19 +2,8 @@
 \usepackage{bsymb,b2latex}
 \begin{document}
 \MultiTitle{Experiment1\_SplitEvent}
-\MultiHeader{CONTEXT}{SimpleContext}
-\CONTEXT{SimpleContext}{}{}
-\CONSTANTS{
-	\Constant{AGES}{}
-}
-\AXIOMS{
-	\Axiom{axm\_0}{false}{$AGES \subseteq{} \nat{}$}{}
-	\Axiom{axm\_1}{false}{$finite(AGES)$}{}
-	\Axiom{axm\_2}{false}{$card(AGES) < 100$}{}
-}
-\END
 \MultiHeader{MACHINE}{Simple}
-\MACHINE{Simple}{}{SimpleContext}{}
+\MACHINE{Simple}{}{}{}
 \VARIABLES{
 	\Variable{from}{}
 	\Variable{to}{}
@@ -38,7 +27,7 @@
 }
 \END
 \MultiHeader{MACHINE}{Simple1}
-\MACHINE{Simple1}{Simple}{SimpleContext}{}
+\MACHINE{Simple1}{Simple}{}{}
 \VARIABLES{
 	\Variable{from}{}
 	\Variable{to}{}
