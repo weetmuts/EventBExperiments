@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{Experiment4\_MaxOfSubSet}
+\MultiHeader{CONTEXT}{WeekContext}
+\CONTEXT{WeekContext}{}{}
+\CONSTANTS{
+	\Constant{MAX\_TIME}{}
+	\Constant{MAX\_POINTS}{}
+	\Constant{to\_week}{}
+}
+\AXIOMS{
+	\Axiom{axm0}{false}{$MAX\_TIME \in{} \nat{}$}{\\Seconds from 1970-01-01 00:00:00}
+	\Axiom{axm1}{false}{$MAX\_TIME = 10*365*24*3600$}{\\Years of seconds....}
+	\Axiom{axm2}{false}{$MAX\_POINTS \in{} \nat{}$}{}
+	\Axiom{axm3}{false}{$MAX\_POINTS = 1000000$}{\\One million snapshots}
+	\Axiom{axm11}{false}{$to\_week \in{} \nat{} \tfun{} \nat{}$}{\\Map second to week nr. Week 0 began on 1970-01-01}
+}
+\END
+\MultiHeader{MACHINE}{Prune}
+\MACHINE{Prune}{}{WeekContext}{}
+\VARIABLES{
+	\Variable{points\_in\_time}{}
+}
+\INVARIANTS{
+	\Invariant{invpnt1}{false}{$points\_in\_time \subseteq{} \nat{}$}{}
+	\Invariant{invpnt2}{false}{$finite(points\_in\_time)$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$points\_in\_time \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{addPoint}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{p}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$p \in{} \nat{}$}{true}{}
+		\Guard{grd2}{false}{$p \notin{} points\_in\_time$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$points\_in\_time \bcmeq{} points\_in\_time \bunion{} \{p\}$}{true}{}
+	}
+}
+\EVT{prune}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{weeks}{true}{}
+		\Param{keep\_in\_weeks}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$points\_in\_time \neq{} \emptyset{}$}{true}{}
+		\Guard{grd2}{false}{$weeks = \{ w,p \qdot{} p \in{} points\_in\_time \land{} w = to\_week(p) | w \}$}{true}{}
+		\Guard{grd3}{false}{$keep\_in\_weeks = \{ w \qdot{} w \in{} weeks | max(\{ x\qdot{} x\in{}points\_in\_time \land{} w=to\_week(x)| x \}) \}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$points\_in\_time \bcmeq{} keep\_in\_weeks$}{true}{}
+	}
+}
+}
+\END
+\end{document}

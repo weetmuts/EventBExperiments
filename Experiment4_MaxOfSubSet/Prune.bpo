@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="MAX_POINTS" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MAX_TIME" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="to_week" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poPredicate name="MAX_POINTT" org.eventb.core.predicate="MAX_TIME∈ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/WeekContext.buc|org.eventb.core.contextFile#WeekContext|org.eventb.core.axiom#_hw6nwC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poPredicate name="MAX_POINTU" org.eventb.core.predicate="MAX_TIME=10∗365∗24∗3600" org.eventb.core.source="/Experiment4_MaxOfSubSet/WeekContext.buc|org.eventb.core.contextFile#WeekContext|org.eventb.core.axiom#_hw6nwS7QEeiMRefkhntaiw"/>
+<org.eventb.core.poPredicate name="MAX_POINTV" org.eventb.core.predicate="MAX_POINTS∈ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/WeekContext.buc|org.eventb.core.contextFile#WeekContext|org.eventb.core.axiom#_hw6nwi7QEeiMRefkhntaiw"/>
+<org.eventb.core.poPredicate name="MAX_POINTW" org.eventb.core.predicate="MAX_POINTS=1000000" org.eventb.core.source="/Experiment4_MaxOfSubSet/WeekContext.buc|org.eventb.core.contextFile#WeekContext|org.eventb.core.axiom#_hw6nwy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poPredicate name="MAX_POINTX" org.eventb.core.predicate="to_week∈ℕ → ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/WeekContext.buc|org.eventb.core.contextFile#WeekContext|org.eventb.core.axiom#_hw7O0C7QEeiMRefkhntaiw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="points_in_time" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/invpnt1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTALLHYPpoints_in_timf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poSequent#INITIALISATION\/invpnt1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/invpnt2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTALLHYPpoints_in_timf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poSequent#INITIALISATION\/invpnt2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpoints_in_timf" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="points_in_time'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpoints_in_timf" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTIDENTpoints_in_timf" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="addPoint/invpnt1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTALLHYPpoints_in_timg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="points_in_time∪{p}⊆ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFlvRi7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poSequent#addPoint\/invpnt1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addPoint/invpnt2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTALLHYPpoints_in_timg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(points_in_time∪{p})" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFlvRi7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poSequent#addPoint\/invpnt2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpoints_in_timg" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="points_in_time'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpoints_in_timg" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTIDENTpoints_in_timg" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFlvRi7QEeiMRefkhntaiw|org.eventb.core.guard#_pFlvSC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∉points_in_time" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFlvRi7QEeiMRefkhntaiw|org.eventb.core.guard#_pFlvSS7QEeiMRefkhntaiw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="prune/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTHYPpoints_in_timh'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂ℤ·p∈points_in_time⇒p∈dom(to_week)∧to_week∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFmWVC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFmWVC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTHYPpoints_in_timh'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="prune/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTHYPpoints_in_timh("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀w⦂ℤ·w∈weeks⇒(∀x⦂ℤ·x∈points_in_time⇒x∈dom(to_week)∧to_week∈ℤ ⇸ ℤ)∧{x⦂ℤ·x∈points_in_time∧w=to_week(x) ∣ x}≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈{x⦂ℤ·x∈points_in_time∧w=to_week(x) ∣ x}⇒b≥x)" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFmWVS7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFmWVS7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTHYPpoints_in_timh("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="prune/invpnt1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTALLHYPpoints_in_timh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="keep_in_weeks⊆ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poSequent#prune\/invpnt1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="prune/invpnt2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTALLHYPpoints_in_timh"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(keep_in_weeks)" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poSequent#prune\/invpnt2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpoints_in_timh" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="keep_in_weeks" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="weeks" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="points_in_time'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpoints_in_timh'" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTIDENTpoints_in_timh" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="points_in_time≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFlvSi7QEeiMRefkhntaiw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPpoints_in_timh(" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTHYPpoints_in_timh'" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="weeks={w⦂ℤ,p⦂ℤ·p∈points_in_time∧w=to_week(p) ∣ w}" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFmWVC7QEeiMRefkhntaiw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpoints_in_timh" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#EVTHYPpoints_in_timh(" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="keep_in_weeks={w⦂ℤ·w∈weeks ∣ max({x⦂ℤ·x∈points_in_time∧w=to_week(x) ∣ x})}" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.event#_pFmWUS7QEeiMRefkhntaiw|org.eventb.core.guard#_pFmWVS7QEeiMRefkhntaiw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment4_MaxOfSubSet/Prune.bpo|org.eventb.core.poFile#Prune|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="points_in_time⊆ℕ" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvQy7QEeiMRefkhntaiw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(points_in_time)" org.eventb.core.source="/Experiment4_MaxOfSubSet/Prune.bum|org.eventb.core.machineFile#Prune|org.eventb.core.invariant#_pFlvRC7QEeiMRefkhntaiw"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

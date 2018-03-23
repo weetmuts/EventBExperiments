@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521834435647" org.eventb.texttools.text_representation="machine Prune&#10;sees WeekContext&#10;&#10;variables&#10;points_in_time&#10;&#10;invariants&#10;@invpnt1 points_in_time ⊆ ℕ&#10;@invpnt2 finite(points_in_time)&#10;&#10;events&#10;  event INITIALISATION&#10;  then&#10;      @act1 points_in_time ≔ ∅&#10;  end&#10;&#10;  event addPoint&#10;  any p&#10;  where&#10;  @grd1 p ∈ ℕ&#10;  @grd2 p ∉ points_in_time&#10;  then&#10;  @act1 points_in_time ≔ points_in_time ∪ {p}&#10;  end&#10;&#10;  event prune&#10;  any weeks keep_in_weeks&#10;  where&#10;  @grd1 points_in_time ≠ ∅&#10;  @grd2 weeks = { w,p · p ∈ points_in_time ∧ w = to_week(p) ∣ w }&#10;  @grd3 keep_in_weeks = { w · w ∈ weeks ∣ max({ x· x∈points_in_time ∧ w=to_week(x)∣ x }) }&#10;  then&#10;  @act1 points_in_time ≔ keep_in_weeks&#10;  end&#10;end" version="5">
+<org.eventb.core.seesContext name="_pFlvQC7QEeiMRefkhntaiw" org.eventb.core.target="WeekContext"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_pFlvQS7QEeiMRefkhntaiw" org.eventb.core.assignment="points_in_time ≔ ∅" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_pFlvQi7QEeiMRefkhntaiw" org.eventb.core.identifier="points_in_time"/>
+<org.eventb.core.invariant name="_pFlvQy7QEeiMRefkhntaiw" org.eventb.core.label="invpnt1" org.eventb.core.predicate="points_in_time ⊆ ℕ"/>
+<org.eventb.core.invariant name="_pFlvRC7QEeiMRefkhntaiw" org.eventb.core.label="invpnt2" org.eventb.core.predicate="finite(points_in_time)"/>
+<org.eventb.core.event name="_pFlvRi7QEeiMRefkhntaiw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addPoint">
+<org.eventb.core.parameter name="_pFlvRy7QEeiMRefkhntaiw" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_pFlvSC7QEeiMRefkhntaiw" org.eventb.core.label="grd1" org.eventb.core.predicate="p ∈ ℕ"/>
+<org.eventb.core.guard name="_pFlvSS7QEeiMRefkhntaiw" org.eventb.core.label="grd2" org.eventb.core.predicate="p ∉ points_in_time"/>
+<org.eventb.core.action name="_pFmWUC7QEeiMRefkhntaiw" org.eventb.core.assignment="points_in_time ≔ points_in_time ∪ {p}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_pFmWUS7QEeiMRefkhntaiw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="prune">
+<org.eventb.core.parameter name="_pFmWUi7QEeiMRefkhntaiw" org.eventb.core.identifier="weeks"/>
+<org.eventb.core.parameter name="_pFmWUy7QEeiMRefkhntaiw" org.eventb.core.identifier="keep_in_weeks"/>
+<org.eventb.core.guard name="_pFlvSi7QEeiMRefkhntaiw" org.eventb.core.label="grd1" org.eventb.core.predicate="points_in_time ≠ ∅"/>
+<org.eventb.core.guard name="_pFmWVC7QEeiMRefkhntaiw" org.eventb.core.label="grd2" org.eventb.core.predicate="weeks = { w,p · p ∈ points_in_time ∧ w = to_week(p) ∣ w }"/>
+<org.eventb.core.guard name="_pFmWVS7QEeiMRefkhntaiw" org.eventb.core.label="grd3" org.eventb.core.predicate="keep_in_weeks = { w · w ∈ weeks ∣ max({ x· x∈points_in_time ∧ w=to_week(x)∣ x }) }"/>
+<org.eventb.core.action name="_pFmWVi7QEeiMRefkhntaiw" org.eventb.core.assignment="points_in_time ≔ keep_in_weeks" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
