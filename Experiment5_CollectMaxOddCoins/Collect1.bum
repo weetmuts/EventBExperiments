@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521837559166" org.eventb.texttools.text_representation="machine Collect1 refines Collect&#10;&#10;variables collected_odds max_odd&#10;&#10;invariants&#10;  @inv1_1 collected_odds ⊆ ℕ&#10;  @inv1_2 finite(collected_odds)&#10;  @inv1_3 collected_odds = { x·x∈coins ∧ x mod 2 = 1 ∣ x }&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @init1_1 collected_odds ≔ ∅&#10;      @init1_2 max_odd ≔ 0&#10;  end&#10;&#10;  event addOdd refines add&#10;    any c&#10;    where&#10;      @grd1_1 c ∈ ℕ&#10;      @grd1_2 c mod 2 = 1&#10;    then&#10;      @act1_1 collected_odds ≔ collected_odds ∪ {c}&#10;  end&#10;&#10;  event ignoreEven refines add&#10;    any c&#10;    where&#10;      @grd1_1 c ∈ ℕ&#10;      @grd1_2 c mod 2 = 0&#10;  end&#10;&#10;  event findMax refines findMax&#10;    where&#10;      @grd1_2 collected_odds ≠ ∅&#10;    with&#10;      @odds odds = collected_odds&#10;    then&#10;      @act1_1 max_odd ≔ max(collected_odds)&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_2sU9cC6eEeiANdSrm6dbEg" org.eventb.core.target="Collect"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_2sU9cS6eEeiANdSrm6dbEg" org.eventb.core.assignment="collected_odds ≔ ∅" org.eventb.core.label="init1_1"/>
+<org.eventb.core.action name="_2sU9ci6eEeiANdSrm6dbEg" org.eventb.core.assignment="max_odd ≔ 0" org.eventb.core.label="init1_2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_2sU9cy6eEeiANdSrm6dbEg" org.eventb.core.identifier="collected_odds"/>
+<org.eventb.core.invariant name="_2sU9dC6eEeiANdSrm6dbEg" org.eventb.core.label="inv1_1" org.eventb.core.predicate="collected_odds ⊆ ℕ"/>
+<org.eventb.core.invariant name="_2sU9dS6eEeiANdSrm6dbEg" org.eventb.core.label="inv1_2" org.eventb.core.predicate="finite(collected_odds)"/>
+<org.eventb.core.invariant name="_2sVkgC6eEeiANdSrm6dbEg" org.eventb.core.label="inv1_3" org.eventb.core.predicate="collected_odds = { x·x∈coins ∧ x mod 2 = 1 ∣ x }"/>
+<org.eventb.core.event name="_2sVkgS6eEeiANdSrm6dbEg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addOdd">
+<org.eventb.core.refinesEvent name="__3OmwC6eEeiANdSrm6dbEg" org.eventb.core.target="add"/>
+<org.eventb.core.parameter name="_fDQk8C6fEeiANdSrm6dbEg" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="_2sVkgy6eEeiANdSrm6dbEg" org.eventb.core.label="grd1_1" org.eventb.core.predicate="c ∈ ℕ"/>
+<org.eventb.core.guard name="_2sVkhy6eEeiANdSrm6dbEg" org.eventb.core.label="grd1_2" org.eventb.core.predicate="c mod 2 = 1"/>
+<org.eventb.core.action name="_2sVkhC6eEeiANdSrm6dbEg" org.eventb.core.assignment="collected_odds ≔ collected_odds ∪ {c}" org.eventb.core.label="act1_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_2sVkhS6eEeiANdSrm6dbEg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ignoreEven">
+<org.eventb.core.refinesEvent name="_trZTAC6fEeiANdSrm6dbEg" org.eventb.core.target="add"/>
+<org.eventb.core.parameter name="_trZTAS6fEeiANdSrm6dbEg" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="_fDRMAC6fEeiANdSrm6dbEg" org.eventb.core.label="grd1_1" org.eventb.core.predicate="c ∈ ℕ"/>
+<org.eventb.core.guard name="_trZTAi6fEeiANdSrm6dbEg" org.eventb.core.label="grd1_2" org.eventb.core.predicate="c mod 2 = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_ioGksC6fEeiANdSrm6dbEg" org.eventb.core.identifier="max_odd"/>
+<org.eventb.core.event name="_trZTAy6fEeiANdSrm6dbEg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="findMax">
+<org.eventb.core.refinesEvent name="_trZTBC6fEeiANdSrm6dbEg" org.eventb.core.target="findMax"/>
+<org.eventb.core.guard name="_trZTBS6fEeiANdSrm6dbEg" org.eventb.core.label="grd1_2" org.eventb.core.predicate="collected_odds ≠ ∅"/>
+<org.eventb.core.witness name="_RXKBUC6fEeiANdSrm6dbEg" org.eventb.core.label="odds" org.eventb.core.predicate="odds = collected_odds"/>
+<org.eventb.core.action name="_kls50C6fEeiANdSrm6dbEg" org.eventb.core.assignment="max_odd ≔ max(collected_odds)" org.eventb.core.label="act1_1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

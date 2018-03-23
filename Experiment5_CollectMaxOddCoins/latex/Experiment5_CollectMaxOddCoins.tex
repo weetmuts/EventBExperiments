@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{Experiment5\_CollectMaxOddCoins}
+\MultiHeader{MACHINE}{Collect}
+\MACHINE{Collect}{}{}{}
+\VARIABLES{
+	\Variable{coins}{}
+	\Variable{max\_odd}{}
+}
+\INVARIANTS{
+	\Invariant{inv\_1}{false}{$coins \subseteq{} \nat{}$}{}
+	\Invariant{inv\_2}{false}{$finite(coins)$}{}
+	\Invariant{inv\_3}{false}{$max\_odd \in{} \nat{}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init\_1}{$coins \bcmeq{} \emptyset{}$}{true}{}
+		\Action{init\_2}{$max\_odd \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{add}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{c}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_1}{false}{$c\in{}\nat{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_1}{$coins \bcmeq{} coins \bunion{} \{c\}$}{true}{}
+	}
+}
+\EVT{findMax}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{odds}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_1}{false}{$coins \neq{} \emptyset{}$}{true}{}
+		\Guard{grd\_2}{false}{$\exists{}x\qdot{}x\in{}coins \land{} x mod 2 = 1$}{true}{}
+		\Guard{grd\_3}{false}{$odds = \{ x\qdot{}x\in{}coins \land{} x mod 2 = 1 | x \}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_1}{$max\_odd \bcmeq{} max(odds)$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{Collect1}
+\MACHINE{Collect1}{Collect}{}{}
+\VARIABLES{
+	\Variable{collected\_odds}{}
+	\Variable{max\_odd}{}
+}
+\INVARIANTS{
+	\Invariant{inv1\_1}{false}{$collected\_odds \subseteq{} \nat{}$}{}
+	\Invariant{inv1\_2}{false}{$finite(collected\_odds)$}{}
+	\Invariant{inv1\_3}{false}{$collected\_odds = \{ x\qdot{}x\in{}coins \land{} x mod 2 = 1 | x \}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init1\_1}{$collected\_odds \bcmeq{} \emptyset{}$}{true}{}
+		\Action{init1\_2}{$max\_odd \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{addOdd}{false}{ordinary}{add}{}{
+	\ANY{
+		\Param{c}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1\_1}{false}{$c \in{} \nat{}$}{true}{}
+		\Guard{grd1\_2}{false}{$c mod 2 = 1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1\_1}{$collected\_odds \bcmeq{} collected\_odds \bunion{} \{c\}$}{true}{}
+	}
+}
+\EVT{ignoreEven}{false}{ordinary}{add}{}{
+	\ANY{
+		\Param{c}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1\_1}{false}{$c \in{} \nat{}$}{true}{}
+		\Guard{grd1\_2}{false}{$c mod 2 = 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Skip
+	}
+}
+\EVT{findMax}{false}{ordinary}{findMax}{}{
+	\GUARDS{false}{
+		\Guard{grd1\_2}{false}{$collected\_odds \neq{} \emptyset{}$}{true}{}
+	}
+	\WITNESSES{
+		\Witness{odds}{$odds = collected\_odds$}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1\_1}{$max\_odd \bcmeq{} max(collected\_odds)$}{true}{}
+	}
+}
+}
+\END
+\end{document}
