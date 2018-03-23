@@ -37,8 +37,8 @@
 }
 }
 \END
-\MultiHeader{MACHINE}{Simple0}
-\MACHINE{Simple0}{Simple}{SimpleContext}{}
+\MultiHeader{MACHINE}{Simple1}
+\MACHINE{Simple1}{Simple}{SimpleContext}{}
 \VARIABLES{
 	\Variable{from}{}
 	\Variable{to}{}
@@ -46,35 +46,35 @@
 	\Variable{copying}{}
 }
 \INVARIANTS{
-	\Invariant{inv0\_1}{false}{$tmp \in{} \nat{}$}{}
-	\Invariant{inv0\_2}{false}{$copying \in{} BOOL$}{}
-	\Invariant{inv0\_3}{false}{$copying = TRUE \limp{}  tmp = from$}{}
+	\Invariant{inv1\_1}{false}{$tmp \in{} \nat{}$}{}
+	\Invariant{inv1\_2}{false}{$copying \in{} BOOL$}{}
+	\Invariant{inv1\_3}{false}{$copying = TRUE \limp{}  tmp = from$}{}
 }
 \EVENTS{
 \INITIALISATION{true}{}{
 	\ACTIONS{false}{
 		\Action{init\_0}{$from \bcmin{} \nat{}$}{false}{}
 		\Action{init\_1}{$to \bcmeq{} 0$}{false}{}
-		\Action{init0\_1}{$tmp \bcmin{} \nat{}$}{true}{}
-		\Action{init0\_2}{$copying \bcmeq{} FALSE$}{true}{}
+		\Action{init1\_1}{$tmp \bcmin{} \nat{}$}{true}{}
+		\Action{init1\_2}{$copying \bcmeq{} FALSE$}{true}{}
 	}
 }
 \EVT{copyStart}{false}{ordinary}{}{}{
 	\GUARDS{false}{
-		\Guard{grd0\_1}{false}{$copying = FALSE$}{true}{}
+		\Guard{grd1\_1}{false}{$copying = FALSE$}{true}{}
 	}
 	\ACTIONS{true}{
-		\Action{act0\_1}{$tmp \bcmeq{} from$}{true}{}
-		\Action{act0\_2}{$copying \bcmeq{} TRUE$}{true}{}
+		\Action{act1\_1}{$tmp \bcmeq{} from$}{true}{}
+		\Action{act1\_2}{$copying \bcmeq{} TRUE$}{true}{}
 	}
 }
 \EVT{copyDone}{false}{ordinary}{copy}{}{
 	\GUARDS{false}{
-		\Guard{grd0\_1}{false}{$copying = TRUE$}{true}{}
+		\Guard{grd1\_1}{false}{$copying = TRUE$}{true}{}
 	}
 	\ACTIONS{true}{
-		\Action{act0\_1}{$to \bcmeq{} tmp$}{true}{}
-		\Action{grd0\_2}{$copying \bcmeq{} FALSE$}{true}{}
+		\Action{act1\_1}{$to \bcmeq{} tmp$}{true}{}
+		\Action{grd1\_2}{$copying \bcmeq{} FALSE$}{true}{}
 	}
 }
 }
