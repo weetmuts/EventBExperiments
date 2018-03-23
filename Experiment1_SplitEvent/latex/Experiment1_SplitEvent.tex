@@ -1,0 +1,82 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{Experiment1\_SplitEvent}
+\MultiHeader{CONTEXT}{SimpleContext}
+\CONTEXT{SimpleContext}{}{}
+\CONSTANTS{
+	\Constant{AGES}{}
+}
+\AXIOMS{
+	\Axiom{axm\_0}{false}{$AGES \subseteq{} \nat{}$}{}
+	\Axiom{axm\_1}{false}{$finite(AGES)$}{}
+	\Axiom{axm\_2}{false}{$card(AGES) < 100$}{}
+}
+\END
+\MultiHeader{MACHINE}{Simple}
+\MACHINE{Simple}{}{SimpleContext}{}
+\VARIABLES{
+	\Variable{from}{}
+	\Variable{to}{}
+}
+\INVARIANTS{
+	\Invariant{inv\_0}{false}{$from \in{} \nat{}$}{}
+	\Invariant{inv\_1}{false}{$to \in{} \nat{}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init\_0}{$from \bcmin{} \nat{}$}{true}{}
+		\Action{init\_1}{$to \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{copy}{false}{ordinary}{}{}{
+	\ACTIONS{false}{
+		\Action{act\_0}{$to \bcmeq{} from$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{Simple0}
+\MACHINE{Simple0}{Simple}{SimpleContext}{}
+\VARIABLES{
+	\Variable{from}{}
+	\Variable{to}{}
+	\Variable{tmp}{}
+	\Variable{copying}{}
+}
+\INVARIANTS{
+	\Invariant{inv0\_1}{false}{$tmp \in{} \nat{}$}{}
+	\Invariant{inv0\_2}{false}{$copying \in{} BOOL$}{}
+	\Invariant{inv0\_3}{false}{$copying = TRUE \limp{}  tmp = from$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{init\_0}{$from \bcmin{} \nat{}$}{false}{}
+		\Action{init\_1}{$to \bcmeq{} 0$}{false}{}
+		\Action{init0\_1}{$tmp \bcmin{} \nat{}$}{true}{}
+		\Action{init0\_2}{$copying \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{copyStart}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd0\_1}{false}{$copying = FALSE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act0\_1}{$tmp \bcmeq{} from$}{true}{}
+		\Action{act0\_2}{$copying \bcmeq{} TRUE$}{true}{}
+	}
+}
+\EVT{copyDone}{false}{ordinary}{copy}{}{
+	\GUARDS{false}{
+		\Guard{grd0\_1}{false}{$copying = TRUE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act0\_1}{$to \bcmeq{} tmp$}{true}{}
+		\Action{grd0\_2}{$copying \bcmeq{} FALSE$}{true}{}
+	}
+}
+}
+\END
+\end{document}
