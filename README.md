@@ -1,9 +1,9 @@
 
 Event-B Experiments by Fredrik Öhrström
 
-**Experiment 4:** max of subsets `{w·w∈weeks ∣ max({ x·x∈points_in_time ∧ w=to_week(x) ∣ x }) }
+**Experiment 4:** max of subsets `{w·w∈weeks ∣ max({ x·x∈points_in_time ∧ w=to_week(x) ∣ x }) }`
 
-prune/grd2/WD: robot then in goal: `∃b·∀x·x∈points_in_time∧to_week(p)=to_week(x) ⇒ b≥x` insert `max(points_in_time` in yellow box.
+prune/grd2/WD: robot then in goal: `∃b·∀x·x∈points_in_time∧to_week(p)=to_week(x) ⇒ b≥x` insert `max(points_in_time)` in yellow box.
 
 prune/invpnt1/INV: robot then for goal: `max({x·x∈points_in_time∧to_week(p)=to_week(x) ∣ x}) ∈ ℕ` apply SMT prover.
 
