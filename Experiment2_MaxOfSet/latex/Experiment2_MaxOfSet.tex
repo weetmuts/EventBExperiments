@@ -1,0 +1,159 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{Experiment2\_MaxOfSet}
+\MultiHeader{MACHINE}{Maximum}
+\MACHINE{Maximum}{}{}{}
+\VARIABLES{
+	\Variable{points}{}
+	\Variable{max\_point}{}
+}
+\INVARIANTS{
+	\Invariant{inv\_0}{false}{$points \subseteq{} \nat{}$}{}
+	\Invariant{inv\_1}{false}{$finite(points)$}{}
+	\Invariant{inv\_2}{false}{$max\_point \in{} \nat{}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init\_0}{$points \bcmeq{} \emptyset{}$}{true}{}
+		\Action{init\_1}{$max\_point \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{addPoint}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{p}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_0}{false}{$p \in{} \nat{}$}{true}{}
+		\Guard{grd\_1}{false}{$p > 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_0}{$points \bcmeq{} points \bunion{} \{p\}$}{true}{}
+	}
+}
+\EVT{maxPoint}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{m}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_0}{false}{$points \neq{} \emptyset{}$}{true}{}
+		\Guard{grd\_1}{false}{$m = max(points)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_0}{$max\_point \bcmeq{} m$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{Maximum1}
+\MACHINE{Maximum1}{Maximum}{}{}
+\VARIABLES{
+	\Variable{points}{}
+	\Variable{current\_max}{}
+	\Variable{max\_point}{}
+}
+\INVARIANTS{
+	\Invariant{inv1\_0}{false}{$points\neq{}\emptyset{} \limp{} current\_max=max(points)$}{}
+	\Invariant{inv1\_1}{false}{$current\_max \geq{} 0$}{}
+	\Invariant{thm1\_0}{true}{$\forall{}p,s\qdot{}p\in{}\nat{} \land{} s\subseteq{}\nat{} \land{} s\neq{}\emptyset{} \land{} finite(s) \land{} p\leq{}max(s) \limp{} max(s) = max(s\bunion{}\{p\})$}{}
+	\Invariant{thm1\_1}{false}{$current\_max\neq{}0 \limp{} points\neq{}\emptyset{}$}{}
+}
+\EVENTS{
+\INITIALISATION{true}{}{
+	\ACTIONS{false}{
+		\Action{init\_0}{$points \bcmeq{} \emptyset{}$}{false}{}
+		\Action{init\_1}{$max\_point \bcmeq{} 0$}{false}{}
+		\Action{init1\_0}{$current\_max \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{addPointNewMax}{false}{ordinary}{addPoint}{}{
+	\ANY{
+		\Param{p}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1\_0}{false}{$p \in{} \nat{}$}{true}{}
+		\Guard{grd1\_2}{false}{$p > current\_max$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_0}{$points \bcmeq{} points \bunion{} \{p\}$}{true}{}
+		\Action{act1\_0}{$current\_max \bcmeq{} p$}{true}{}
+	}
+}
+\EVT{addPointNoNewMax}{false}{ordinary}{addPoint}{}{
+	\ANY{
+		\Param{p}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1\_0}{false}{$p \in{} \nat{}$}{true}{}
+		\Guard{grd1\_2}{false}{$p \leq{} current\_max$}{true}{}
+		\Guard{grd1\_3}{false}{$p > 0$}{true}{}
+		\Guard{grd1\_4}{false}{$points \neq{} \emptyset{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1\_0}{$points \bcmeq{} points \bunion{} \{p\}$}{true}{}
+	}
+}
+\EVT{maxPoint}{false}{ordinary}{maxPoint}{}{
+	\GUARDS{false}{
+		\Guard{grd1\_0}{false}{$current\_max \neq{} 0$}{true}{}
+	}
+	\WITNESSES{
+		\Witness{m}{$m = current\_max$}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1\_0}{$max\_point \bcmeq{} current\_max$}{true}{}
+	}
+}
+}
+\END
+\MultiHeader{MACHINE}{Maximum2}
+\MACHINE{Maximum2}{Maximum1}{}{}
+\VARIABLES{
+	\Variable{current\_max}{}
+	\Variable{max\_point}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init1\_0}{$current\_max \bcmeq{} 0$}{true}{}
+		\Action{init1\_1}{$max\_point \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{addPointNewMax}{false}{ordinary}{addPointNewMax}{}{
+	\ANY{
+		\Param{p}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd2\_0}{false}{$p \in{} \nat{}$}{true}{}
+		\Guard{grd2\_1}{false}{$p > current\_max$}{true}{}
+		\Guard{grd2\_2}{false}{$p > 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act2\_0}{$current\_max \bcmeq{} p$}{true}{}
+	}
+}
+\EVT{addPointNoNewMax}{false}{ordinary}{addPointNoNewMax}{}{
+	\ANY{
+		\Param{p}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd2\_0}{false}{$p \in{} \nat{}$}{true}{}
+		\Guard{grd2\_1}{false}{$p \leq{} current\_max$}{true}{}
+		\Guard{grd2\_2}{false}{$p > 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Skip
+	}
+}
+\EVT{maxPoint}{true}{ordinary}{maxPoint}{}{
+	\GUARDS{false}{
+		\Guard{grd1\_0}{false}{$current\_max \neq{} 0$}{false}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1\_0}{$max\_point \bcmeq{} current\_max$}{false}{}
+	}
+}
+}
+\END
+\end{document}

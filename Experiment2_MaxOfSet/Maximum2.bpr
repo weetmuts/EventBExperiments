@@ -138,7 +138,6 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="current_max" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="max_point" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="p" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="points" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊥⇒current_max=max(points)"/>
@@ -146,7 +145,6 @@
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="p∈ℕ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀p⦂ℤ,s⦂ℙ(ℤ)·p∈ℕ∧s⊆ℕ∧s≠(∅ ⦂ ℙ(ℤ))∧finite(s)∧p≤max(s)⇒max(s)=max(s∪{p})"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="points≠(∅ ⦂ ℙ(ℤ))⇒(∃b⦂ℤ·∀x⦂ℤ·x∈points⇒b≥x)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="max_point∈ℕ"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="points≠(∅ ⦂ ℙ(ℤ))⇒current_max=max(points)"/>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="current_max≠0⇒⊥"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="⊥⇒(∃b⦂ℤ·∀x⦂ℤ·x∈points⇒b≥x)"/>
@@ -155,11 +153,24 @@
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀p⦂ℤ,s⦂ℙ(ℤ)·p∈ℕ∧s⊆ℕ∧¬s=(∅ ⦂ ℙ(ℤ))∧finite(s)∧p≤max(s)⇒max(s)=max(s∪{p})"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="p&gt;0"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="points⊆ℕ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="current_max≥0"/>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="p≤current_max"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="current_max=0"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="current_max≠0⇒points≠(∅ ⦂ ℙ(ℤ))"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/init1_0/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0=0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
