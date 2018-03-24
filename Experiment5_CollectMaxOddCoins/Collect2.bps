@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="inv2_4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="thm2_1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="thm2_1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="thm2_2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/thm2_2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/init1_2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="firstOdd/inv2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="firstOdd/inv2_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="firstOdd/inv2_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addOdd/inv2_1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addOdd/inv2_3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addOdd/inv2_4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="findMax/grd1_2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="findMax/act1_1/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

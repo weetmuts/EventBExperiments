@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="coins" org.eventb.core.type="ℙ(ℤ)"/>
@@ -9,13 +9,13 @@
 <org.eventb.core.poPredicate name="collected_oddu" org.eventb.core.predicate="finite(coins)" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.invariant#_fV2GkS6bEeiANdSrm6dbEg"/>
 <org.eventb.core.poPredicate name="collected_oddv" org.eventb.core.predicate="max_odd∈ℕ" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.invariant#_9D9VQC6bEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv1_3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="inv1_3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sVkgC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sVkgC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="INITIALISATION/inv1_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddt"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆ℕ" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sU9dC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#'"/>
@@ -24,7 +24,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#INITIALISATION\/inv1_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="INITIALISATION/inv1_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddt"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sU9dS6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#'"/>
@@ -33,7 +33,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#INITIALISATION\/inv1_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="INITIALISATION/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddt"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))={x⦂ℤ·x∈(∅ ⦂ ℙ(ℤ))∧x mod 2=1 ∣ x}" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sVkgC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#'"/>
@@ -56,13 +56,13 @@
 <org.eventb.core.poIdentifier name="collected_odds'" org.eventb.core.type="ℙ(ℤ)"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddt" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddt" org.eventb.core.poStamp="1"/>
-<org.eventb.core.poSequent name="addOdd/grd1_2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="addOdd/grd1_2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddu("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤c∧0&lt;2" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkgS6eEeiANdSrm6dbEg|org.eventb.core.guard#_2sVkhy6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkgS6eEeiANdSrm6dbEg|org.eventb.core.guard#_2sVkhy6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddu("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="addOdd/inv1_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="addOdd/inv1_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddu"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="collected_odds∪{c}⊆ℕ" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sU9dC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_o8lXUC6bEeiANdSrm6dbEg"/>
@@ -71,7 +71,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#addOdd\/inv1_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="addOdd/inv1_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="addOdd/inv1_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddu"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(collected_odds∪{c})" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sU9dS6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_o8lXUC6bEeiANdSrm6dbEg"/>
@@ -80,7 +80,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#addOdd\/inv1_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="addOdd/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="addOdd/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddu"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="collected_odds∪{c}={x⦂ℤ·x∈coins∪{c}∧x mod 2=1 ∣ x}" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sVkgC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_o8lXUC6bEeiANdSrm6dbEg"/>
@@ -89,24 +89,24 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#addOdd\/inv1_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTcollected_oddu" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTIDENTcollected_oddu" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="coins'" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="collected_odds'" org.eventb.core.type="ℙ(ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPcollected_oddu(" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddu" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTHYPcollected_oddu(" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddu" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈ℕ" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkgS6eEeiANdSrm6dbEg|org.eventb.core.guard#_2sVkgy6eEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddu" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddu(" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddu" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddu(" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c mod 2=1" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkgS6eEeiANdSrm6dbEg|org.eventb.core.guard#_2sVkhy6eEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="ignoreEven/grd1_2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="ignoreEven/grd1_2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddv("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0≤c∧0&lt;2" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkhS6eEeiANdSrm6dbEg|org.eventb.core.guard#_trZTAi6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkhS6eEeiANdSrm6dbEg|org.eventb.core.guard#_trZTAi6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddv("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="ignoreEven/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="ignoreEven/inv1_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="collected_odds={x⦂ℤ·x∈coins∪{c}∧x mod 2=1 ∣ x}" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sVkgC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_o8lXUC6bEeiANdSrm6dbEg"/>
@@ -115,17 +115,17 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#ignoreEven\/inv1_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTcollected_oddv" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTIDENTcollected_oddv" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="coins'" org.eventb.core.type="ℙ(ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPcollected_oddv(" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddv" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTHYPcollected_oddv(" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddv" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈ℕ" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkhS6eEeiANdSrm6dbEg|org.eventb.core.guard#_fDRMAC6fEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddv" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddv(" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddv" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTHYPcollected_oddv(" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c mod 2=0" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_2sVkhS6eEeiANdSrm6dbEg|org.eventb.core.guard#_trZTAi6fEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="findMax/grd_1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="findMax/grd_1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="coins≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg|org.eventb.core.guard#_2KMBEC6bEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg"/>
@@ -133,7 +133,7 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#findMax\/grd_1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="findMax/grd_2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="findMax/grd_2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃x⦂ℤ·x∈coins∧x mod 2=1" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg|org.eventb.core.guard#_wUZngS6dEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg"/>
@@ -141,7 +141,7 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#findMax\/grd_2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="findMax/grd_3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="findMax/grd_3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="collected_odds={x⦂ℤ·x∈coins∧x mod 2=1 ∣ x}" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg|org.eventb.core.guard#_wUZngi6dEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg"/>
@@ -149,13 +149,13 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#findMax\/grd_3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="findMax/act1_1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="findMax/act1_1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="collected_odds≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈collected_odds⇒b≥x)" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg|org.eventb.core.action#_kls50C6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg|org.eventb.core.action#_kls50C6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddw"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="findMax/act_1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="findMax/act_1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTALLHYPcollected_oddw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="max(collected_odds)=max(collected_odds)" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg|org.eventb.core.action#_o8lXUy6bEeiANdSrm6dbEg"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect.bum|org.eventb.core.machineFile#Collect|org.eventb.core.event#_2KLaAC6bEeiANdSrm6dbEg"/>
@@ -163,18 +163,18 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poSequent#findMax\/act_1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTcollected_oddw" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTIDENTcollected_oddw" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="odds" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="max_odd'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddw" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddw" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTALLHYPcollected_oddw" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#EVTIDENTcollected_oddw" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="collected_odds≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.event#_trZTAy6fEeiANdSrm6dbEg|org.eventb.core.guard#_trZTBS6fEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="HYP+" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="collected_odds⊆ℕ" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sU9dC6eEeiANdSrm6dbEg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(collected_odds)" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sU9dS6eEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment5_CollectMaxOddCoins/Collect1.bpo|org.eventb.core.poFile#Collect1|org.eventb.core.poPredicateSet#HYP+" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="collected_odds={x⦂ℤ·x∈coins∧x mod 2=1 ∣ x}" org.eventb.core.source="/Experiment5_CollectMaxOddCoins/Collect1.bum|org.eventb.core.machineFile#Collect1|org.eventb.core.invariant#_2sVkgC6eEeiANdSrm6dbEg"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

@@ -101,4 +101,77 @@
 }
 }
 \END
+\MultiHeader{MACHINE}{Collect2}
+\MACHINE{Collect2}{Collect1}{}{}
+\VARIABLES{
+	\Variable{current\_max}{}
+	\Variable{max\_odd}{}
+	\Variable{found\_odd}{}
+}
+\INVARIANTS{
+	\Invariant{inv2\_1}{false}{$current\_max \in{} \nat{}$}{}
+	\Invariant{inv2\_2}{false}{$found\_odd \in{} BOOL$}{}
+	\Invariant{inv2\_3}{false}{$found\_odd = FALSE \limp{} collected\_odds = \emptyset{}$}{}
+	\Invariant{inv2\_4}{false}{$found\_odd = TRUE \limp{}  collected\_odds \neq{} \emptyset{} \land{} max(collected\_odds) = current\_max$}{}
+	\Invariant{thm2\_1}{true}{$\forall{}p,s\qdot{}p\in{}\nat{} \land{} s\subseteq{}\nat{} \land{} s\neq{}\emptyset{} \land{} finite(s) \land{} p\leq{}max(s) \limp{} max(s) = max(s\bunion{}\{p\})$}{}
+	\Invariant{thm2\_2}{false}{$\forall{}p,s\qdot{}p\in{}\nat{} \land{} s\subseteq{}\nat{} \land{} s\neq{}\emptyset{} \land{} finite(s) \land{} p>max(s) \limp{} p = max(s\bunion{}\{p\})$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init2\_0}{$current\_max \bcmeq{} 0$}{true}{}
+		\Action{init2\_1}{$max\_odd \bcmeq{} 0$}{true}{}
+		\Action{init2\_2}{$found\_odd \bcmeq{} FALSE$}{true}{}
+	}
+}
+\EVT{firstOdd}{false}{ordinary}{addOdd}{}{
+	\ANY{
+		\Param{c}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd2\_0}{false}{$c \in{} \nat{}$}{true}{}
+		\Guard{grd2\_1}{false}{$found\_odd = FALSE$}{true}{}
+		\Guard{grd2\_2}{false}{$c mod 2 = 1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act2\_0}{$current\_max \bcmeq{} c$}{true}{}
+		\Action{act2\_1}{$found\_odd \bcmeq{} TRUE$}{true}{}
+	}
+}
+\EVT{addOdd}{false}{ordinary}{addOdd}{}{
+	\ANY{
+		\Param{c}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd2\_0}{false}{$c \in{} \nat{}$}{true}{}
+		\Guard{grd2\_1}{false}{$found\_odd = TRUE$}{true}{}
+		\Guard{grd2\_2}{false}{$c > current\_max$}{true}{}
+		\Guard{grd2\_3}{false}{$c mod 2 = 1$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act2\_0}{$current\_max \bcmeq{} c$}{true}{}
+	}
+}
+\EVT{ignoreEven}{false}{ordinary}{ignoreEven}{}{
+	\ANY{
+		\Param{c}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1\_1}{false}{$c \in{} \nat{}$}{true}{}
+		\Guard{grd1\_2}{false}{$c mod 2 = 0$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Skip
+	}
+}
+\EVT{findMax}{false}{ordinary}{findMax}{}{
+	\GUARDS{false}{
+		\Guard{grd1\_1}{false}{$found\_odd = TRUE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1\_1}{$max\_odd \bcmeq{} current\_max$}{true}{}
+	}
+}
+}
+\END
 \end{document}

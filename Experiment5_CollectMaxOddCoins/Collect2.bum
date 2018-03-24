@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521887552284" org.eventb.texttools.text_representation="machine Collect2 refines Collect1&#10;&#10;variables current_max max_odd found_odd&#10;&#10;invariants&#10;&#10;  @inv2_1 current_max ∈ ℕ&#10;  @inv2_2 found_odd ∈ BOOL&#10;  @inv2_3 found_odd = FALSE ⇒ collected_odds = ∅&#10;  @inv2_4 found_odd = TRUE ⇒  collected_odds ≠ ∅ ∧ max(collected_odds) = current_max&#10;&#10;theorem&#10;&#10;  @thm2_1 ∀p,s·p∈ℕ ∧ s⊆ℕ ∧ s≠∅ ∧ finite(s) ∧ p≤max(s) ⇒ max(s) = max(s∪{p})&#10;  @thm2_2 ∀p,s·p∈ℕ ∧ s⊆ℕ ∧ s≠∅ ∧ finite(s) ∧ p&gt;max(s) ⇒ p = max(s∪{p})&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @init2_0 current_max ≔ 0&#10;      @init2_1 max_odd ≔ 0&#10;      @init2_2 found_odd ≔ FALSE&#10;  end&#10;&#10;  event firstOdd refines addOdd&#10;    any c&#10;    where&#10;      @grd2_0 c ∈ ℕ&#10;      @grd2_1 found_odd = FALSE&#10;      @grd2_2 c mod 2 = 1&#10;    then&#10;      @act2_0 current_max ≔ c&#10;      @act2_1 found_odd ≔ TRUE&#10;  end&#10;&#10;  event addOdd refines addOdd&#10;    any c&#10;    where&#10;      @grd2_0 c ∈ ℕ&#10;      @grd2_1 found_odd = TRUE&#10;      @grd2_2 c &gt; current_max&#10;      @grd2_3 c mod 2 = 1&#10;    then&#10;      @act2_0 current_max ≔ c&#10;  end&#10;&#10;  event ignoreEven refines ignoreEven&#10;    any c&#10;    where&#10;      @grd1_1 c ∈ ℕ&#10;      @grd1_2 c mod 2 = 0&#10;  end&#10;&#10;  event findMax refines findMax&#10;    where&#10;      @grd1_1 found_odd = TRUE&#10;    then&#10;      @act1_1 max_odd ≔ current_max&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Collect1"/>
+<org.eventb.core.variable name="_2sU9cy6eEeiANdSrm6dbEg" org.eventb.core.identifier="current_max"/>
+<org.eventb.core.variable name="_ioGksC6fEeiANdSrm6dbEg" org.eventb.core.identifier="max_odd"/>
+<org.eventb.core.event name="_ioGksC6fEeiANdSrm6dbEh" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_nGSWEC81EeiUMbKi0vIfxw" org.eventb.core.assignment="current_max ≔ 0" org.eventb.core.label="init2_0"/>
+<org.eventb.core.action name="_nGSWES81EeiUMbKi0vIfxw" org.eventb.core.assignment="max_odd ≔ 0" org.eventb.core.label="init2_1"/>
+<org.eventb.core.action name="__rtMoC81EeiUMbKi0vIfxw" org.eventb.core.assignment="found_odd ≔ FALSE" org.eventb.core.label="init2_2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_ioGksC6fEeiANdSrm6dbEi" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="firstOdd">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addOdd"/>
+<org.eventb.core.parameter name="__rtMoS81EeiUMbKi0vIfxw" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="__rtzsC81EeiUMbKi0vIfxw" org.eventb.core.label="grd2_0" org.eventb.core.predicate="c ∈ ℕ"/>
+<org.eventb.core.guard name="__rtzsS81EeiUMbKi0vIfxw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="found_odd = FALSE"/>
+<org.eventb.core.guard name="__rtzsi81EeiUMbKi0vIfxw" org.eventb.core.label="grd2_2" org.eventb.core.predicate="c mod 2 = 1"/>
+<org.eventb.core.action name="__rtzsy81EeiUMbKi0vIfxw" org.eventb.core.assignment="current_max ≔ c" org.eventb.core.label="act2_0"/>
+<org.eventb.core.action name="__rvB0i81EeiUMbKi0vIfxw" org.eventb.core.assignment="found_odd ≔ TRUE" org.eventb.core.label="act2_1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_ioGksC6fEeiANdSrm6dbEj" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addOdd">
+<org.eventb.core.refinesEvent name="_RfEgkC82EeiUMbKi0vIfxw" org.eventb.core.target="addOdd"/>
+<org.eventb.core.parameter name="__ruawC81EeiUMbKi0vIfxw" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="__ruawS81EeiUMbKi0vIfxw" org.eventb.core.label="grd2_0" org.eventb.core.predicate="c ∈ ℕ"/>
+<org.eventb.core.guard name="__ruawi81EeiUMbKi0vIfxw" org.eventb.core.label="grd2_1" org.eventb.core.predicate="found_odd = TRUE"/>
+<org.eventb.core.guard name="__rvB0C81EeiUMbKi0vIfxw" org.eventb.core.label="grd2_2" org.eventb.core.predicate="c &gt; current_max"/>
+<org.eventb.core.guard name="_RfEgkS82EeiUMbKi0vIfxw" org.eventb.core.label="grd2_3" org.eventb.core.predicate="c mod 2 = 1"/>
+<org.eventb.core.action name="_RfFHoC82EeiUMbKi0vIfxw" org.eventb.core.assignment="current_max ≔ c" org.eventb.core.label="act2_0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_ioGksC6fEeiANdSrm6dbEk" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ignoreEven">
+<org.eventb.core.refinesEvent name="_RfFHoS82EeiUMbKi0vIfxw" org.eventb.core.target="ignoreEven"/>
+<org.eventb.core.parameter name="_RfFHoi82EeiUMbKi0vIfxw" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="_RfFHoy82EeiUMbKi0vIfxw" org.eventb.core.label="grd1_1" org.eventb.core.predicate="c ∈ ℕ"/>
+<org.eventb.core.guard name="_RfFHpC82EeiUMbKi0vIfxw" org.eventb.core.label="grd1_2" org.eventb.core.predicate="c mod 2 = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="__rvo4C81EeiUMbKi0vIfxw" org.eventb.core.identifier="found_odd"/>
+<org.eventb.core.invariant name="__rvo4S81EeiUMbKi0vIfxw" org.eventb.core.label="inv2_1" org.eventb.core.predicate="current_max ∈ ℕ"/>
+<org.eventb.core.invariant name="__rvo4i81EeiUMbKi0vIfxw" org.eventb.core.label="inv2_2" org.eventb.core.predicate="found_odd ∈ BOOL"/>
+<org.eventb.core.invariant name="_FmuZkC82EeiUMbKi0vIfxw" org.eventb.core.label="inv2_3" org.eventb.core.predicate="found_odd = FALSE ⇒ collected_odds = ∅"/>
+<org.eventb.core.event name="_RfFusC82EeiUMbKi0vIfxw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="findMax">
+<org.eventb.core.refinesEvent name="_RfFusS82EeiUMbKi0vIfxw" org.eventb.core.target="findMax"/>
+<org.eventb.core.guard name="_RfFusi82EeiUMbKi0vIfxw" org.eventb.core.label="grd1_1" org.eventb.core.predicate="found_odd = TRUE"/>
+<org.eventb.core.action name="_RfGVwC82EeiUMbKi0vIfxw" org.eventb.core.assignment="max_odd ≔ current_max" org.eventb.core.label="act1_1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_5J-IgC82EeiUMbKi0vIfxw" org.eventb.core.label="inv2_4" org.eventb.core.predicate="found_odd = TRUE ⇒  collected_odds ≠ ∅ ∧ max(collected_odds) = current_max"/>
+<org.eventb.core.invariant name="_qO904C9OEeiUMbKi0vIfxw" org.eventb.core.label="thm2_1" org.eventb.core.predicate="∀p,s·p∈ℕ ∧ s⊆ℕ ∧ s≠∅ ∧ finite(s) ∧ p≤max(s) ⇒ max(s) = max(s∪{p})" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="_qO904S9OEeiUMbKi0vIfxw" org.eventb.core.label="thm2_2" org.eventb.core.predicate="∀p,s·p∈ℕ ∧ s⊆ℕ ∧ s≠∅ ∧ finite(s) ∧ p&gt;max(s) ⇒ p = max(s∪{p})"/>
+</org.eventb.core.machineFile>
