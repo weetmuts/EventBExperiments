@@ -16,6 +16,14 @@ findMax/grd_1/GRD: robot, then expand `collected_odds` in hyp, then robot.
 
 findMax/grd_2/GRD: no robot, just expand `collected_odds` in hyp and the proof will be completed automatically.
 
+thm2_1/WD: robot, then supply `max(s)` as upper bound in yellow box.
+
+thm2_2/WD: robot, then supply `p` as upper bound in yellow box, then EITHER: prove by case `x=p`, then ML. OR use SMT directly.
+
+INITIALISATION/thm2_2/INV: robot then for goal `p=max(s∪{p})` run SMT. OR
+
+addOdd/inv2_4/INV: robot then for goal `max(collected_odds∪{c})=c` search/add theorem `∀p,s·p∈ℕ∧s⊆ℕ∧¬s=∅∧finite(s)∧p>max(s)⇒p=max(s∪{p})` instantiate p=c and s=collected_odds in the yellow boxes. It is automatically discharged.
+
 **Experiment 4:** max of subsets `{w·w∈weeks ∣ max({ x·x∈points_in_time ∧ w=to_week(x) ∣ x }) }`
 
 prune/grd2/WD: robot then in goal: `∃b·∀x·x∈points_in_time∧to_week(p)=to_week(x) ⇒ b≥x` insert `max(points_in_time)` in yellow box.
