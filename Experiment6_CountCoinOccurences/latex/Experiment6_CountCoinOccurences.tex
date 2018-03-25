@@ -1,0 +1,94 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{Experiment6\_CountCoinOccurences}
+\MultiHeader{CONTEXT}{MapContext}
+\CONTEXT{MapContext}{}{}
+\CONSTANTS{
+	\Constant{to\_block}{}
+}
+\AXIOMS{
+	\Axiom{axm\_1}{false}{$to\_block \in{} \nat{} \tfun{} \nat{}$}{}
+	\Axiom{axm\_2}{false}{$\\\forall{}x\qdot{}\forall{}y\qdot{}x\in{}\nat{} \land{} y\in{}\nat{} \land{} y>0 \land{} x\in{}dom(to\_block) \land{} x+y\in{}dom(to\_block)\\~                \limp{} to\_block(x+y) \geq{} to\_block(x)$}{}
+}
+\END
+\MultiHeader{MACHINE}{Function}
+\MACHINE{Function}{}{MapContext}{}
+\VARIABLES{
+	\Variable{coins}{}
+	\Variable{counts}{}
+	\Variable{bcounts}{}
+}
+\INVARIANTS{
+	\Invariant{inv\_1}{false}{$coins \subseteq{} \nat{}$}{}
+	\Invariant{inv\_2}{false}{$counts \in{} coins \tfun{} \nat{}$}{}
+	\Invariant{inv\_3}{false}{$\forall{}x\qdot{}x\in{}coins \limp{} x\in{}dom(counts)$}{}
+	\Invariant{inv\_4}{false}{$bcounts \in{} to\_block[coins] \tfun{} \nat{}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init\_1}{$coins \bcmeq{}  \emptyset{}$}{true}{}
+		\Action{init\_2}{$counts \bcmeq{} \emptyset{}$}{true}{}
+		\Action{init\_3}{$bcounts \bcmeq{} \emptyset{}$}{true}{}
+	}
+}
+\EVT{addNewCoinAndNewBlock}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{c}{true}{}
+		\Param{b}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_1}{false}{$c\in{}\nat{}$}{true}{}
+		\Guard{grd\_2}{false}{$c\notin{}coins \land{} c\notin{}dom(counts) \land{} c\in{}dom(to\_block)$}{true}{}
+		\Guard{grd\_3}{false}{$b = to\_block(c)$}{true}{}
+		\Guard{grd\_4}{false}{$b\notin{}dom(bcounts)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_1}{$coins \bcmeq{} coins \bunion{} \{c\}$}{true}{}
+		\Action{act\_2}{$counts(c) \bcmeq{} 1$}{true}{}
+		\Action{act\_3}{$bcounts(b) \bcmeq{} 1$}{true}{}
+	}
+}
+\EVT{addNewCoinUpdateBlock}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{c}{true}{}
+		\Param{b}{true}{}
+		\Param{bn}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_1}{false}{$c\in{}\nat{}$}{true}{}
+		\Guard{grd\_2}{false}{$c\notin{}coins \land{} c\notin{}dom(counts) \land{} c\in{}dom(to\_block)$}{true}{}
+		\Guard{grd\_3}{false}{$b = to\_block(c)$}{true}{}
+		\Guard{grd\_4}{false}{$b\in{}dom(bcounts)$}{true}{}
+		\Guard{grd\_5}{false}{$bn = bcounts(b)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_1}{$coins \bcmeq{} coins \bunion{} \{c\}$}{true}{}
+		\Action{act\_2}{$counts(c) \bcmeq{} 1$}{true}{}
+		\Action{act\_3}{$bcounts(b) \bcmeq{} bn+1$}{true}{}
+	}
+}
+\EVT{addMore}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{c}{true}{}
+		\Param{b}{true}{}
+		\Param{n}{true}{}
+		\Param{bn}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_1}{false}{$c\in{}\nat{}$}{true}{}
+		\Guard{grd\_2}{false}{$c\in{}coins \land{} c\in{}dom(counts) \land{} c\in{}dom(to\_block)$}{true}{}
+		\Guard{grd\_3}{false}{$b = to\_block(c)$}{true}{}
+		\Guard{grd\_4}{false}{$n = counts(c)$}{true}{}
+		\Guard{grd\_5}{false}{$b \in{} dom(bcounts)$}{true}{}
+		\Guard{grd\_6}{false}{$bn = bcounts(b)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act\_1}{$counts(c) \bcmeq{} n+1$}{true}{}
+		\Action{act\_2}{$bcounts(b) \bcmeq{} bn+1$}{true}{}
+	}
+}
+}
+\END
+\end{document}

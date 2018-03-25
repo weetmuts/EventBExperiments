@@ -1,6 +1,27 @@
 
 Event-B Experiments by Fredrik Öhrström
 
+**Experiment 6:** count occurences of coins and occurences of blocks of counts
+
+Use an undefined function to_block to categorize the natural numbers into blocks.
+(Could for example be blocks by 10, ie 0..9 maps to 0, 10..19 maps to 1, 20..29 maps to 2, etc)
+
+The accumulate natural numbers (`coins ⊆ ℕ`) keep a count of the number of occurences
+(counts ∈ coins → ℕ) and how many coins in each block (bcounts ∈ to_block[coins] → ℕ)
+
+addNewCoinAndNewBlock/inv_4/INV: goal `bcounts{b ↦ 1}∈to_block[coins∪{c}] → ℕ`
+do not run robot, it will expand too much,
+simply expand b into `to_block(c)` the goal `bcounts{to_block(c) ↦ 1}∈to_block[coins∪{c}] → ℕ`
+can then be discharged using SMT.
+
+addNewCoinUpdateBlock/inv_4/INV: again do not run robot (aka prune at
+top) then replace b with `to_block(c)`, then prune AGAIN immediately
+where the replacement took place, because the robot has already gone
+to far. SMT is successfull immediately where the replacement took
+place, but not if the robot is allowed to continue replacing.
+(In fact it seems like it is the replace of `bn+1` into `bcounts(to_block(c))+1` that
+makes the goal too complicated for the provers.)
+
 **Experiment 5:** max of odd coins
 
 When refining move a guard into an invariant. `@grd_3 odds = { x·x∈coins ∧ x mod 2 = 1 ∣ x }` becomes ` @inv1_3 collected_odds = { x·x∈coins ∧ x mod 2 = 1 ∣ x }`

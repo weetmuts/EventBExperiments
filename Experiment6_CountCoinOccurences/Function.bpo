@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="24">
+<org.eventb.core.poIdentifier name="to_block" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poPredicate name="to_blocl" org.eventb.core.predicate="to_block∈ℕ → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_W-vQoC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poPredicate name="to_blocm" org.eventb.core.predicate="∀x⦂ℤ·∀y⦂ℤ·x∈ℕ∧y∈ℕ∧y&gt;0∧x∈dom(to_block)∧x+y∈dom(to_block)⇒to_block(x+y)≥to_block(x)" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_gDTocC9qEeikXcRT2AUumg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="bcounts" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="counts" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#INITIALISATION\/inv_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×ℤ))∈(∅ ⦂ ℙ(ℤ)) → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#INITIALISATION\/inv_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ·x∈(∅ ⦂ ℙ(ℤ))⇒x∈dom(∅ ⦂ ℙ(ℤ×ℤ))" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#INITIALISATION\/inv_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv_4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×ℤ))∈to_block[∅ ⦂ ℙ(ℤ)] → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#INITIALISATION\/inv_4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMapContexy" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poIdentifier name="counts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="bcounts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="coins'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMapContexy" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTIDENTMapContexy" org.eventb.core.poStamp="28"/>
+<org.eventb.core.poSequent name="addNewCoinAndNewBlock/grd_3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContexz("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c∈dom(to_block)∧to_block∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg|org.eventb.core.guard#_m-3IgC9uEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg|org.eventb.core.guard#_m-3IgC9uEeimi79Q8W0oTw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContexz("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinAndNewBlock/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="coins∪{c}⊆ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinAndNewBlock\/inv_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinAndNewBlock/inv_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="counts{c ↦ 1}∈coins∪{c} → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinAndNewBlock\/inv_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinAndNewBlock/inv_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ·x∈coins∪{c}⇒x∈dom(counts{c ↦ 1})" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinAndNewBlock\/inv_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinAndNewBlock/inv_4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bcounts{b ↦ 1}∈to_block[coins∪{c}] → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinAndNewBlock\/inv_4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMapContexz" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="counts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="bcounts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="coins'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMapContexz(" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTIDENTMapContexz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg|org.eventb.core.guard#_8mHhoC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∉coins∧c∉dom(counts)∧c∈dom(to_block)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg|org.eventb.core.guard#_JhJNoi9rEeikXcRT2AUumg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMapContexz" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContexz(" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b=to_block(c)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg|org.eventb.core.guard#_m-3IgC9uEeimi79Q8W0oTw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b∉dom(bcounts)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_8mG6kC9qEeikXcRT2AUumg|org.eventb.core.guard#_lTkkAC9xEeimi79Q8W0oTw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="addNewCoinUpdateBlock/grd_3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex{("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c∈dom(to_block)∧to_block∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfI0y__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfI0y__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex{("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinUpdateBlock/grd_5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex{*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="b∈dom(bcounts)∧bcounts∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfv4S__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfv4S__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex{*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinUpdateBlock/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="coins∪{c}⊆ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinUpdateBlock\/inv_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinUpdateBlock/inv_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="counts{c ↦ 1}∈coins∪{c} → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinUpdateBlock\/inv_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinUpdateBlock/inv_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ·x∈coins∪{c}⇒x∈dom(counts{c ↦ 1})" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinUpdateBlock\/inv_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addNewCoinUpdateBlock/inv_4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bcounts{b ↦ bn+1}∈to_block[coins∪{c}] → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addNewCoinUpdateBlock\/inv_4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMapContex{" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="bn" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="counts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="bcounts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="coins'" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMapContex{(" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTIDENTMapContex{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_VcHtsS9yEeimi79Q8W0oTw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∉coins∧c∉dom(counts)∧c∈dom(to_block)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCdToC__EeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMapContex{*" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex{(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b=to_block(c)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfI0y__EeiP8ME3SeqLww"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="b∈dom(bcounts)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfv4C__EeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMapContex{" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex{*" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="bn=bcounts(b)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_VcHtsC9yEeimi79Q8W0oTw|org.eventb.core.guard#_vCfv4S__EeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="addMore/grd_3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c∈dom(to_block)∧to_block∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVQi4zAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVQi4zAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addMore/grd_4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c∈dom(counts)∧counts∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVQi5DAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVQi5DAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addMore/grd_6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="b∈dom(bcounts)∧bcounts∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_KE8pkDAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_KE8pkDAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|+"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addMore/inv_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="counts{c ↦ n+1}∈coins → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addMore\/inv_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addMore/inv_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒x∈dom(counts{c ↦ n+1})" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addMore\/inv_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="addMore/inv_4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTALLHYPMapContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bcounts{b ↦ bn+1}∈to_block[coins] → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poSequent#addMore\/inv_4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMapContex|" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poIdentifier name="b" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="bn" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="counts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="bcounts'" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMapContex|(" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTIDENTMapContex\|" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c∈ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_vCfv4i__EeiP8ME3SeqLww"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈coins∧c∈dom(counts)∧c∈dom(to_block)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_vCgW8C__EeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMapContex|)" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|(" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="b=to_block(c)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVQi4zAAEeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPMapContex|+" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n=counts(c)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVQi5DAAEeiP8ME3SeqLww"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="b∈dom(bcounts)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_EVRJ8DAAEeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMapContex|" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#EVTHYPMapContex\|+" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="bn=bcounts(b)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.event#_vCehwC__EeiP8ME3SeqLww|org.eventb.core.guard#_KE8pkDAAEeiP8ME3SeqLww"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/Function.bpo|org.eventb.core.poFile#Function|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="coins⊆ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_1StlcS9qEeikXcRT2AUumg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="counts∈coins → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_tt66IS9xEeimi79Q8W0oTw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒x∈dom(counts)" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_wYPiMC_8EeifONdg58oYUg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="bcounts∈to_block[coins] → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/Function.bum|org.eventb.core.machineFile#Function|org.eventb.core.invariant#_6SGjQS_8EeifONdg58oYUg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

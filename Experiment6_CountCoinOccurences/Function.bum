@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521963793117" org.eventb.texttools.text_representation="machine Function&#10;&#10;sees MapContext&#10;&#10;variables&#10;&#10;    coins counts bcounts&#10;&#10;invariants&#10;&#10;    @inv_1 coins ⊆ ℕ&#10;    @inv_2 counts ∈ coins → ℕ&#10;    @inv_3 ∀x·x∈coins ⇒ x∈dom(counts)&#10;    @inv_4 bcounts ∈ to_block[coins] → ℕ&#10;&#10;events&#10;&#10;  event INITIALISATION&#10;  then&#10;    @init_1 coins ≔  ∅&#10;    @init_2 counts ≔ ∅&#10;    @init_3 bcounts ≔ ∅&#10;  end&#10;&#10;  event addNewCoinAndNewBlock&#10;  any c b&#10;  where&#10;    @grd_1 c∈ℕ&#10;    @grd_2 c∉coins ∧ c∉dom(counts) ∧ c∈dom(to_block)&#10;    @grd_3 b = to_block(c)&#10;    @grd_4 b∉dom(bcounts)&#10;  then&#10;    @act_1 coins ≔ coins ∪ {c}&#10;    @act_2 counts(c) ≔ 1&#10;    @act_3 bcounts(b) ≔ 1&#10;  end&#10;&#10;  event addNewCoinUpdateBlock&#10;  any c b bn&#10;  where&#10;    @grd_1 c∈ℕ&#10;    @grd_2 c∉coins ∧ c∉dom(counts) ∧ c∈dom(to_block)&#10;    @grd_3 b = to_block(c)&#10;    @grd_4 b∈dom(bcounts)&#10;    @grd_5 bn = bcounts(b)&#10;  then&#10;    @act_1 coins ≔ coins ∪ {c}&#10;    @act_2 counts(c) ≔ 1&#10;    @act_3 bcounts(b) ≔ bn+1&#10;  end&#10;&#10;  event addMore&#10;  any c b n bn&#10;  where&#10;    @grd_1 c∈ℕ&#10;    @grd_2 c∈coins ∧ c∈dom(counts) ∧ c∈dom(to_block)&#10;    @grd_3 b = to_block(c)&#10;    @grd_4 n = counts(c)&#10;    @grd_5 b ∈ dom(bcounts)&#10;    @grd_6 bn = bcounts(b)&#10;  then&#10;    @act_1 counts(c) ≔ n+1&#10;    @act_2 bcounts(b) ≔ bn+1&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_1SsXUC9qEeikXcRT2AUumg" org.eventb.core.target="MapContext"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_8mFscC9qEeikXcRT2AUumg" org.eventb.core.assignment="coins ≔  ∅" org.eventb.core.label="init_1"/>
+<org.eventb.core.action name="_8mFscS9qEeikXcRT2AUumg" org.eventb.core.assignment="counts ≔ ∅" org.eventb.core.label="init_2"/>
+<org.eventb.core.action name="_vbSa4C9xEeimi79Q8W0oTw" org.eventb.core.assignment="bcounts ≔ ∅" org.eventb.core.label="init_3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_1Ss-YC9qEeikXcRT2AUumg" org.eventb.core.identifier="coins"/>
+<org.eventb.core.invariant name="_1StlcS9qEeikXcRT2AUumg" org.eventb.core.label="inv_1" org.eventb.core.predicate="coins ⊆ ℕ"/>
+<org.eventb.core.event name="_8mG6kC9qEeikXcRT2AUumg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addNewCoinAndNewBlock">
+<org.eventb.core.parameter name="_8mG6kS9qEeikXcRT2AUumg" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="_8mHhoC9qEeikXcRT2AUumg" org.eventb.core.label="grd_1" org.eventb.core.predicate="c∈ℕ"/>
+<org.eventb.core.guard name="_JhJNoi9rEeikXcRT2AUumg" org.eventb.core.label="grd_2" org.eventb.core.predicate="c∉coins ∧ c∉dom(counts) ∧ c∈dom(to_block)"/>
+<org.eventb.core.action name="_y-UcwC9xEeimi79Q8W0oTw" org.eventb.core.assignment="coins ≔ coins ∪ {c}" org.eventb.core.label="act_1"/>
+<org.eventb.core.action name="_VcHtsi9yEeimi79Q8W0oTw" org.eventb.core.assignment="counts(c) ≔ 1" org.eventb.core.label="act_2"/>
+<org.eventb.core.guard name="_m-3IgC9uEeimi79Q8W0oTw" org.eventb.core.label="grd_3" org.eventb.core.predicate="b = to_block(c)"/>
+<org.eventb.core.guard name="_lTkkAC9xEeimi79Q8W0oTw" org.eventb.core.label="grd_4" org.eventb.core.predicate="b∉dom(bcounts)"/>
+<org.eventb.core.action name="_F1zP8C_9EeifONdg58oYUg" org.eventb.core.assignment="bcounts(b) ≔ 1" org.eventb.core.label="act_3"/>
+<org.eventb.core.parameter name="_f9zZMC9xEeimi79Q8W0oTw" org.eventb.core.identifier="b"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_tt66IC9xEeimi79Q8W0oTw" org.eventb.core.identifier="counts"/>
+<org.eventb.core.invariant name="_tt66IS9xEeimi79Q8W0oTw" org.eventb.core.label="inv_2" org.eventb.core.predicate="counts ∈ coins → ℕ"/>
+<org.eventb.core.event name="_VcHtsC9yEeimi79Q8W0oTw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addNewCoinUpdateBlock">
+<org.eventb.core.parameter name="_aTHm8C90Eeimi79Q8W0oTw" org.eventb.core.identifier="c"/>
+<org.eventb.core.guard name="_VcHtsS9yEeimi79Q8W0oTw" org.eventb.core.label="grd_1" org.eventb.core.predicate="c∈ℕ"/>
+<org.eventb.core.guard name="_vCdToC__EeiP8ME3SeqLww" org.eventb.core.label="grd_2" org.eventb.core.predicate="c∉coins ∧ c∉dom(counts) ∧ c∈dom(to_block)"/>
+<org.eventb.core.action name="_vCd6sC__EeiP8ME3SeqLww" org.eventb.core.assignment="coins ≔ coins ∪ {c}" org.eventb.core.label="act_1"/>
+<org.eventb.core.action name="_vCd6sS__EeiP8ME3SeqLww" org.eventb.core.assignment="counts(c) ≔ 1" org.eventb.core.label="act_2"/>
+<org.eventb.core.parameter name="_vCfI0C__EeiP8ME3SeqLww" org.eventb.core.identifier="b"/>
+<org.eventb.core.parameter name="_vCfI0S__EeiP8ME3SeqLww" org.eventb.core.identifier="bn"/>
+<org.eventb.core.guard name="_vCfI0y__EeiP8ME3SeqLww" org.eventb.core.label="grd_3" org.eventb.core.predicate="b = to_block(c)"/>
+<org.eventb.core.guard name="_vCfv4C__EeiP8ME3SeqLww" org.eventb.core.label="grd_4" org.eventb.core.predicate="b∈dom(bcounts)"/>
+<org.eventb.core.guard name="_vCfv4S__EeiP8ME3SeqLww" org.eventb.core.label="grd_5" org.eventb.core.predicate="bn = bcounts(b)"/>
+<org.eventb.core.action name="_vCgW8S__EeiP8ME3SeqLww" org.eventb.core.assignment="bcounts(b) ≔ bn+1" org.eventb.core.label="act_3"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_wYPiMC_8EeifONdg58oYUg" org.eventb.core.label="inv_3" org.eventb.core.predicate="∀x·x∈coins ⇒ x∈dom(counts)"/>
+<org.eventb.core.variable name="_6SGjQC_8EeifONdg58oYUg" org.eventb.core.identifier="bcounts"/>
+<org.eventb.core.invariant name="_6SGjQS_8EeifONdg58oYUg" org.eventb.core.label="inv_4" org.eventb.core.predicate="bcounts ∈ to_block[coins] → ℕ"/>
+<org.eventb.core.event name="_vCehwC__EeiP8ME3SeqLww" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addMore">
+<org.eventb.core.parameter name="_vCfI0i__EeiP8ME3SeqLww" org.eventb.core.identifier="c"/>
+<org.eventb.core.parameter name="_EVQi4DAAEeiP8ME3SeqLww" org.eventb.core.identifier="b"/>
+<org.eventb.core.parameter name="_EVQi4TAAEeiP8ME3SeqLww" org.eventb.core.identifier="n"/>
+<org.eventb.core.parameter name="_EVQi4jAAEeiP8ME3SeqLww" org.eventb.core.identifier="bn"/>
+<org.eventb.core.guard name="_vCfv4i__EeiP8ME3SeqLww" org.eventb.core.label="grd_1" org.eventb.core.predicate="c∈ℕ"/>
+<org.eventb.core.guard name="_vCgW8C__EeiP8ME3SeqLww" org.eventb.core.label="grd_2" org.eventb.core.predicate="c∈coins ∧ c∈dom(counts) ∧ c∈dom(to_block)"/>
+<org.eventb.core.guard name="_EVQi4zAAEeiP8ME3SeqLww" org.eventb.core.label="grd_3" org.eventb.core.predicate="b = to_block(c)"/>
+<org.eventb.core.guard name="_EVQi5DAAEeiP8ME3SeqLww" org.eventb.core.label="grd_4" org.eventb.core.predicate="n = counts(c)"/>
+<org.eventb.core.guard name="_EVRJ8DAAEeiP8ME3SeqLww" org.eventb.core.label="grd_5" org.eventb.core.predicate="b ∈ dom(bcounts)"/>
+<org.eventb.core.guard name="_KE8pkDAAEeiP8ME3SeqLww" org.eventb.core.label="grd_6" org.eventb.core.predicate="bn = bcounts(b)"/>
+<org.eventb.core.action name="_vCgW8i__EeiP8ME3SeqLww" org.eventb.core.assignment="counts(c) ≔ n+1" org.eventb.core.label="act_1"/>
+<org.eventb.core.action name="_EVRJ8TAAEeiP8ME3SeqLww" org.eventb.core.assignment="bcounts(b) ≔ bn+1" org.eventb.core.label="act_2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

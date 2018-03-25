@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521906243656" org.eventb.texttools.text_representation="context MapContext&#10;&#10;constants&#10;&#10;&#9;to_block&#10;&#10;axioms&#10;&#10;&#9;@axm_1 to_block ∈ ℕ → ℕ&#10;    @axm_2 ∀x·∀y·x∈ℕ ∧ y∈ℕ ∧ y&gt;0 ∧ x∈dom(to_block) ∧ x+y∈dom(to_block)&#10;                 ⇒ to_block(x+y) ≥ to_block(x)&#10;&#10;end&#10;" version="3">
+<org.eventb.core.constant name="_W-upkC9qEeikXcRT2AUumg" org.eventb.core.identifier="to_block"/>
+<org.eventb.core.axiom name="_W-vQoC9qEeikXcRT2AUumg" org.eventb.core.label="axm_1" org.eventb.core.predicate="to_block ∈ ℕ → ℕ"/>
+<org.eventb.core.axiom name="_gDTocC9qEeikXcRT2AUumg" org.eventb.core.label="axm_2" org.eventb.core.predicate="∀x·∀y·x∈ℕ ∧ y∈ℕ ∧ y&gt;0 ∧ x∈dom(to_block) ∧ x+y∈dom(to_block)&#10;                 ⇒ to_block(x+y) ≥ to_block(x)"/>
+</org.eventb.core.contextFile>
