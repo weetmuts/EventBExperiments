@@ -1,17 +1,17 @@
 
 Event-B Experiments by Fredrik Öhrström
 
-**Experiment 6:** count occurences of coins and occurences of blocks of counts
+**Experiment 6:** count occurences of coins and count how many coins there are inside each block
 
 Use an undefined function to_block to categorize the natural numbers into blocks.
-(Could for example be blocks by 10, ie 0..9 maps to 0, 10..19 maps to 1, 20..29 maps to 2, etc)
+This could for example be a blocks by 10, ie 0..9 maps to 0, 10..19 maps to 1, 20..29 maps to 2, etc.
 
-The accumulate natural numbers (`coins ⊆ ℕ`) keep a count of the number of occurences
+Then accumulate natural numbers (`coins ⊆ ℕ`) keep a count of the number of occurences
 (counts ∈ coins → ℕ) and how many coins in each block (bcounts ∈ to_block[coins] → ℕ)
 
-addNewCoinAndNewBlock/inv_4/INV: goal `bcounts{b ↦ 1}∈to_block[coins∪{c}] → ℕ`
+addNewCoinAndNewBlock/inv_4/INV: goal `bcounts∈{b ↦ 1}∈to_block[coins∪{c}] → ℕ`
 do not run robot, it will expand too much,
-simply expand b into `to_block(c)` the goal `bcounts{to_block(c) ↦ 1}∈to_block[coins∪{c}] → ℕ`
+simply expand b into `to_block(c)` the goal `bcounts∈{to_block(c) ↦ 1}∈to_block[coins∪{c}] → ℕ`
 can then be discharged using SMT.
 
 addNewCoinUpdateBlock/inv_4/INV: again do not run robot (aka prune at
