@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="to_block" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm_2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/MapContext.bpo|org.eventb.core.poFile#MapContext|org.eventb.core.poPredicateSet#HYP'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ·x∈ℕ∧y∈ℕ∧y&gt;0∧x∈dom(to_block)∧x+y∈dom(to_block)⇒to_block∈ℤ ⇸ ℤ" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_gDTocC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_gDTocC9qEeikXcRT2AUumg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment6_CountCoinOccurences/MapContext.bpo|org.eventb.core.poFile#MapContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Experiment6_CountCoinOccurences/MapContext.bpo|org.eventb.core.poFile#MapContext|org.eventb.core.poPredicateSet#HYP'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP'" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/MapContext.bpo|org.eventb.core.poFile#MapContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="to_block∈ℕ → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_W-vQoC9qEeikXcRT2AUumg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment6_CountCoinOccurences/MapContext.bpo|org.eventb.core.poFile#MapContext|org.eventb.core.poPredicateSet#HYP'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀x⦂ℤ·∀y⦂ℤ·x∈ℕ∧y∈ℕ∧y&gt;0∧x∈dom(to_block)∧x+y∈dom(to_block)⇒to_block(x+y)≥to_block(x)" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_gDTocC9qEeikXcRT2AUumg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
