@@ -18,6 +18,8 @@ The goal is transformed into `∃b·∀x·x∈ae⇒b≥x`. We still have to prov
 `finite(ae)` and clicking ah, then two clicks on robot will automatically prove the supplied hyp and
 also discharge the proof obligation.
 
+The same method is used to prove thm_2/WD.
+
 **Experiment 7:** simple max of the union of two sets
 
 Surprisingly difficult, as with all things max..... the problem is that the prover does not

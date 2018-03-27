@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="all" org.eventb.core.type="ℙ(ℤ)"/>
@@ -7,19 +7,25 @@
 <org.eventb.core.poIdentifier name="to_month" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
 <org.eventb.core.poIdentifier name="to_week" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv_9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="inv_9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="all≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈all⇒b≥x)∧ran(to_week)∪ran(to_month)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(to_week)∪ran(to_month)⇒b≥x)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_e24xEDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_e24xEDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="thm_1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="thm_1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP4"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀s⦂ℙ(ℤ)·∀d⦂ℙ(ℤ)·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d)⇒finite(s∪d)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_kcGtITG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_kcGtITG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="thm_2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂ℙ(ℤ),b⦂ℙ(ℤ),m⦂ℤ·(m∈ℕ∧a⊆ℕ∧b⊆ℕ∧a≠(∅ ⦂ ℙ(ℤ))∧b≠(∅ ⦂ ℙ(ℤ))∧finite(a)∧finite(b)∧finite(a∪b)⇒(∃b⦂ℤ·∀x⦂ℤ·x∈a⇒b≥x)∧(m=max(a)⇒(∃b0⦂ℤ·∀x⦂ℤ·x∈b⇒b0≥x)))∧(m∈ℕ∧a⊆ℕ∧b⊆ℕ∧a≠(∅ ⦂ ℙ(ℤ))∧b≠(∅ ⦂ ℙ(ℤ))∧finite(a)∧finite(b)∧finite(a∪b)∧m=max(a)∧m=max(b)⇒a∪b≠(∅ ⦂ ℙ(ℤ))∧(∃b0⦂ℤ·∀x⦂ℤ·x∈a∪b⇒b0≥x))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_nBH3gDHNEeipxJLGHKGyOQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_nBH3gDHNEeipxJLGHKGyOQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv_1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{0}⊆ℕ" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_58GyRTG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -27,7 +33,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_1a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_1a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{0}≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_58GyRjG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -35,7 +41,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_1a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_1b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_1b/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite({0})" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_58GyRzG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -43,7 +49,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_1b\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{0 ↦ 0}∈ℕ ⇸ ℕ" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_58GySDG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -51,7 +57,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(ran({0 ↦ 0}))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_58GySTG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -59,7 +65,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_3a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_3a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{0 ↦ 0}≠(∅ ⦂ ℙ(ℤ×ℤ))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_58GySjG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -67,7 +73,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_3a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{0 ↦ 0}∈ℕ ⇸ ℕ" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_KTc0IjG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -75,7 +81,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(ran({0 ↦ 0}))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_KTc0IzG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -83,7 +89,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD7"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_5a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_5a/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{0 ↦ 0}≠(∅ ⦂ ℙ(ℤ×ℤ))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_KTc0JDG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -91,7 +97,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_5a\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD8"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_qpQoYDG4EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -99,7 +105,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD9"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran({0 ↦ 0})⊆{0}" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_JfofoDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -107,7 +113,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD10"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran({0 ↦ 0})⊆{0}" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_S0PekDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -115,7 +121,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD11"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="max({0})=max(ran({0 ↦ 0})∪ran({0 ↦ 0}))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_e24xEDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
@@ -123,13 +129,21 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP4|org.eventb.core.poPredicate#PRD12"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv_10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="INITIALISATION/inv_10/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(ran({0 ↦ 0})∪ran({0 ↦ 0}))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_kcGtIDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_kcGtIDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/inv_10\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP4|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/thm_2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_monti"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂ℙ(ℤ),b⦂ℙ(ℤ),m⦂ℤ·m∈ℕ∧a⊆ℕ∧b⊆ℕ∧a≠(∅ ⦂ ℙ(ℤ))∧b≠(∅ ⦂ ℙ(ℤ))∧finite(a)∧finite(b)∧finite(a∪b)∧m=max(a)∧m=max(b)⇒m=max(a∪b)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_nBH3gDHNEeipxJLGHKGyOQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_nBH3gDHNEeipxJLGHKGyOQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#INITIALISATION\/thm_2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
 </org.eventb.core.poSequent>
 <org.eventb.core.poPredicateSet name="EVTIDENTto_monti" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="all'" org.eventb.core.type="ℙ(ℤ)"/>
@@ -138,19 +152,19 @@
 <org.eventb.core.poIdentifier name="the_max'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPto_monti" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTIDENTto_monti" org.eventb.core.poStamp="1"/>
-<org.eventb.core.poSequent name="calc/grd_5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="calc/grd_5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj*"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran(to_week)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(to_week)⇒b≥x)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_KTcNEjG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_KTcNEjG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj*"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="calc/grd_6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="calc/grd_6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj+"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ran(to_month)≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈ran(to_month)⇒b≥x)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_KTc0IDG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_KTc0IDG3EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj+"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="calc/inv_6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="calc/inv_6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_montj"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="max(m)∈ℕ" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_qpQoYDG4EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ"/>
@@ -158,28 +172,28 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poSequent#calc\/inv_6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP2|org.eventb.core.poPredicate#PRD9"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="calc/act_1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="calc/act_1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_montj"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈m⇒b≥x)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.action#_lN7BEDG4EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.action#_lN7BEDG4EeipxJLGHKGyOQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTALLHYPto_montj"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTto_montj" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTIDENTto_montj" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
 <org.eventb.core.poIdentifier name="mm" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="the_max'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="wm" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="m" org.eventb.core.type="ℙ(ℤ)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPto_montj*" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTIDENTto_montj" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTHYPto_montj*" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTIDENTto_montj" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="to_week≠(∅ ⦂ ℙ(ℤ×ℤ))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_58GyTTG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="to_month≠(∅ ⦂ ℙ(ℤ×ℤ))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_58HZUDG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m=ran(to_week)∪ran(to_month)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_58HZUTG2EeipxJLGHKGyOQ"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(m)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_58HZUjG2EeipxJLGHKGyOQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPto_montj+" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj*" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTHYPto_montj+" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj*" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="wm=max(ran(to_week))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_KTcNEjG3EeipxJLGHKGyOQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPto_montj" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj+" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="EVTALLHYPto_montj" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#EVTHYPto_montj+" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="mm=max(ran(to_month))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.event#_58GySzG2EeipxJLGHKGyOQ|org.eventb.core.guard#_KTc0IDG3EeipxJLGHKGyOQ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
@@ -200,7 +214,10 @@
 <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="max(all)=max(ran(to_week)∪ran(to_month))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_e24xEDG5EeipxJLGHKGyOQ"/>
 <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="finite(ran(to_week)∪ran(to_month))" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_kcGtIDG5EeipxJLGHKGyOQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP4" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="HYP5" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP4" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="∀s⦂ℙ(ℤ)·∀d⦂ℙ(ℤ)·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d)⇒finite(s∪d)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_kcGtITG5EeipxJLGHKGyOQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Experiment8_MaxOfMaxes/MaxOfMaxes.bpo|org.eventb.core.poFile#MaxOfMaxes|org.eventb.core.poPredicateSet#HYP5" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="∀a⦂ℙ(ℤ),b⦂ℙ(ℤ),m⦂ℤ·m∈ℕ∧a⊆ℕ∧b⊆ℕ∧a≠(∅ ⦂ ℙ(ℤ))∧b≠(∅ ⦂ ℙ(ℤ))∧finite(a)∧finite(b)∧finite(a∪b)∧m=max(a)∧m=max(b)⇒m=max(a∪b)" org.eventb.core.source="/Experiment8_MaxOfMaxes/MaxOfMaxes.bum|org.eventb.core.machineFile#MaxOfMaxes|org.eventb.core.invariant#_nBH3gDHNEeipxJLGHKGyOQ"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
