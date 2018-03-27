@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1522153371881" org.eventb.texttools.text_representation="machine MaxOfMaxes&#10;&#10;variables&#10;    all&#10;    to_week&#10;    to_month&#10;    the_max&#10;&#10;invariants&#10;&#10;    @inv_1 all ⊆ ℕ&#10;    @inv_1a all ≠ ∅&#10;    @inv_1b finite(all)&#10;&#9;@inv_2 to_week ∈ ℕ ⇸ ℕ&#10;    @inv_3 finite(ran(to_week))&#10;    @inv_3a to_week ≠ ∅&#10;&#9;@inv_4 to_month ∈ ℕ ⇸ ℕ&#10;    @inv_5 finite(ran(to_month))&#10;    @inv_5a to_month ≠ ∅&#10;    @inv_6 the_max ∈ ℕ&#10;    @inv_7 ran(to_week) ⊆ all&#10;    @inv_8 ran(to_month) ⊆ all&#10;    @inv_9 max(all) = max(ran(to_week)∪ran(to_month))&#10;    @inv_10 finite(ran(to_week)∪ran(to_month))&#10;&#10;theorem&#10;&#10;    @thm_1 ∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d) ⇒ finite(s∪d)&#10;&#10;events&#10;&#10;  event INITIALISATION&#10;  then&#10;    @init_0 all ≔ { 0 }&#10;    @init_1 to_week ≔  { 0 ↦ 0 }&#10;    @init_2 to_month ≔ { 0 ↦ 0 }&#10;    @init_3 the_max ≔ 0&#10;  end&#10;&#10;  event calc&#10;  any m wm mm&#10;  when&#10;    @grd_1 to_week ≠ ∅&#10;    @grd_2 to_month ≠ ∅&#10;    @grd_3 m = (ran(to_week) ∪ ran(to_month))&#10;    @grd_4 finite(m)&#10;    @grd_5 wm = max(ran(to_week))&#10;    @grd_6 mm = max(ran(to_month))&#10;  then&#10;    @act_1 the_max ≔ max(m)&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_58GLMDG2EeipxJLGHKGyOQ" org.eventb.core.assignment="all ≔ { 0 }" org.eventb.core.label="init_0"/>
+<org.eventb.core.action name="_58GyQDG2EeipxJLGHKGyOQ" org.eventb.core.assignment="to_week ≔  { 0 ↦ 0 }" org.eventb.core.label="init_1"/>
+<org.eventb.core.action name="_58GyQTG2EeipxJLGHKGyOQ" org.eventb.core.assignment="to_month ≔ { 0 ↦ 0 }" org.eventb.core.label="init_2"/>
+<org.eventb.core.action name="_58HZUzG2EeipxJLGHKGyOQ" org.eventb.core.assignment="the_max ≔ 0" org.eventb.core.label="init_3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_58GyQjG2EeipxJLGHKGyOQ" org.eventb.core.identifier="all"/>
+<org.eventb.core.variable name="_58GyQzG2EeipxJLGHKGyOQ" org.eventb.core.identifier="to_week"/>
+<org.eventb.core.variable name="_58GyRDG2EeipxJLGHKGyOQ" org.eventb.core.identifier="to_month"/>
+<org.eventb.core.invariant name="_58GyRTG2EeipxJLGHKGyOQ" org.eventb.core.label="inv_1" org.eventb.core.predicate="all ⊆ ℕ"/>
+<org.eventb.core.invariant name="_58GyRjG2EeipxJLGHKGyOQ" org.eventb.core.label="inv_1a" org.eventb.core.predicate="all ≠ ∅"/>
+<org.eventb.core.invariant name="_58GyRzG2EeipxJLGHKGyOQ" org.eventb.core.label="inv_1b" org.eventb.core.predicate="finite(all)"/>
+<org.eventb.core.invariant name="_58GySDG2EeipxJLGHKGyOQ" org.eventb.core.label="inv_2" org.eventb.core.predicate="to_week ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.invariant name="_58GySTG2EeipxJLGHKGyOQ" org.eventb.core.label="inv_3" org.eventb.core.predicate="finite(ran(to_week))"/>
+<org.eventb.core.invariant name="_58GySjG2EeipxJLGHKGyOQ" org.eventb.core.label="inv_3a" org.eventb.core.predicate="to_week ≠ ∅"/>
+<org.eventb.core.event name="_58GySzG2EeipxJLGHKGyOQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="calc">
+<org.eventb.core.parameter name="_58GyTDG2EeipxJLGHKGyOQ" org.eventb.core.identifier="m"/>
+<org.eventb.core.parameter name="_KTcNEDG3EeipxJLGHKGyOQ" org.eventb.core.identifier="wm"/>
+<org.eventb.core.parameter name="_KTcNETG3EeipxJLGHKGyOQ" org.eventb.core.identifier="mm"/>
+<org.eventb.core.guard name="_58GyTTG2EeipxJLGHKGyOQ" org.eventb.core.label="grd_1" org.eventb.core.predicate="to_week ≠ ∅"/>
+<org.eventb.core.guard name="_58HZUDG2EeipxJLGHKGyOQ" org.eventb.core.label="grd_2" org.eventb.core.predicate="to_month ≠ ∅"/>
+<org.eventb.core.guard name="_58HZUTG2EeipxJLGHKGyOQ" org.eventb.core.label="grd_3" org.eventb.core.predicate="m = (ran(to_week) ∪ ran(to_month))"/>
+<org.eventb.core.guard name="_58HZUjG2EeipxJLGHKGyOQ" org.eventb.core.label="grd_4" org.eventb.core.predicate="finite(m)"/>
+<org.eventb.core.guard name="_KTcNEjG3EeipxJLGHKGyOQ" org.eventb.core.label="grd_5" org.eventb.core.predicate="wm = max(ran(to_week))"/>
+<org.eventb.core.guard name="_KTc0IDG3EeipxJLGHKGyOQ" org.eventb.core.label="grd_6" org.eventb.core.predicate="mm = max(ran(to_month))"/>
+<org.eventb.core.action name="_lN7BEDG4EeipxJLGHKGyOQ" org.eventb.core.assignment="the_max ≔ max(m)" org.eventb.core.label="act_1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_KTc0ITG3EeipxJLGHKGyOQ" org.eventb.core.identifier="the_max"/>
+<org.eventb.core.invariant name="_KTc0IjG3EeipxJLGHKGyOQ" org.eventb.core.label="inv_4" org.eventb.core.predicate="to_month ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.invariant name="_KTc0IzG3EeipxJLGHKGyOQ" org.eventb.core.label="inv_5" org.eventb.core.predicate="finite(ran(to_month))"/>
+<org.eventb.core.invariant name="_KTc0JDG3EeipxJLGHKGyOQ" org.eventb.core.label="inv_5a" org.eventb.core.predicate="to_month ≠ ∅"/>
+<org.eventb.core.invariant name="_qpQoYDG4EeipxJLGHKGyOQ" org.eventb.core.label="inv_6" org.eventb.core.predicate="the_max ∈ ℕ"/>
+<org.eventb.core.invariant name="_JfofoDG5EeipxJLGHKGyOQ" org.eventb.core.label="inv_7" org.eventb.core.predicate="ran(to_week) ⊆ all"/>
+<org.eventb.core.invariant name="_S0PekDG5EeipxJLGHKGyOQ" org.eventb.core.label="inv_8" org.eventb.core.predicate="ran(to_month) ⊆ all"/>
+<org.eventb.core.invariant name="_e24xEDG5EeipxJLGHKGyOQ" org.eventb.core.label="inv_9" org.eventb.core.predicate="max(all) = max(ran(to_week)∪ran(to_month))"/>
+<org.eventb.core.invariant name="_kcGtIDG5EeipxJLGHKGyOQ" org.eventb.core.label="inv_10" org.eventb.core.predicate="finite(ran(to_week)∪ran(to_month))"/>
+<org.eventb.core.invariant name="_kcGtITG5EeipxJLGHKGyOQ" org.eventb.core.label="thm_1" org.eventb.core.predicate="∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d) ⇒ finite(s∪d)" org.eventb.core.theorem="true"/>
+</org.eventb.core.machineFile>
