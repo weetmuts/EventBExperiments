@@ -1,5 +1,22 @@
 
-Event-B Experiments by Fredrik Öhrström
+Event-B Experiments by Fredrik Öhrström, developed using Roding 3.3 with SMT provers installed.
+
+**Experiment 8:** max(all) = max(ran(to_week)∪ran(to_month))
+
+The pattern matching rule that discharges max existance cannot understand anything else than
+a keyword in place for the set. For example, calc/act_1/WD is proved automatically
+because I name the variable `m=ran(to_week)∪ran(to_month)` together with `finite(m)`
+then the existance predicate: `∃b·∀x·x∈m⇒b≥x` is automatically proved. If m is replaced with
+ran(to_week)∪ran(to_month), then suddenly it cannot be proved! Also if the m is not explicitly
+declared finite using `finite(m)`, the pattern matching proving does not match either. It does not help that
+`finite(ran(to_week)∪ran(to_month))` is a hypothesis.
+
+Using this information it is possible to prove inv_9/WD by naming an expression. I.e.
+we have the goal `∃b·∀x·x∈ran(to_week)∪ran(to_month)⇒b≥x` then enter the expression
+`ran(to_week)∪ran(to_month)` in the proof control, then click the ae (Add Expression) button.
+The goal is transformed into `∃b·∀x·x∈ae⇒b≥x`. We still have to provide the hypothesis
+`finite(ae)` and clicking ah, then two clicks on robot will automatically prove the supplied hyp and
+also discharge the proof obligation.
 
 **Experiment 7:** simple max of the union of two sets
 
