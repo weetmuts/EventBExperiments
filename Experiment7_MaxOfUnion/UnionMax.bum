@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1522150194692" org.eventb.texttools.text_representation="machine UnionMax&#10;&#10;variables&#10;    to_week&#10;    to_month&#10;    the_max&#10;&#10;invariants&#10;&#10;&#9;@inv_1 to_week ∈ ℕ ⇸ ℕ&#10;    @inv_2 finite(ran(to_week))&#10;&#9;@inv_3 to_month ∈ ℕ ⇸ ℕ&#10;    @inv_4 finite(ran(to_month))&#10;    @inv_5 the_max ∈ ℕ&#10;&#10;theorem&#10;&#10;    @thm_1 ∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d) ⇒ finite(s∪d)&#10;&#10;events&#10;&#10;  event INITIALISATION&#10;  then&#10;    @init_1 to_week ≔ ∅&#10;    @init_2 to_month ≔ ∅&#10;    @init_3 the_max ≔ 0&#10;  end&#10;&#10;  event calc&#10;  any m&#10;  when&#10;    @grd_1 to_week ≠ ∅&#10;    @grd_2 to_month ≠ ∅&#10;    @grd_3 m = (ran(to_week) ∪ ran(to_month)) // To have act_1_WD autoprove add the guard: @grd_4 finite(m)&#10;  then&#10;    @act_1 the_max ≔ max(m)&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_WgKlgDDvEei3GIcPPZh2EQ" org.eventb.core.assignment="to_week ≔ ∅" org.eventb.core.label="init_1"/>
+<org.eventb.core.action name="_WgLMkDDvEei3GIcPPZh2EQ" org.eventb.core.assignment="to_month ≔ ∅" org.eventb.core.label="init_2"/>
+<org.eventb.core.action name="_WgLMljDvEei3GIcPPZh2EQ" org.eventb.core.assignment="the_max ≔ 0" org.eventb.core.label="init_3"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="__CqZQDDuEei3GIcPPZh2EQ" org.eventb.core.identifier="to_week"/>
+<org.eventb.core.variable name="__CrAUDDuEei3GIcPPZh2EQ" org.eventb.core.identifier="to_month"/>
+<org.eventb.core.invariant name="__CrAUTDuEei3GIcPPZh2EQ" org.eventb.core.label="inv_1" org.eventb.core.predicate="to_week ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.invariant name="__CrAUjDuEei3GIcPPZh2EQ" org.eventb.core.label="inv_2" org.eventb.core.predicate="finite(ran(to_week))"/>
+<org.eventb.core.variable name="_WgLMkTDvEei3GIcPPZh2EQ" org.eventb.core.identifier="the_max"/>
+<org.eventb.core.invariant name="_WgLMkjDvEei3GIcPPZh2EQ" org.eventb.core.label="inv_3" org.eventb.core.predicate="to_month ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.event name="_WgLMkzDvEei3GIcPPZh2EQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="calc">
+<org.eventb.core.guard name="_WgLMlDDvEei3GIcPPZh2EQ" org.eventb.core.label="grd_1" org.eventb.core.predicate="to_week ≠ ∅"/>
+<org.eventb.core.guard name="_WgLMlTDvEei3GIcPPZh2EQ" org.eventb.core.label="grd_2" org.eventb.core.predicate="to_month ≠ ∅"/>
+<org.eventb.core.guard name="_kmuQgDDvEei3GIcPPZh2EQ" org.eventb.core.comment="To have act_1_WD autoprove add the guard: @grd_4 finite(m)" org.eventb.core.label="grd_3" org.eventb.core.predicate="m = (ran(to_week) ∪ ran(to_month))"/>
+<org.eventb.core.action name="_bfSK4DDvEei3GIcPPZh2EQ" org.eventb.core.assignment="the_max ≔ max(m)" org.eventb.core.label="act_1"/>
+<org.eventb.core.parameter name="_7yt5kDE9EeiiAt9wFIaI7A" org.eventb.core.identifier="m"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_BSt3oDGwEeipxJLGHKGyOQ" org.eventb.core.label="inv_4" org.eventb.core.predicate="finite(ran(to_month))"/>
+<org.eventb.core.invariant name="_UmE-sDGwEeipxJLGHKGyOQ" org.eventb.core.label="inv_5" org.eventb.core.predicate="the_max ∈ ℕ"/>
+<org.eventb.core.invariant name="_iMNAsDGxEeipxJLGHKGyOQ" org.eventb.core.label="thm_1" org.eventb.core.predicate="∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d) ⇒ finite(s∪d)" org.eventb.core.theorem="true"/>
+</org.eventb.core.machineFile>

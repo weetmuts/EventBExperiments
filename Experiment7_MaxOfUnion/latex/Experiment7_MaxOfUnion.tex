@@ -1,0 +1,43 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\MultiTitle{Experiment7\_MaxOfUnion}
+\MultiHeader{MACHINE}{UnionMax}
+\MACHINE{UnionMax}{}{}{}
+\VARIABLES{
+	\Variable{to\_week}{}
+	\Variable{to\_month}{}
+	\Variable{the\_max}{}
+}
+\INVARIANTS{
+	\Invariant{inv\_1}{false}{$to\_week \in{} \nat{} \pfun{} \nat{}$}{}
+	\Invariant{inv\_2}{false}{$finite(ran(to\_week))$}{}
+	\Invariant{inv\_3}{false}{$to\_month \in{} \nat{} \pfun{} \nat{}$}{}
+	\Invariant{inv\_4}{false}{$finite(ran(to\_month))$}{}
+	\Invariant{inv\_5}{false}{$the\_max \in{} \nat{}$}{}
+	\Invariant{thm\_1}{true}{$\forall{}s\qdot{}\forall{}d\qdot{}s\subseteq{}\nat{}\land{}d\subseteq{}\nat{}\land{}finite(s)\land{}finite(d) \limp{} finite(s\bunion{}d)$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{init\_1}{$to\_week \bcmeq{} \emptyset{}$}{true}{}
+		\Action{init\_2}{$to\_month \bcmeq{} \emptyset{}$}{true}{}
+		\Action{init\_3}{$the\_max \bcmeq{} 0$}{true}{}
+	}
+}
+\EVT{calc}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{m}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd\_1}{false}{$to\_week \neq{} \emptyset{}$}{true}{}
+		\Guard{grd\_2}{false}{$to\_month \neq{} \emptyset{}$}{true}{}
+		\Guard{grd\_3}{false}{$m = (ran(to\_week) \bunion{} ran(to\_month))$}{true}{\\To have act$\_$1$\_$WD autoprove add the guard: @grd$\_$4 finite(m)}
+	}
+	\ACTIONS{true}{
+		\Action{act\_1}{$the\_max \bcmeq{} max(m)$}{true}{}
+	}
+}
+}
+\END
+\end{document}
