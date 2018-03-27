@@ -1,6 +1,26 @@
 
 Event-B Experiments by Fredrik Öhrström
 
+**Experiment 7:** simple max of the union of two sets
+
+Surprisingly difficult, as with all things max..... the problem is that the prover does not
+understand that the union of two finite sets are also finite. Adding a theorem does not help.
+Only adding a very explicit guard helps! If not using the guard, the automatic prover files.
+
+
+calc/act1/WD: Prune at the root, then add the hypothesis `finite(m)`,
+prune where the goal is `m≠∅ ∧ (∃ b · ∀ x · x∈m ⇒ b≥x)` and the hyps are:
+```
+to_week≠∅
+to_month≠∅
+m=ran(to_week)∪ran(to_month)
+finite(m)
+```
+then run robot. Now it autoproves.
+
+Odd that it can easily prove `finite(m)` but if max requires that for the WD proof,
+why not attempt that proof automatically?
+
 **Experiment 6:** count occurences of coins and count how many coins there are inside each block
 
 Use an undefined function to_block to categorize the natural numbers into blocks.
