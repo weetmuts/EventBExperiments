@@ -5,11 +5,13 @@ Event-B Experiments by Fredrik Öhrström
 
 Surprisingly difficult, as with all things max..... the problem is that the prover does not
 understand that the union of two finite sets are also finite. Adding a theorem does not help.
-Only adding a very explicit guard helps! If not using the guard, the automatic prover files.
+Only adding a very explicit guard helps! If not using the guard, then the automatic prover fails.
 
+The interactive prover runs ahead and destroys the goal for automatic proving. Thus
+you must prune twice to get back to simpler goals.
 
 calc/act1/WD: Prune at the root, then add the hypothesis `finite(m)`,
-prune where the goal is `m≠∅ ∧ (∃ b · ∀ x · x∈m ⇒ b≥x)` and the hyps are:
+then prune again where the goal is `m≠∅ ∧ (∃ b · ∀ x · x∈m ⇒ b≥x)` and the hyps are:
 ```
 to_week≠∅
 to_month≠∅
@@ -19,7 +21,7 @@ finite(m)
 then run robot. Now it autoproves.
 
 Odd that it can easily prove `finite(m)` but if max requires that for the WD proof,
-why not attempt that proof automatically?
+why does it not attempt that proof automatically?
 
 **Experiment 6:** count occurences of coins and count how many coins there are inside each block
 
