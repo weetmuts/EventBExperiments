@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1523265990307" org.eventb.texttools.text_representation="machine MoreMaxes&#10;&#10;variables&#10;&#10;  daily&#10;  weekly&#10;  monthly&#10;  source&#10;&#10;invariants&#10;&#10;  @inv_1 daily ∈ ℕ ⇸ ℕ&#10;  @inv_2 weekly ∈ ℕ ⇸ ℕ&#10;  @inv_3 monthly ∈ ℕ ⇸ ℕ&#10;  @inv_4 finite(daily)&#10;  @inv_5 finite(weekly)&#10;  @inv_6 finite(monthly)&#10;  @inv_7 daily ≠ ∅&#10;  @inv_8 weekly ≠ ∅&#10;  @inv_9 monthly ≠ ∅&#10;  @inv_10 source ⊆ ℕ&#10;  @inv_11 source ≠ ∅&#10;  @inv_12 finite(source)&#10;  @inv_13 max(source) = max(ran(daily))&#10;  @inv_14 max(source) = max(ran(weekly))&#10;  @inv_15 max(source) = max(ran(monthly))&#10;&#10;theorem&#10;&#10;   @thm_1 ∀s·∀d· s⊆ℕ ∧ d⊆ℕ ∧ finite(s) ∧ finite(d) ⇒ finite(s∪d)&#10;&#10;   @thm_2 ∀s · s∈ℕ⇸ℕ ∧ s≠∅ ∧ ran(s)≠∅ ∧ finite(s)&#10;            ⇒ finite(dom(s)) ∧ finite(ran(s))&#10;&#10;   @thm_3 ∀a,b·a⊆ℕ∧b⊆ℕ∧ a≠∅ ∧ b ≠ ∅ ∧&#10;                 finite(a)∧finite(b)∧&#10;                 max(a)=max(b)&#10;             ⇒  max(a)=max(a∪b)&#10;&#10;   @thm_4 ∀a,b·a⊆ℕ∧b⊆ℕ∧ a≠∅ ∧ b ≠ ∅ ∧&#10;                 finite(a)∧finite(b)&#10;             ⇒ max(a∪b)=max(b∪a)&#10;&#10;events&#10;  event INITIALISATION&#10;  then&#10;    @init_1 daily ≔ { 0 ↦ 0 }&#10;    @init_2 weekly ≔ { 0 ↦ 0 }&#10;    @init_3 monthly ≔ { 0 ↦ 0 }&#10;    @init_4 source ≔ { 0 }&#10;  end&#10;&#10;  event done&#10;  then&#10;    @act_1 source ≔ ran(daily) ∪ ran(weekly) ∪ ran(monthly)&#10;  end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_bviVwDNSEei66YgB4EIPCg" org.eventb.core.assignment="daily ≔ { 0 ↦ 0 }" org.eventb.core.label="init_1"/>
+<org.eventb.core.action name="_bviVwTNSEei66YgB4EIPCg" org.eventb.core.assignment="weekly ≔ { 0 ↦ 0 }" org.eventb.core.label="init_2"/>
+<org.eventb.core.action name="_bviVwjNSEei66YgB4EIPCg" org.eventb.core.assignment="monthly ≔ { 0 ↦ 0 }" org.eventb.core.label="init_3"/>
+<org.eventb.core.action name="_mtaYkzNSEei66YgB4EIPCg" org.eventb.core.assignment="source ≔ { 0 }" org.eventb.core.label="init_4"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_MDWJsDNSEei66YgB4EIPCg" org.eventb.core.identifier="daily"/>
+<org.eventb.core.variable name="_MDWwwDNSEei66YgB4EIPCg" org.eventb.core.identifier="weekly"/>
+<org.eventb.core.variable name="_MDWwwTNSEei66YgB4EIPCg" org.eventb.core.identifier="monthly"/>
+<org.eventb.core.invariant name="_MDWwwjNSEei66YgB4EIPCg" org.eventb.core.label="inv_1" org.eventb.core.predicate="daily ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.invariant name="_MDWwwzNSEei66YgB4EIPCg" org.eventb.core.label="inv_2" org.eventb.core.predicate="weekly ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.invariant name="_MDXX0DNSEei66YgB4EIPCg" org.eventb.core.label="inv_3" org.eventb.core.predicate="monthly ∈ ℕ ⇸ ℕ"/>
+<org.eventb.core.invariant name="_MDXX0TNSEei66YgB4EIPCg" org.eventb.core.label="inv_4" org.eventb.core.predicate="finite(daily)"/>
+<org.eventb.core.invariant name="_bviVwzNSEei66YgB4EIPCg" org.eventb.core.label="inv_5" org.eventb.core.predicate="finite(weekly)"/>
+<org.eventb.core.invariant name="_bvi80DNSEei66YgB4EIPCg" org.eventb.core.label="inv_6" org.eventb.core.predicate="finite(monthly)"/>
+<org.eventb.core.invariant name="_bvi80TNSEei66YgB4EIPCg" org.eventb.core.label="inv_7" org.eventb.core.predicate="daily ≠ ∅"/>
+<org.eventb.core.invariant name="_bvi80jNSEei66YgB4EIPCg" org.eventb.core.label="inv_8" org.eventb.core.predicate="weekly ≠ ∅"/>
+<org.eventb.core.invariant name="_bvi80zNSEei66YgB4EIPCg" org.eventb.core.label="inv_9" org.eventb.core.predicate="monthly ≠ ∅"/>
+<org.eventb.core.invariant name="_bvi81DNSEei66YgB4EIPCg" org.eventb.core.label="inv_10" org.eventb.core.predicate="source ⊆ ℕ"/>
+<org.eventb.core.variable name="_mtaYkDNSEei66YgB4EIPCg" org.eventb.core.identifier="source"/>
+<org.eventb.core.invariant name="_mtaYkTNSEei66YgB4EIPCg" org.eventb.core.label="inv_11" org.eventb.core.predicate="source ≠ ∅"/>
+<org.eventb.core.event name="_mtaYkjNSEei66YgB4EIPCg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="done">
+<org.eventb.core.action name="_r0V2IDNSEei66YgB4EIPCg" org.eventb.core.assignment="source ≔ ran(daily) ∪ ran(weekly) ∪ ran(monthly)" org.eventb.core.label="act_1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_3lESMDNSEei66YgB4EIPCg" org.eventb.core.label="inv_12" org.eventb.core.predicate="finite(source)"/>
+<org.eventb.core.invariant name="_3lESMTNSEei66YgB4EIPCg" org.eventb.core.label="inv_13" org.eventb.core.predicate="max(source) = max(ran(daily))"/>
+<org.eventb.core.invariant name="_3lESMjNSEei66YgB4EIPCg" org.eventb.core.label="inv_14" org.eventb.core.predicate="max(source) = max(ran(weekly))"/>
+<org.eventb.core.invariant name="_FwvtwDNTEei66YgB4EIPCg" org.eventb.core.label="inv_15" org.eventb.core.predicate="max(source) = max(ran(monthly))"/>
+<org.eventb.core.invariant name="_VsD68DNTEei66YgB4EIPCg" org.eventb.core.label="thm_1" org.eventb.core.predicate="∀s·∀d· s⊆ℕ ∧ d⊆ℕ ∧ finite(s) ∧ finite(d) ⇒ finite(s∪d)" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="_mERfgDNTEei66YgB4EIPCg" org.eventb.core.label="thm_2" org.eventb.core.predicate="∀s · s∈ℕ⇸ℕ ∧ s≠∅ ∧ ran(s)≠∅ ∧ finite(s)&#10;            ⇒ finite(dom(s)) ∧ finite(ran(s))"/>
+<org.eventb.core.invariant name="_t_b_QDNTEei66YgB4EIPCg" org.eventb.core.label="thm_3" org.eventb.core.predicate="∀a,b·a⊆ℕ∧b⊆ℕ∧ a≠∅ ∧ b ≠ ∅ ∧&#10;                 finite(a)∧finite(b)∧&#10;                 max(a)=max(b)&#10;             ⇒  max(a)=max(a∪b)"/>
+<org.eventb.core.invariant name="_sV2dsDvXEeiIAO-NeCJKng" org.eventb.core.label="thm_4" org.eventb.core.predicate="∀a,b·a⊆ℕ∧b⊆ℕ∧ a≠∅ ∧ b ≠ ∅ ∧&#10;                 finite(a)∧finite(b)&#10;             ⇒ max(a∪b)=max(b∪a)"/>
+</org.eventb.core.machineFile>
