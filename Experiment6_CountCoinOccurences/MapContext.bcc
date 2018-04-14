@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
-<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm_1" org.eventb.core.predicate="to_block∈ℕ → ℕ" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_W-vQoC9qEeikXcRT2AUumg" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm_2" org.eventb.core.predicate="∀x⦂ℤ·∀y⦂ℤ·x∈ℕ∧y∈ℕ∧y&gt;0∧x∈dom(to_block)∧x+y∈dom(to_block)⇒to_block(x+y)≥to_block(x)" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.axiom#_gDTocC9qEeikXcRT2AUumg" org.eventb.core.theorem="false"/>
-<org.eventb.core.scConstant name="to_block" org.eventb.core.source="/Experiment6_CountCoinOccurences/MapContext.buc|org.eventb.core.contextFile#MapContext|org.eventb.core.constant#_W-upkC9qEeikXcRT2AUumg" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
-</org.eventb.core.scContextFile>

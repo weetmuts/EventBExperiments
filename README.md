@@ -1,6 +1,10 @@
 
 Event-B Experiments by Fredrik Öhrström, developed using Roding 3.3 with SMT provers installed.
 
+**Experiment 10:**
+
+To prove `max(a)=max(a∪b∪c) given max(a)=max(b) and max(b)=max(c)` you must add hyp `max(a)=max(c)` then CVT will proove it.
+
 **Experiment 9:**
 
 inv_14/WD: to prove the trivial finite(dom(s)) or finite(ran(s)) when you have the hyp finite(s) you have to apply FIN_REL_DOM_R or FIN_REL_RAN_R. You do so by using the drop down when clicking on `finite` and choosing `finite of a domain of a relation in goal` (or range when it is a range).
