@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1570029074361" org.eventb.texttools.text_representation="context LambdaContext&#10;&#10;constants&#10;&#10;   n file_parts&#10;&#10;axioms&#10;&#10;   @axm_1 n∈ℕ&#10;   @axm_2 file_parts ∈ 1‥n → BOOL&#10;&#10;end&#10;" version="3">
+<org.eventb.core.constant name="_R8HCgD_4EeikOMhR4kfRdg" org.eventb.core.generated="false" org.eventb.core.identifier="n"/>
+<org.eventb.core.constant name="_R8HCgT_4EeikOMhR4kfRdg" org.eventb.core.generated="false" org.eventb.core.identifier="file_parts"/>
+<org.eventb.core.axiom name="_R8HpkD_4EeikOMhR4kfRdg" org.eventb.core.generated="false" org.eventb.core.label="axm_1" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.axiom name="_R8HpkT_4EeikOMhR4kfRdg" org.eventb.core.generated="false" org.eventb.core.label="axm_2" org.eventb.core.predicate="file_parts ∈ 1‥n → BOOL"/>
+</org.eventb.core.contextFile>

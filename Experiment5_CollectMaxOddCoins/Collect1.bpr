@@ -139,16 +139,16 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="inv1_3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4">
+<org.eventb.core.prProof name="inv1_3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p7">
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p4,p1,p2,p3,p7">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p8">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p5,p1,p4,p2,p3,p8">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -159,25 +159,27 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="collected_odds" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="max_odd" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(coins)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="collected_odds⊆ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="0≤x">
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="0≤x">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(collected_odds)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="x∈coins⇒0≤x">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="max_odd∈ℕ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="x∈coins⇒0≤x">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="coins⊆ℕ"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="x∈coins">
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="coins⊆ℕ"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="x∈coins">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -188,8 +190,8 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆ℕ"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv1_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -200,8 +202,8 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(∅ ⦂ ℙ(ℤ))"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv1_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -214,8 +216,8 @@
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂ℤ·x∈(∅ ⦂ ℙ(ℤ))⇒0≤x∧0&lt;2"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))={x⦂ℤ·x∈(∅ ⦂ ℙ(ℤ))∧x mod 2=1 ∣ x}"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="add/grd1_2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7">
 <org.eventb.core.lang name="L"/>
@@ -328,17 +330,18 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0=0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="findMax/act1_1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Existence of minimum or maximum in goal with finite hypothesis" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Existence of minimum or maximum in goal with finite hypothesis" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p2"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -348,34 +351,47 @@
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤∧(∃b⦂ℤ·∀x⦂ℤ·x∈collected_odds⇒b≥x)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="collected_odds≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈collected_odds⇒b≥x)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(collected_odds)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬collected_odds=(∅ ⦂ ℙ(ℤ))"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∃b⦂ℤ·∀x⦂ℤ·x∈collected_odds⇒b≥x"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬collected_odds=(∅ ⦂ ℙ(ℤ))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∃b⦂ℤ·∀x⦂ℤ·x∈collected_odds⇒b≥x"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.finiteHypBoundedGoal"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.finiteHypBoundedGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="findMax/act_1/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="collected_odds" org.eventb.core.type="ℙ(ℤ)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="collected_odds≠(∅ ⦂ ℙ(ℤ))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="collected_odds≠(∅ ⦂ ℙ(ℤ))"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="max(collected_odds)=max(collected_odds)"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬collected_odds=(∅ ⦂ ℙ(ℤ))"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬collected_odds=(∅ ⦂ ℙ(ℤ))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="addOdd/grd1_2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7">
+<org.eventb.core.prProof name="addOdd/grd1_2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p7,p1,p3,p4,p2,p5,p8">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p8,p1,p6,p3,p4,p2,p5,p9">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -383,29 +399,37 @@
 <org.eventb.core.prIdent name="c" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="collected_odds" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="max_odd" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(coins)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="collected_odds={x⦂ℤ·x∈coins∧x mod 2=1 ∣ x}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="0≤c"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="0≤c"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤c∧0&lt;2"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="collected_odds⊆ℕ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(collected_odds)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∈ℕ"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="coins⊆ℕ"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="max_odd∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="coins⊆ℕ"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="addOdd/inv1_1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p1,p2">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps=""/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -414,32 +438,57 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="c" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="collected_odds" org.eventb.core.type="ℙ(ℤ)"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="0&lt;2"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤∧⊤"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="0&lt;2"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤∧⊤"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="collected_odds⊆ℕ"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="c∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧⊤">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="collected_odds∪{c}⊆ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="collected_odds⊆ℕ∧c∈ℕ"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="collected_odds⊆ℕ∧c∈ℕ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="addOdd/inv1_2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="c" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="collected_odds" org.eventb.core.type="ℙ(ℤ)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="0&lt;2"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="0&lt;2"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(collected_odds∪{c})"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(collected_odds)"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧⊤">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x">
+<org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="addOdd/inv1_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
@@ -565,12 +614,12 @@
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="ignoreEven/grd1_2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7">
+<org.eventb.core.prProof name="ignoreEven/grd1_2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p7,p1,p3,p4,p2,p5,p8">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p8,p1,p6,p3,p4,p2,p5,p9">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -578,18 +627,20 @@
 <org.eventb.core.prIdent name="c" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="coins" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.prIdent name="collected_odds" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="max_odd" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(coins)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="collected_odds={x⦂ℤ·x∈coins∧x mod 2=1 ∣ x}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="0≤c"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="0≤c"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0≤c∧0&lt;2"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="collected_odds⊆ℕ"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(collected_odds)"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∈ℕ"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="coins⊆ℕ"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="max_odd∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x∧0&lt;2"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀x⦂ℤ·x∈coins⇒0≤x"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="coins⊆ℕ"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="ignoreEven/inv1_3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>

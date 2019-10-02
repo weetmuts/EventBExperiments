@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1521828599619" org.eventb.texttools.text_representation="machine Simple1 refines Simple&#10;&#10;variables from to tmp copying&#10;&#10;invariants&#10;  @inv1_1 tmp ∈ ℕ&#10;  @inv1_2 copying ∈ BOOL&#10;  @inv1_3 copying = TRUE ⇒  tmp = from&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @init1_1 tmp :∈ ℕ&#10;      @init1_2 copying ≔ FALSE&#10;  end&#10;&#10;  event copyStart&#10;    where&#10;      @grd1_1 copying = FALSE&#10;    then&#10;      @act1_1 tmp ≔ from&#10;      @act1_2 copying ≔ TRUE&#10;  end&#10;&#10;  event copyDone refines copy&#10;    where&#10;      @grd1_1 copying = TRUE&#10;    then&#10;      @act1_1 to ≔ tmp&#10;      @grd1_2 copying ≔ FALSE&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1550834243453" org.eventb.texttools.text_representation="machine Simple1 refines Simple&#10;&#10;variables from to tmp copying&#10;&#10;invariants&#10;  @inv1_1 tmp ∈ ℕ&#10;  @inv1_2 copying ∈ BOOL&#10;  @inv1_3 copying = TRUE ⇒  tmp = from&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;    then&#10;      @init1_1 tmp :∈ ℕ&#10;      @init1_2 copying ≔ FALSE&#10;  end&#10;&#10;  event copyStart&#10;    where&#10;      @grd1_1 copying = FALSE&#10;    then&#10;      @act1_1 tmp ≔ from&#10;      @act1_2 copying ≔ TRUE&#10;  end&#10;&#10;  event copyDone refines copy&#10;    where&#10;      @grd1_1 copying = TRUE&#10;    then&#10;      @act1_1 to ≔ tmp&#10;      @grd1_2 copying ≔ FALSE&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="Simple"/>
 <org.eventb.core.variable name="_AW3McSnmEeiBeMYfOzNVkQ" org.eventb.core.identifier="from"/>
 <org.eventb.core.variable name="_Sprk0CqcEeigaN9Fe2Ez3A" org.eventb.core.identifier="to"/>
@@ -18,9 +18,9 @@
 <org.eventb.core.invariant name="_26u8ESqcEeigaN9Fe2Ez3A" org.eventb.core.label="inv1_2" org.eventb.core.predicate="copying ∈ BOOL"/>
 <org.eventb.core.event name="_FwmkICqdEeigaN9Fe2Ez3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="copyDone">
 <org.eventb.core.refinesEvent name="_FwmkISqdEeigaN9Fe2Ez3A" org.eventb.core.target="copy"/>
-<org.eventb.core.guard name="_FwmkIiqdEeigaN9Fe2Ez3A" org.eventb.core.label="grd1_1" org.eventb.core.predicate="copying = TRUE"/>
 <org.eventb.core.action name="_FwmkIyqdEeigaN9Fe2Ez3A" org.eventb.core.assignment="to ≔ tmp" org.eventb.core.label="act1_1"/>
-<org.eventb.core.action name="_FwmkJCqdEeigaN9Fe2Ez3A" org.eventb.core.assignment="copying ≔ FALSE" org.eventb.core.label="grd1_2"/>
+<org.eventb.core.guard name="_NpZocDaTEem0KMY42l0D5w" org.eventb.core.label="grd1_1" org.eventb.core.predicate="copying = TRUE"/>
+<org.eventb.core.action name="_bWEMwDaTEem0KMY42l0D5w" org.eventb.core.assignment="copying ≔ FALSE" org.eventb.core.label="grd1_2"/>
 </org.eventb.core.event>
 <org.eventb.core.invariant name="_K9AssCqfEeiBL7Lexk3pHg" org.eventb.core.label="inv1_3" org.eventb.core.predicate="copying = TRUE ⇒  tmp = from"/>
 </org.eventb.core.machineFile>

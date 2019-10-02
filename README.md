@@ -3,7 +3,7 @@ Event-B Experiments by Fredrik Öhrström, developed using Roding 3.3 with SMT p
 
 **Experiment 10:**
 
-To prove `max(a)=max(a∪b∪c) given max(a)=max(b) and max(b)=max(c)` you must add hyp `max(a)=max(c)` then CVT will proove it.
+To prove `max(a)=max(a∪b∪c) given max(a)=max(b) and max(b)=max(c)` you must add hyp `max(a)=max(c)` then CVT will prove it.
 
 **Experiment 9:**
 
