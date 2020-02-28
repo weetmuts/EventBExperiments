@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1570175139223" org.eventb.texttools.text_representation="machine SingleEvent&#10;&#10;variables&#10;&#10;    result&#10;&#10;invariants&#10;&#10;    @inv_res result ∈ 0‥1&#10;&#10;events&#10;&#10;event INITIALISATION&#10;then&#10;&#9;@init_res result :∈ 0‥1&#10;end&#10;&#10;event handleByte&#10;any b&#10;where&#10;    @grd_b b ∈ 0‥255&#10;then&#10;    @act result :∈ 0‥1&#10;end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_c8EwMOZ6EemYhu1KTm0rmA" org.eventb.core.assignment="result :∈ 0‥1" org.eventb.core.generated="false" org.eventb.core.label="init_res"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_c8FXQOZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.identifier="result"/>
+<org.eventb.core.invariant name="_c8FXQeZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.label="inv_res" org.eventb.core.predicate="result ∈ 0‥1"/>
+<org.eventb.core.event name="_kky1EOZ6EemYhu1KTm0rmA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="handleByte">
+<org.eventb.core.parameter name="_kkzcIOZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.identifier="b"/>
+<org.eventb.core.guard name="_kkzcIeZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.label="grd_b" org.eventb.core.predicate="b ∈ 0‥255"/>
+<org.eventb.core.action name="_kkzcIuZ6EemYhu1KTm0rmA" org.eventb.core.assignment="result :∈ 0‥1" org.eventb.core.generated="false" org.eventb.core.label="act"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

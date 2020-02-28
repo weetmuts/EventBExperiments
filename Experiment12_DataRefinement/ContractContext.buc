@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1582901219875" org.eventb.texttools.text_representation="context ContractContext&#10;&#10;sets TERMS // Abstract representation of contractual terms&#10;DATA // Very abstract data&#10;&#10;constants NoTerms // No terms supplied&#10;DetailedTerms // Detailed terms supplied&#10;NoData // No data supplied&#10;&#10;axioms&#10;  @axm1 partition(TERMS, {NoTerms}, {DetailedTerms})&#10;  @axm2 NoData ∈ DATA&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_-pU60FoyEeqh_pDQUF4kcQ" org.eventb.core.comment="Abstract representation of contractual terms" org.eventb.core.generated="false" org.eventb.core.identifier="TERMS"/>
+<org.eventb.core.constant name="_-pU60VoyEeqh_pDQUF4kcQ" org.eventb.core.comment="No terms supplied" org.eventb.core.generated="false" org.eventb.core.identifier="NoTerms"/>
+<org.eventb.core.axiom name="_-pVh4FoyEeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TERMS, {NoTerms}, {DetailedTerms})"/>
+<org.eventb.core.constant name="_kwIggFo4Eeqh_pDQUF4kcQ" org.eventb.core.comment="Detailed terms supplied" org.eventb.core.generated="false" org.eventb.core.identifier="DetailedTerms"/>
+<org.eventb.core.carrierSet name="_zak7sFo4Eeqh_pDQUF4kcQ" org.eventb.core.comment="Very abstract data" org.eventb.core.generated="false" org.eventb.core.identifier="DATA"/>
+<org.eventb.core.constant name="_KI0OMFo5Eeqh_pDQUF4kcQ" org.eventb.core.comment="No data supplied" org.eventb.core.generated="false" org.eventb.core.identifier="NoData"/>
+<org.eventb.core.axiom name="_LMLIoFo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="NoData ∈ DATA"/>
+</org.eventb.core.contextFile>

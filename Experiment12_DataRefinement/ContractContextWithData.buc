@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1582901253939" org.eventb.texttools.text_representation="context ContractContextWithData extends ContractContext&#10;&#10;constants&#10;alfa&#10;beta&#10;&#10;axioms&#10;@axm1 partition(DATA, {NoData}, {alfa}, {beta})&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_Ac14IFo5Eeqh_pDQUF4kcQ" org.eventb.core.target="ContractContext"/>
+<org.eventb.core.constant name="_Ac14IVo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.identifier="alfa"/>
+<org.eventb.core.constant name="_Ac14Ilo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.identifier="beta"/>
+<org.eventb.core.axiom name="_Ac14I1o5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(DATA, {NoData}, {alfa}, {beta})"/>
+</org.eventb.core.contextFile>

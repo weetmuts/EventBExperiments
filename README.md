@@ -1,6 +1,29 @@
 
 Event-B Experiments by Fredrik Öhrström, developed using Roding 3.3 with SMT provers installed.
 
+**Experiment 12:**
+
+Incrementally add elements to a SET in a refinement.
+
+**Experiment 11:**
+
+We want to have a guarantee that handleByte(x:0..255) is properly refined
+into handleByteLo(x:0..127) and handleByteHi(x:128..255).
+I.e. we have not forgotten any interval/case.
+
+We can add a theorem invariant that states that given the parent guard x:0..255,
+then the disjunction of all the guards of the refined events must be true.
+
+@thm_all_cases !x. x:0..255 => x:0..127 or x:128..255
+
+Unfortunately this means that the developer has to manually
+make sure the guards inside the theorem matches the real guards
+used in the events.
+
+Thus some framework/language support is needed to automatically
+track the guards. This is done in some previous work on dead lock freeness
+plugins.
+
 **Experiment 10:**
 
 To prove `max(a)=max(a∪b∪c) given max(a)=max(b) and max(b)=max(c)` you must add hyp `max(a)=max(c)` then CVT will prove it.

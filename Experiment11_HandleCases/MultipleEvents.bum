@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1570175122482" org.eventb.texttools.text_representation="machine MultipleEvents refines SingleEvent&#10;&#10;variables&#10;&#10;    result&#10;&#10;invariants&#10;&#10;    @thm_all_cases ∀b·b∈0‥255 ⇒ b∈0‥127 ∨ b∈128‥255&#10;&#10;events&#10;&#10;event INITIALISATION&#10;then&#10;    @init1_res result :∈ 0‥1&#10;end&#10;&#10;event handleByteLo refines handleByte&#10;any b&#10;where&#10;    @grd1_b b ∈ 0‥127&#10;then&#10;    @act1 result ≔ 0&#10;end&#10;&#10;event handleByteHi refines handleByte&#10;any b&#10;where&#10;    @grd1_b b ∈ 128‥255&#10;then&#10;    @act1 result ≔ 1&#10;end&#10;&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_4cuo0OZ6EemYhu1KTm0rmA" org.eventb.core.target="SingleEvent"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_4cuo0eZ6EemYhu1KTm0rmA" org.eventb.core.assignment="result :∈ 0‥1" org.eventb.core.generated="false" org.eventb.core.label="init1_res"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_4cuo0uZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.identifier="result"/>
+<org.eventb.core.invariant name="_4cuo0-Z6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.label="thm_all_cases" org.eventb.core.predicate="∀b·b∈0‥255 ⇒ b∈0‥127 ∨ b∈128‥255"/>
+<org.eventb.core.event name="_4cuo1OZ6EemYhu1KTm0rmA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="handleByteLo">
+<org.eventb.core.refinesEvent name="_651kcOZ6EemYhu1KTm0rmA" org.eventb.core.target="handleByte"/>
+<org.eventb.core.parameter name="_4cuo1eZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.identifier="b"/>
+<org.eventb.core.guard name="_4cuo1uZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.label="grd1_b" org.eventb.core.predicate="b ∈ 0‥127"/>
+<org.eventb.core.action name="_4cuo1-Z6EemYhu1KTm0rmA" org.eventb.core.assignment="result ≔ 0" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_4cuo2OZ6EemYhu1KTm0rmA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="handleByteHi">
+<org.eventb.core.refinesEvent name="_651kceZ6EemYhu1KTm0rmA" org.eventb.core.target="handleByte"/>
+<org.eventb.core.parameter name="_4cuo2eZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.identifier="b"/>
+<org.eventb.core.guard name="_4cuo2uZ6EemYhu1KTm0rmA" org.eventb.core.generated="false" org.eventb.core.label="grd1_b" org.eventb.core.predicate="b ∈ 128‥255"/>
+<org.eventb.core.action name="_4cuo2-Z6EemYhu1KTm0rmA" org.eventb.core.assignment="result ≔ 1" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1582902100248" org.eventb.texttools.text_representation="machine ConcreteContract refines AbstractContract  sees ContractContextWithData&#10;&#10;variables contract_written // Contract&#10;contract_seller // Seller id&#10;contract_buyer  // Buyer id&#10;in_data // Temporary storage for data&#10;data // Final storage for data&#10;&#10;invariants&#10;  @inv1 contract_written ∈ BOOL&#10;  @inv2 contract_seller ∈ ℕ&#10;  @inv3 contract_buyer ∈ ℕ&#10;  @inv4 contract_written = TRUE ⇒&#10;     (contract_seller ≠ 0 ∧ contract_buyer ≠ 0 ∧ data ≠ NoData)&#10;  @gluing contract = DetailedTerms ⇔ contract_written = TRUE&#10;  @inv5 in_data ∈ DATA&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @init1 contract_written ≔ FALSE&#10;      @init2 contract_seller ≔ 0&#10;      @init3 contract_buyer ≔ 0&#10;      @init4 data ≔ NoData&#10;      @init5 in_data ≔ NoData&#10;  end&#10;&#10;  event receiveDataAlfa&#10;  any d&#10;  where&#10;  @grd1 in_data = NoData&#10;  @grd2 d ∈ DATA&#10;  @grd3 d ≠ NoData&#10;  then&#10;  @act1 in_data ≔ d&#10;  end&#10;&#10;  event writeContract refines writeContract&#10;    any s b&#10;    where&#10;      @grd1_1 s ∈ ℕ&#10;      @grd1_2 b ∈ ℕ&#10;      @grd1_3 s &gt; 0&#10;      @grd1_4 b &gt; 0&#10;      @grd1_5 in_data ≠ NoData&#10;    with&#10;      @d d = in_data&#10;    then&#10;      @act1 contract_written ≔ TRUE&#10;      @act2 contract_seller ≔ s&#10;      @act3 contract_buyer ≔ b&#10;      @act4 data ≔ in_data&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_jf5j4FM2Eeqn396LUpvnqA" org.eventb.core.target="AbstractContract"/>
+<org.eventb.core.seesContext name="_B7uQ8Fo5Eeqh_pDQUF4kcQ" org.eventb.core.target="ContractContextWithData"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="__jUzAFo0Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract_written ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="init1"/>
+<org.eventb.core.action name="__jUzAVo0Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract_seller ≔ 0" org.eventb.core.generated="false" org.eventb.core.label="init2"/>
+<org.eventb.core.action name="__jUzAlo0Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract_buyer ≔ 0" org.eventb.core.generated="false" org.eventb.core.label="init3"/>
+<org.eventb.core.action name="_2pPaoFo5Eeqh_pDQUF4kcQ" org.eventb.core.assignment="data ≔ NoData" org.eventb.core.generated="false" org.eventb.core.label="init4"/>
+<org.eventb.core.action name="_0v1zkFo6Eeqh_pDQUF4kcQ" org.eventb.core.assignment="in_data ≔ NoData" org.eventb.core.generated="false" org.eventb.core.label="init5"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_opoZElohEeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="contract_written ∈ BOOL"/>
+<org.eventb.core.invariant name="_KKnDIFonEeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="contract_seller ∈ ℕ"/>
+<org.eventb.core.invariant name="_fN29A1ozEeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="inv3" org.eventb.core.predicate="contract_buyer ∈ ℕ"/>
+<org.eventb.core.variable name="_qhl7EFozEeqh_pDQUF4kcQ" org.eventb.core.comment="Contract" org.eventb.core.generated="false" org.eventb.core.identifier="contract_written"/>
+<org.eventb.core.variable name="_qhl7EVozEeqh_pDQUF4kcQ" org.eventb.core.comment="Seller id" org.eventb.core.generated="false" org.eventb.core.identifier="contract_seller"/>
+<org.eventb.core.variable name="_qhl7ElozEeqh_pDQUF4kcQ" org.eventb.core.comment="Buyer id" org.eventb.core.generated="false" org.eventb.core.identifier="contract_buyer"/>
+<org.eventb.core.event name="_FS5ysFo6Eeqh_pDQUF4kcQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="receiveDataAlfa">
+<org.eventb.core.parameter name="_03ZpkFo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.identifier="d"/>
+<org.eventb.core.guard name="_oppnMVohEeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="in_data = NoData"/>
+<org.eventb.core.guard name="_oppnMlohEeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="d ∈ DATA"/>
+<org.eventb.core.guard name="_a08KEFo1Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="d ≠ NoData"/>
+<org.eventb.core.action name="_oppnNFohEeqh_pDQUF4kcQ" org.eventb.core.assignment="in_data ≔ d" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t6psIFo0Eeqh_pDQUF4kcQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="writeContract">
+<org.eventb.core.refinesEvent name="_t6psIVo0Eeqh_pDQUF4kcQ" org.eventb.core.target="writeContract"/>
+<org.eventb.core.parameter name="_xvTCcFo0Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.identifier="s"/>
+<org.eventb.core.parameter name="_xvTCcVo0Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.identifier="b"/>
+<org.eventb.core.action name="_FS6ZwVo6Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract_written ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="_LxupkFo1Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract_seller ≔ s" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_LxupkVo1Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract_buyer ≔ b" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+<org.eventb.core.witness name="_jWgwQlo6Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="d" org.eventb.core.predicate="d = in_data"/>
+<org.eventb.core.action name="_3abKgFo6Eeqh_pDQUF4kcQ" org.eventb.core.assignment="data ≔ in_data" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="_ImAswFo7Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1_1" org.eventb.core.predicate="s ∈ ℕ"/>
+<org.eventb.core.guard name="_ImAswVo7Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1_2" org.eventb.core.predicate="b ∈ ℕ"/>
+<org.eventb.core.guard name="_ImAswlo7Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1_3" org.eventb.core.predicate="s &gt; 0"/>
+<org.eventb.core.guard name="_ImAsw1o7Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1_4" org.eventb.core.predicate="b &gt; 0"/>
+<org.eventb.core.guard name="_ImAsxFo7Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1_5" org.eventb.core.predicate="in_data ≠ NoData"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_XuRUEFo1Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="inv4" org.eventb.core.predicate="contract_written = TRUE ⇒&#10;     (contract_seller ≠ 0 ∧ contract_buyer ≠ 0 ∧ data ≠ NoData)"/>
+<org.eventb.core.invariant name="_8lhlIFo0Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="gluing" org.eventb.core.predicate="contract = DetailedTerms ⇔ contract_written = TRUE"/>
+<org.eventb.core.variable name="_0v2aoFo6Eeqh_pDQUF4kcQ" org.eventb.core.comment="Temporary storage for data" org.eventb.core.generated="false" org.eventb.core.identifier="in_data"/>
+<org.eventb.core.variable name="_03aQolo5Eeqh_pDQUF4kcQ" org.eventb.core.comment="Final storage for data" org.eventb.core.generated="false" org.eventb.core.identifier="data"/>
+<org.eventb.core.invariant name="_0v3BsFo6Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="inv5" org.eventb.core.predicate="in_data ∈ DATA"/>
+</org.eventb.core.machineFile>
