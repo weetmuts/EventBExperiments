@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1582901385054" org.eventb.texttools.text_representation="machine AbstractContract sees ContractContext&#10;&#10;variables contract // The abstract concept of a contract&#10;          data // Data&#10;&#10;invariants&#10;  @inv1 contract ∈ TERMS&#10;  @inv2 data ∈ DATA&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @ini1 contract ≔ NoTerms&#10;      @ini2 data ≔ NoData&#10;  end&#10;&#10;  event writeContract&#10;  any d&#10;  where&#10;  @grd1 d ∈ DATA&#10;  @grd2 d ≠ NoData&#10;  then&#10;&#9;@act1 contract ≔ DetailedTerms&#10;&#9;@act2 data ≔ d&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1591543838377" org.eventb.texttools.text_representation="machine AbstractContract sees ContractContext&#10;&#10;variables contract // The abstract concept of a contract&#10;          data // Data&#10;&#10;&#10;invariants&#10;  @inv1 contract ∈ TERMS&#10;  @inv2 data ∈ DATA&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @ini1 contract ≔ NoTerms&#10;      @ini2 data ≔ NoData&#10;  end&#10;&#10;  event enterContractDetails&#10;    where&#10;      @grd contract = NoTerms&#10;    then&#10;      @act contract ≔ DetailedTerms&#10;  end&#10;&#10;  event enterDataDetails&#10;    where&#10;      @grd data = NoData&#10;    then&#10;      @act data ≔ AllData&#10;  end&#10;&#10;  event writeContract&#10;    where&#10;      @grd1 contract = DetailedTerms&#10;      @grd2 data = AllData&#10;    then&#10;      @act1 contract ≔ DetailedTerms&#10;      @act2 data ≔ AllData&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.seesContext name="_O-xCIFM2Eeqn396LUpvnqA" org.eventb.core.target="ContractContext"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="_O-xpMFM2Eeqn396LUpvnqA" org.eventb.core.assignment="contract ≔ NoTerms" org.eventb.core.generated="false" org.eventb.core.label="ini1"/>
@@ -7,12 +7,19 @@
 </org.eventb.core.event>
 <org.eventb.core.invariant name="_KnwloFM2Eeqn396LUpvnqA" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="contract ∈ TERMS"/>
 <org.eventb.core.variable name="_Efk8gFozEeqh_pDQUF4kcQ" org.eventb.core.comment="The abstract concept of a contract" org.eventb.core.generated="false" org.eventb.core.identifier="contract"/>
+<org.eventb.core.event name="_K6VskFpLEeqcnOMoSDYY0Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="enterContractDetails">
+<org.eventb.core.guard name="_K6VskVpLEeqcnOMoSDYY0Q" org.eventb.core.generated="false" org.eventb.core.label="grd" org.eventb.core.predicate="contract = NoTerms"/>
+<org.eventb.core.action name="_K6VsklpLEeqcnOMoSDYY0Q" org.eventb.core.assignment="contract ≔ DetailedTerms" org.eventb.core.generated="false" org.eventb.core.label="act"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_K6Vsk1pLEeqcnOMoSDYY0Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="enterDataDetails">
+<org.eventb.core.guard name="_K6VslFpLEeqcnOMoSDYY0Q" org.eventb.core.generated="false" org.eventb.core.label="grd" org.eventb.core.predicate="data = NoData"/>
+<org.eventb.core.action name="_K6VslVpLEeqcnOMoSDYY0Q" org.eventb.core.assignment="data ≔ AllData" org.eventb.core.generated="false" org.eventb.core.label="act"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="_O-VaYFozEeqh_pDQUF4kcQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="writeContract">
 <org.eventb.core.action name="_IQGrAFo3Eeqh_pDQUF4kcQ" org.eventb.core.assignment="contract ≔ DetailedTerms" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="_bgEN4Fo5Eeqh_pDQUF4kcQ" org.eventb.core.assignment="data ≔ d" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
-<org.eventb.core.parameter name="_jzbLMFo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.identifier="d"/>
-<org.eventb.core.guard name="_jzbLMVo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="d ∈ DATA"/>
-<org.eventb.core.guard name="_jzbLMlo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="d ≠ NoData"/>
+<org.eventb.core.action name="_bgEN4Fo5Eeqh_pDQUF4kcQ" org.eventb.core.assignment="data ≔ AllData" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="_WyEIgFpLEeqcnOMoSDYY0Q" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="contract = DetailedTerms"/>
+<org.eventb.core.guard name="_jzbLMlo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="data = AllData"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="_VILewFo5Eeqh_pDQUF4kcQ" org.eventb.core.comment="Data" org.eventb.core.generated="false" org.eventb.core.identifier="data"/>
 <org.eventb.core.invariant name="_VILewVo5Eeqh_pDQUF4kcQ" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="data ∈ DATA"/>

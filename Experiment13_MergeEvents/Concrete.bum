@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1591544705774" org.eventb.texttools.text_representation="machine Concrete refines Abstracts&#10;&#10;variables height width&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event setHeightAndWidth refines setHeight setWidth&#10;    then&#10;      @alfa height ≔ 17&#10;      @beta width ≔ 4711&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_dp4HsKjVEeq4I7YD67Lydw" org.eventb.core.target="Abstracts"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.variable name="_dp4uwKjVEeq4I7YD67Lydw" org.eventb.core.generated="false" org.eventb.core.identifier="height"/>
+<org.eventb.core.variable name="_dp4uwajVEeq4I7YD67Lydw" org.eventb.core.generated="false" org.eventb.core.identifier="width"/>
+<org.eventb.core.event name="_jT0ywKjVEeq4I7YD67Lydw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="setHeightAndWidth">
+<org.eventb.core.refinesEvent name="_jT0ywajVEeq4I7YD67Lydw" org.eventb.core.target="setHeight"/>
+<org.eventb.core.refinesEvent name="_jT0ywqjVEeq4I7YD67Lydw" org.eventb.core.target="setWidth"/>
+<org.eventb.core.action name="_2qEOsKjVEeq4I7YD67Lydw" org.eventb.core.assignment="height ≔ 17" org.eventb.core.generated="false" org.eventb.core.label="alfa"/>
+<org.eventb.core.action name="_2qEOsajVEeq4I7YD67Lydw" org.eventb.core.assignment="width ≔ 4711" org.eventb.core.generated="false" org.eventb.core.label="beta"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

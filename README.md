@@ -1,9 +1,13 @@
 
-Event-B Experiments by Fredrik Öhrström, developed using Roding 3.3 with SMT provers installed.
+Event-B Experiments by Fredrik Öhrström, developed using Roding 3.4 with SMT provers installed.
+
+**Experiment 13:**
+
+Merge two events into a single refined event.
 
 **Experiment 12:**
 
-Incrementally add elements to a SET in a refinement.
+Incrementally add elements to a SET in a refinement. I.e. a sort of data refinement?
 
 **Experiment 11:**
 
