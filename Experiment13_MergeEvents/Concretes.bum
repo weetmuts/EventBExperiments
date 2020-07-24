@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1595256089062" org.eventb.texttools.text_representation="machine Concretes refines Abstracts&#10;&#10;variables height width&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event setBoth refines setHeight setWidth&#10;  where&#10;  @grd height = 0 ∨ width = 0&#10;    then&#10;      @alfa height ≔ 17&#10;      @beta width ≔ 17&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_4721IMqVEeqaOp4bDqob8w" org.eventb.core.target="Abstracts"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.variable name="_N4iqcMqWEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="height"/>
+<org.eventb.core.variable name="_N4iqccqWEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="width"/>
+<org.eventb.core.event name="_t975kMqWEeqaOp4bDqob8w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="setBoth">
+<org.eventb.core.refinesEvent name="_t975kcqWEeqaOp4bDqob8w" org.eventb.core.target="setHeight"/>
+<org.eventb.core.refinesEvent name="_t975ksqWEeqaOp4bDqob8w" org.eventb.core.target="setWidth"/>
+<org.eventb.core.guard name="_GKZdkMqXEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd" org.eventb.core.predicate="height = 0 ∨ width = 0"/>
+<org.eventb.core.action name="_vvaeQMqWEeqaOp4bDqob8w" org.eventb.core.assignment="height ≔ 17" org.eventb.core.generated="false" org.eventb.core.label="alfa"/>
+<org.eventb.core.action name="_vvaeQcqWEeqaOp4bDqob8w" org.eventb.core.assignment="width ≔ 17" org.eventb.core.generated="false" org.eventb.core.label="beta"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,9 +1,13 @@
 
 Event-B Experiments by Fredrik Öhrström, developed using Roding 3.4 with SMT provers installed.
 
+**Experiment 14:**
+
+Refine an event with parameters in different ways.
+
 **Experiment 13:**
 
-Merge two events into a single refined event.
+Merge two events into a single refined event. Not succeeded yet.
 
 **Experiment 12:**
 

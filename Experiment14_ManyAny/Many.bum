@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Different ways of refining two any variables." org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1595255065803" org.eventb.texttools.text_representation="machine Many // Different ways of refining two any variables.&#10;&#10;events&#10;  event INITIALISATION&#10;  end&#10;&#10;  event calculate&#10;    any in out&#10;    where&#10;      @grd1 in ∈ ℤ&#10;      @grd2 out ∈ ℤ&#10;      @grd3 out = in + 17&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_AJhqsMmvEeqzgfDVAj_yZw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="calculate">
+<org.eventb.core.guard name="_AJiRwsmvEeqzgfDVAj_yZw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="in ∈ ℤ"/>
+<org.eventb.core.guard name="_AJi40MmvEeqzgfDVAj_yZw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="out ∈ ℤ"/>
+<org.eventb.core.guard name="_AJi40cmvEeqzgfDVAj_yZw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="out = in + 17"/>
+<org.eventb.core.parameter name="_rTB54MqTEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="in"/>
+<org.eventb.core.parameter name="_rTB54cqTEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="out"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

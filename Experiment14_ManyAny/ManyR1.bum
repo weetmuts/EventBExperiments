@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1595255287232" org.eventb.texttools.text_representation="machine ManyR1 refines Many&#10;&#10;variables input output&#10;&#10;invariants&#10;  @inv1 input ∈ ℤ&#10;  @inv2 output ∈ ℤ&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @init1 input ≔ 0&#10;      @init2 output ≔ 0&#10;  end&#10;&#10;  event calculateA // Simple extend&#10;  extends calculate&#10;    where&#10;      @grd11 in = input&#10;    then&#10;      @act11 output ≔ out&#10;  end&#10;&#10;  event calculateB // As extend but using refine instead&#10;  refines calculate&#10;    any in out&#10;    where&#10;      @grd11 in ∈ ℤ&#10;      @grd12 out ∈ ℤ&#10;      @grd13 out = in + 17&#10;      @grd14 in = input&#10;    then&#10;      @act11 output ≔ out&#10;  end&#10;&#10;  event calculateC // refine and drop in parameter&#10;  refines calculate&#10;    any out&#10;    where&#10;      @grd11 out = input + 17&#10;    with&#10;      @in in = input&#10;    then&#10;      @act11 output ≔ out&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_EIn9gMmvEeqzgfDVAj_yZw" org.eventb.core.target="Many"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_j3ne0MmvEeqzgfDVAj_yZw" org.eventb.core.assignment="input ≔ 0" org.eventb.core.generated="false" org.eventb.core.label="init1"/>
+<org.eventb.core.action name="_j3oF4MmvEeqzgfDVAj_yZw" org.eventb.core.assignment="output ≔ 0" org.eventb.core.generated="false" org.eventb.core.label="init2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="_mnPt0MmvEeqzgfDVAj_yZw" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="input ∈ ℤ"/>
+<org.eventb.core.invariant name="_mnPt0cmvEeqzgfDVAj_yZw" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="output ∈ ℤ"/>
+<org.eventb.core.variable name="_6aDjYsqTEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="input"/>
+<org.eventb.core.variable name="_g5VFsMqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="output"/>
+<org.eventb.core.event name="_7Si1IMqUEeqaOp4bDqob8w" org.eventb.core.comment="Simple extend" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="calculateA">
+<org.eventb.core.refinesEvent name="_7Si1IcqUEeqaOp4bDqob8w" org.eventb.core.target="calculate"/>
+<org.eventb.core.guard name="_m0n_cMqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd11" org.eventb.core.predicate="in = input"/>
+<org.eventb.core.action name="_uhtnAMnQEeqzgfDVAj_yZw" org.eventb.core.assignment="output ≔ out" org.eventb.core.generated="false" org.eventb.core.label="act11"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_7SjcMMqUEeqaOp4bDqob8w" org.eventb.core.comment="As extend but using refine instead" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="calculateB">
+<org.eventb.core.refinesEvent name="_7SjcMcqUEeqaOp4bDqob8w" org.eventb.core.target="calculate"/>
+<org.eventb.core.parameter name="_7SjcMsqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="in"/>
+<org.eventb.core.parameter name="_7SjcM8qUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="out"/>
+<org.eventb.core.guard name="_7SjcNMqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd11" org.eventb.core.predicate="in ∈ ℤ"/>
+<org.eventb.core.guard name="_7SjcNcqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd12" org.eventb.core.predicate="out ∈ ℤ"/>
+<org.eventb.core.guard name="_7SjcNsqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd13" org.eventb.core.predicate="out = in + 17"/>
+<org.eventb.core.guard name="_87vAgMqUEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd14" org.eventb.core.predicate="in = input"/>
+<org.eventb.core.action name="_7SjcOMqUEeqaOp4bDqob8w" org.eventb.core.assignment="output ≔ out" org.eventb.core.generated="false" org.eventb.core.label="act11"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_CMGt8MqVEeqaOp4bDqob8w" org.eventb.core.comment="refine and drop in parameter" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="calculateC">
+<org.eventb.core.refinesEvent name="_CMGt8cqVEeqaOp4bDqob8w" org.eventb.core.target="calculate"/>
+<org.eventb.core.parameter name="_CMGt8sqVEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.identifier="out"/>
+<org.eventb.core.guard name="_EWgI8MqVEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="grd11" org.eventb.core.predicate="out = input + 17"/>
+<org.eventb.core.witness name="_CMGt9MqVEeqaOp4bDqob8w" org.eventb.core.generated="false" org.eventb.core.label="in" org.eventb.core.predicate="in = input"/>
+<org.eventb.core.action name="_CMHVAMqVEeqaOp4bDqob8w" org.eventb.core.assignment="output ≔ out" org.eventb.core.generated="false" org.eventb.core.label="act11"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
