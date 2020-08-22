@@ -152,7 +152,7 @@ collectOddCoins/inv1_8/INV: robot, then for goal: `x mod 2=1` supply prove by ca
 
 collectOddCoins/act_1/SIM: robot, then in: `collected={x·x∈coins∧x mod 2=1 ∣ x}` click = to prove ⊆ in both directions instead.
 
-**Experiment 2:** maximum of set
+**Experiment 2:** maximum of set [source](Camilles/Experiment002_MaxOfSet.txt)
 
 Add to set and get max, implement max using var, drop the actual set.
 
@@ -160,6 +160,6 @@ Useful theorem: `@thm1_0 ∀p,s·p∈ℕ ∧ s⊆ℕ ∧ s≠∅ ∧ finite(s) �
 
 thm1_0/WD proof: robot, then for b in goal: `∃b·∀x·x∈s∪{p} ⇒ b≥x` supply max(s) in yellow box.
 
-**Experiment 1:** split event [Camilles/Experiment001_SplitEvent.txt](source)
+**Experiment 1:** split event [source](Camilles/Experiment001_SplitEvent.txt)
 
 Split a single copy event into two separate copy events.
