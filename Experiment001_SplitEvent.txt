@@ -1,59 +1,59 @@
-[1;31mmachine[0m Simple
+machine Simple
 
-[1;31mvariables[0m
-    [1;34mfrom[0m 
-    [1;34mto[0m   
-[1;31minvariants[0m
-    [0;34m@inv_0[0m [1;34mfrom[0m∈[0;31mℕ[0m 
-    [0;34m@inv_1[0m [1;34mto[0m∈[0;31mℕ[0m   
-[1;31mevents[0m
-[1;31mevent [0mINITIALISATION
-[1;31mthen[0m
-    [0;34m@init_0[0m [1;34mfrom[0m :∈ [0;31mℕ[0m 
-    [0;34m@init_1[0m [1;34mto[0m ≔ 0    
-[1;31mend[0m
+variables
+    from 
+    to   
+invariants
+    @inv_0 from∈ℕ 
+    @inv_1 to∈ℕ   
+events
+event INITIALISATION
+then
+    @init_0 from :∈ ℕ 
+    @init_1 to ≔ 0    
+end
 
-[1;31mevent [0mcopy
-[1;31mthen[0m
-    [0;34m@act_0[0m [1;34mto[0m ≔ [1;34mfrom[0m 
-[1;31mend[0m
+event copy
+then
+    @act_0 to ≔ from 
+end
 
-[1;31mend[0m
+end
 
-[1;31mrefinement[0m Simple1
-    [1;31mrefines[0m Simple 
+refinement Simple1
+    refines Simple 
 
-[1;31mvariables[0m
-    [1;34mtmp[0m     
-    [1;34mcopying[0m 
-[1;31minvariants[0m
-    [0;34m@inv1_1[0m [1;34mtmp[0m∈[0;31mℕ[0m                  
-    [0;34m@inv1_2[0m [1;34mcopying[0m∈[0;31mBOOL[0m           
-    [0;34m@inv1_3[0m [1;34mcopying[0m=[1;32mTRUE[0m⇒ [1;34mtmp[0m=[1;34mfrom[0m 
-[1;31mevents[0m
-[1;31mevent [0mINITIALISATION
-    [1;31mextends [0mINITIALISATION 
-[1;31mthen[0m
-    [0;34m@init1_1[0m [1;34mtmp[0m :∈ [0;31mℕ[0m        
-    [0;34m@init1_2[0m [1;34mcopying[0m ≔ [1;32mFALSE[0m 
-[1;31mend[0m
+variables
+    tmp     
+    copying 
+invariants
+    @inv1_1 tmp∈ℕ                  
+    @inv1_2 copying∈BOOL           
+    @inv1_3 copying=TRUE⇒ tmp=from 
+events
+event INITIALISATION
+    extends INITIALISATION 
+then
+    @init1_1 tmp :∈ ℕ        
+    @init1_2 copying ≔ FALSE 
+end
 
-[1;31mevent [0mcopyStart
-[1;31mwhere[0m
-    [0;34m@grd1_1[0m [1;34mcopying[0m=[1;32mFALSE[0m 
-[1;31mthen[0m
-    [0;34m@act1_1[0m [1;34mtmp[0m ≔ [1;34mfrom[0m     
-    [0;34m@act1_2[0m [1;34mcopying[0m ≔ [1;32mTRUE[0m 
-[1;31mend[0m
+event copyStart
+where
+    @grd1_1 copying=FALSE 
+then
+    @act1_1 tmp ≔ from     
+    @act1_2 copying ≔ TRUE 
+end
 
-[1;31mevent [0mcopyDone
-    [1;31mrefines [0mcopy 
-[1;31mwhere[0m
-    [0;34m@grd1_1[0m [1;34mcopying[0m=[1;32mTRUE[0m 
-[1;31mthen[0m
-    [0;34m@act1_1[0m [1;34mto[0m ≔ [1;34mtmp[0m        
-    [0;34m@grd1_2[0m [1;34mcopying[0m ≔ [1;32mFALSE[0m 
-[1;31mend[0m
+event copyDone
+    refines copy 
+where
+    @grd1_1 copying=TRUE 
+then
+    @act1_1 to ≔ tmp        
+    @grd1_2 copying ≔ FALSE 
+end
 
-[1;31mend[0m
+end
 
