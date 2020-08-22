@@ -1,0 +1,54 @@
+machine MaxOfMaxes
+
+variables
+    all      
+    to_week  
+    to_month 
+    the_max  
+invariants
+    @inv_1  all⊆ℕ                                          
+    @inv_1a all≠∅                                          
+    @inv_1b finite(all)                                    
+    @inv_2  to_week∈ℕ⇸ ℕ                                   
+    @inv_3  finite(ran(to_week))                           
+    @inv_3a to_week≠∅                                      
+    @inv_4  to_month∈ℕ⇸ ℕ                                  
+    @inv_5  finite(ran(to_month))                          
+    @inv_5a to_month≠∅                                     
+    @inv_6  the_max∈ℕ                                      
+    @inv_7  ran(to_week)⊆all                               
+    @inv_8  ran(to_month)⊆all                              
+    @inv_9  max(all)=max(ran(to_week)∪ran(to_month))       
+    @inv_10 finite(ran(to_week)∪ran(to_month))             
+    @thm_1  ∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d)⇒ finite(s∪d) 
+    @thm_2  ∀a,b,m·m∈ℕ∧a⊆ℕ∧b⊆ℕ∧
+a≠∅∧b≠∅∧
+finite(a)∧finite(b)∧finite(a∪b)∧
+m=max(a)∧m=max(b)⇒ m=max(a∪b) 
+events
+event INITIALISATION
+then
+    @init_0 all ≔ {0}        
+    @init_1 to_week ≔ {0↦0}  
+    @init_2 to_month ≔ {0↦0} 
+    @init_3 the_max ≔ 0      
+end
+
+event calc
+any
+    m  
+    wm 
+    mm 
+where
+    @grd_1 to_week≠∅                    
+    @grd_2 to_month≠∅                   
+    @grd_3 m=ran(to_week)∪ran(to_month) 
+    @grd_4 finite(m)                    
+    @grd_5 wm=max(ran(to_week))         
+    @grd_6 mm=max(ran(to_month))        
+then
+    @act_1 the_max ≔ max(m) 
+end
+
+end
+

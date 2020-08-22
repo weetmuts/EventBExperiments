@@ -1,0 +1,81 @@
+context MapContext
+
+constants
+    to_block 
+axioms
+    @axm_1 to_block∈ℕ→ ℕ                                                                  
+    @axm_2 ∀x·∀y·x∈ℕ∧y∈ℕ∧y>0∧x∈dom(to_block)∧x+y∈dom(to_block)⇒ to_block(x+y)≥to_block(x) 
+end
+
+machine Function
+    sees MapContext 
+
+variables
+    coins   
+    counts  
+    bcounts 
+invariants
+    @inv_1 coins⊆ℕ                    
+    @inv_2 counts∈coins→ ℕ            
+    @inv_3 ∀x·x∈coins⇒ x∈dom(counts)  
+    @inv_4 bcounts∈to_block[coins]→ ℕ 
+events
+event INITIALISATION
+then
+    @init_1 coins ≔ ∅   
+    @init_2 counts ≔ ∅  
+    @init_3 bcounts ≔ ∅ 
+end
+
+event addNewCoinAndNewBlock
+any
+    c 
+    b 
+where
+    @grd_1 c∈ℕ                                   
+    @grd_2 c∉coins∧c∉dom(counts)∧c∈dom(to_block) 
+    @grd_3 b=to_block(c)                         
+    @grd_4 b∉dom(bcounts)                        
+then
+    @act_1 coins ≔ coins∪{c} 
+    @act_2 counts(c) ≔ 1     
+    @act_3 bcounts(b) ≔ 1    
+end
+
+event addNewCoinUpdateBlock
+any
+    c  
+    b  
+    bn 
+where
+    @grd_1 c∈ℕ                                   
+    @grd_2 c∉coins∧c∉dom(counts)∧c∈dom(to_block) 
+    @grd_3 b=to_block(c)                         
+    @grd_4 b∈dom(bcounts)                        
+    @grd_5 bn=bcounts(b)                         
+then
+    @act_1 coins ≔ coins∪{c} 
+    @act_2 counts(c) ≔ 1     
+    @act_3 bcounts(b) ≔ bn+1 
+end
+
+event addMore
+any
+    c  
+    b  
+    n  
+    bn 
+where
+    @grd_1 c∈ℕ                                   
+    @grd_2 c∈coins∧c∈dom(counts)∧c∈dom(to_block) 
+    @grd_3 b=to_block(c)                         
+    @grd_4 n=counts(c)                           
+    @grd_5 b∈dom(bcounts)                        
+    @grd_6 bn=bcounts(b)                         
+then
+    @act_1 counts(c) ≔ n+1   
+    @act_2 bcounts(b) ≔ bn+1 
+end
+
+end
+

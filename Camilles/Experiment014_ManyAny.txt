@@ -1,0 +1,4 @@
+Could not parse formula:
+    in = input
+
+While using symbol table:

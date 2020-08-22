@@ -1,0 +1,129 @@
+Abstract representation of contractual terms
+context ContractContext
+
+sets
+    TERMS // Abstract representation of contractual terms
+    DATA  // Very abstract data
+constants
+    NoTerms       // No terms supplied
+    DetailedTerms // Detailed terms supplied
+    NoData        // No data supplied
+    AllData       // All data supplied
+axioms
+    @axm1 partition(TERMS,{NoTerms},{DetailedTerms}) 
+    @axm2 partition(DATA,{NoData},{AllData})         
+end
+
+context ContractContextWithData
+extends ContractContext 
+
+constants
+    alfa 
+    beta 
+axioms
+    @axm1 partition(DATA,{NoData},{AllData},{alfa},{beta}) 
+end
+
+machine AbstractContract
+    sees ContractContext 
+
+variables
+    contract // The abstract concept of a contract
+    data     // Data
+invariants
+    @inv1 contract∈TERMS 
+    @inv2 data∈DATA      
+events
+event INITIALISATION
+then
+    @ini1 contract ≔ NoTerms 
+    @ini2 data ≔ NoData      
+end
+
+event enterContractDetails
+where
+    @grd contract=NoTerms 
+then
+    @act contract ≔ DetailedTerms 
+end
+
+event enterDataDetails
+where
+    @grd data=NoData 
+then
+    @act data ≔ AllData 
+end
+
+event writeContract
+where
+    @grd1 contract=DetailedTerms 
+    @grd2 data=AllData           
+then
+    @act1 contract ≔ DetailedTerms 
+    @act2 data ≔ AllData           
+end
+
+end
+
+refinement ConcreteContract
+    refines AbstractContract 
+    sees ContractContextWithData 
+
+variables
+    contract_written // Contract
+    contract_seller  // Seller id
+    contract_buyer   // Buyer id
+    in_data          // Temporary storage for data
+invariants
+    @inv1   contract_written∈BOOL                                                 
+    @inv2   contract_seller∈ℕ                                                     
+    @inv3   contract_buyer∈ℕ                                                      
+    @inv4   contract_written=TRUE⇒ contract_seller≠0∧contract_buyer≠0∧data≠NoData 
+    @gluing contract=DetailedTerms⇔ contract_written=TRUE                         
+    @inv5   in_data∈DATA                                                          
+events
+event INITIALISATION
+then
+    @init1 contract_written ≔ FALSE 
+    @init2 contract_seller ≔ 0      
+    @init3 contract_buyer ≔ 0       
+    @init4 contract ≔ NoTerms       
+    @init5 data ≔ NoData            
+    @init6 in_data ≔ NoData         
+end
+
+event receiveDataAlfa
+    refines enterDataDetails 
+any
+    d 
+where
+    @grd1 in_data=NoData 
+    @grd2 d∈DATA         
+    @grd3 d≠NoData       // Force the event to add actual data.
+    @grd4 d≠AllData      // Ditto.
+    @grd5 alfa∈DATA      
+    @grd6 beta∈DATA      
+then
+    @act1 in_data ≔ d 
+end
+
+event writeContract
+    refines writeContract 
+any
+    s 
+    b 
+where
+    @grd1_1 s∈ℕ            
+    @grd1_2 b∈ℕ            
+    @grd1_3 s>0            
+    @grd1_4 b>0            
+    @grd1_5 in_data≠NoData 
+then
+    @act1 contract_written ≔ TRUE 
+    @act2 contract_seller ≔ s     
+    @act3 contract_buyer ≔ b      
+    @act4 data ≔ in_data          
+end
+
+end
+

@@ -1,0 +1,126 @@
+machine Collect
+
+variables
+    coins    
+    oddcoins 
+invariants
+    @inv_1 coins⊆ℕ        
+    @inv_2 finite(coins)  
+    @inv_3 oddcoins⊆ℕ     
+    @inv_4 oddcoins⊆coins 
+events
+event INITIALISATION
+then
+    @init_1 coins ≔ ∅    
+    @init_2 oddcoins ≔ ∅ 
+end
+
+event add
+any
+    c 
+where
+    @grd_1 c∈ℕ 
+then
+    @act_1 coins ≔ coins∪{c} 
+end
+
+event collectOddCoins
+where
+    @grd_1 coins≠∅ 
+then
+    @act_1 oddcoins ≔ {x·x∈coins∧x mod 2=1|x} 
+end
+
+end
+
+refinement Collect1
+    refines Collect 
+
+variables
+    collecting  
+    tobechecked 
+    checked     
+    collected   
+invariants
+    @inv1_1  collecting∈BOOL                            
+    @inv1_2  tobechecked⊆ℕ                              
+    @inv1_3  finite(tobechecked)                        
+    @inv1_4  tobechecked⊆coins                          
+    @inv1_5  collected⊆ℕ                                
+    @inv1_6  finite(collected)                          
+    @inv1_7  collected⊆coins                            
+    @inv1_8  ∀x·x∈collected⇒ x mod 2=1                  
+    @inv1_9  checked⊆ℕ                                  
+    @inv1_10 checked⊆coins                              
+    @inv1_11 collecting=TRUE⇒ tobechecked∪checked=coins 
+    @inv1_12 collected⊆checked                          
+    @inv1_13 ∀x·x∈checked∧x mod 2=1⇒ x∈collected        
+events
+event INITIALISATION
+    extends INITIALISATION 
+then
+    @init1_1 collecting ≔ FALSE 
+    @init1_2 tobechecked ≔ ∅    
+    @init1_3 collected ≔ ∅      
+    @init1_4 checked ≔ ∅        
+end
+
+event add
+    extends add 
+where
+    @grd1_1 collecting=FALSE 
+end
+
+event startCollecting
+where
+    @grd1_1 collecting=FALSE 
+    @grd1_2 coins≠∅          
+then
+    @act1_1 collecting ≔ TRUE   
+    @act1_2 tobechecked ≔ coins 
+    @act1_3 checked ≔ ∅         
+    @act1_4 collected ≔ ∅       
+end
+
+event ignoreSingleEvenCoin
+any
+    c 
+where
+    @grd1_1 collecting=TRUE 
+    @grd1_2 tobechecked≠∅   
+    @grd1_3 c∈tobechecked   
+    @grd1_4 c mod 2=0       
+then
+    @act1_1 tobechecked ≔ tobechecked\{c} 
+    @act1_2 checked ≔ checked∪{c}         
+end
+
+event collectSingleOddCoin
+any
+    c 
+where
+    @grd1_1 collecting=TRUE 
+    @grd1_2 tobechecked≠∅   
+    @grd1_3 c∈tobechecked   
+    @grd1_4 c mod 2=1       
+    @gtd1_5 c∈coins         
+then
+    @act1_1 tobechecked ≔ tobechecked\{c} 
+    @act1_2 checked ≔ checked∪{c}         
+    @act1_3 collected ≔ collected∪{c}     
+end
+
+event collectOddCoins
+    refines collectOddCoins 
+where
+    @grd1_1 collecting=TRUE 
+    @grd1_2 coins≠∅         
+    @grd1_3 tobechecked=∅   
+    @thm1_1 checked=coins   // Nice to show that we have checked all coins
+then
+    @act1_1 oddcoins ≔ collected 
+    @act1_2 collecting ≔ FALSE   
+end
+
+end
+

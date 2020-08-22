@@ -1,0 +1,53 @@
+Seconds from 1970-01-01 00:00:00
+context WeekContext
+
+constants
+    MAX_TIME   
+    MAX_POINTS 
+    to_week    
+axioms
+    @axm0  MAX_TIME∈ℕ              // Seconds from 1970-01-01 00:00:00
+    @axm1  MAX_TIME=10∗365∗24∗3600 // Years of seconds....
+    @axm2  MAX_POINTS∈ℕ            
+    @axm3  MAX_POINTS=1000000      // One million snapshots
+    @axm11 to_week∈ℕ→ ℕ            // Map second to week nr. Week 0 began on 1970-01-01
+end
+
+machine Prune
+    sees WeekContext 
+
+variables
+    points_in_time 
+invariants
+    @invpnt1 points_in_time⊆ℕ       
+    @invpnt2 finite(points_in_time) 
+events
+event INITIALISATION
+then
+    @act1 points_in_time ≔ ∅ 
+end
+
+event addPoint
+any
+    p 
+where
+    @grd1 p∈ℕ              
+    @grd2 p∉points_in_time 
+then
+    @act1 points_in_time ≔ points_in_time∪{p} 
+end
+
+event prune
+any
+    weeks         
+    keep_in_weeks 
+where
+    @grd1 points_in_time≠∅                                                   
+    @grd2 weeks={w,p·p∈points_in_time∧w=to_week(p)|w}                        
+    @grd3 keep_in_weeks={w·w∈weeks|max({x·x∈points_in_time∧w=to_week(x)|x})} 
+then
+    @act1 points_in_time ≔ keep_in_weeks 
+end
+
+end
+

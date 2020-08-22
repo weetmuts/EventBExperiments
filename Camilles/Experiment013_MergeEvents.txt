@@ -1,0 +1,49 @@
+machine Abstracts
+
+variables
+    height 
+    width  
+invariants
+    @inv1 height∈ℕ 
+    @inv2 width∈ℕ  
+events
+event INITIALISATION
+then
+    @init1 height ≔ 0 
+    @init2 width ≔ 0  
+end
+
+event setHeight
+where
+    @grd height=0 
+then
+    @alfa height ≔ 17 
+    @beta width ≔ 17  
+end
+
+event setWidth
+where
+    @grd width=0 
+then
+    @alfa height ≔ 17 
+    @beta width ≔ 17  
+end
+
+end
+
+refinement Concretes
+    refines Abstracts 
+
+variables
+events
+event setBoth
+    refines setHeight setWidth 
+where
+    @grd height=0∨width=0 
+then
+    @alfa height ≔ 17 
+    @beta width ≔ 17  
+end
+
+end
+

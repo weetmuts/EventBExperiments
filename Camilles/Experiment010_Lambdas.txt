@@ -1,0 +1,28 @@
+context LambdaContext
+
+constants
+    n          
+    file_parts 
+axioms
+    @axm_1 n∈ℕ                  
+    @axm_2 file_parts∈1‥n→ BOOL 
+end
+
+machine Lambda
+    sees LambdaContext 
+
+variables
+    checked_parts 
+invariants
+    @inv_1 checked_parts⊆1‥n 
+    @thm_1 ∀a,b,c·a⊆ℕ∧b⊆ℕ∧c⊆ℕ∧a≠∅∧b≠∅∧c≠∅∧
+finite(a)∧finite(b)∧finite(c)∧
+max(a)=max(b)∧max(b)=max(c)⇒ max(a)=max(a∪b∪c) 
+events
+event INITIALISATION
+then
+    @init_1 checked_parts ≔ ∅ 
+end
+
+end
+

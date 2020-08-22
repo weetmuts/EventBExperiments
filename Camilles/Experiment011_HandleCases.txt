@@ -1,0 +1,57 @@
+refinement MultipleEvents
+    refines SingleEvent 
+
+variables
+invariants
+    @thm_all_cases ∀b·b∈0‥255⇒ b∈0‥127∨b∈128‥255 
+events
+event INITIALISATION
+then
+    @init1_res result :∈ 0‥1 
+end
+
+event handleByteLo
+    refines handleByte 
+any
+    b 
+where
+    @grd1_b b∈0‥127 
+then
+    @act1 result ≔ 0 
+end
+
+event handleByteHi
+    refines handleByte 
+any
+    b 
+where
+    @grd1_b b∈128‥255 
+then
+    @act1 result ≔ 1 
+end
+
+end
+
+machine SingleEvent
+
+variables
+    result 
+invariants
+    @inv_res result∈0‥1 
+events
+event INITIALISATION
+then
+    @init_res result :∈ 0‥1 
+end
+
+event handleByte
+any
+    b 
+where
+    @grd_b b∈0‥255 
+then
+    @act result :∈ 0‥1 
+end
+
+end
+

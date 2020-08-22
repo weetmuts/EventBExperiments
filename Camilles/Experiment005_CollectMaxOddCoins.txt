@@ -1,0 +1,150 @@
+machine Collect
+
+variables
+    coins   
+    max_odd 
+invariants
+    @inv_1 coins⊆ℕ       
+    @inv_2 finite(coins) 
+    @inv_3 max_odd∈ℕ     
+events
+event INITIALISATION
+then
+    @init_1 coins ≔ ∅   
+    @init_2 max_odd ≔ 0 
+end
+
+event add
+any
+    c 
+where
+    @grd_1 c∈ℕ 
+then
+    @act_1 coins ≔ coins∪{c} 
+end
+
+event findMax
+any
+    odds 
+where
+    @grd_1 coins≠∅                      
+    @grd_2 ∃x·x∈coins∧x mod 2=1         
+    @grd_3 odds={x·x∈coins∧x mod 2=1|x} 
+then
+    @act_1 max_odd ≔ max(odds) 
+end
+
+end
+
+refinement Collect1
+    refines Collect 
+
+variables
+    collected_odds 
+invariants
+    @inv1_1 collected_odds⊆ℕ                       
+    @inv1_2 finite(collected_odds)                 
+    @inv1_3 collected_odds={x·x∈coins∧x mod 2=1|x} 
+events
+event INITIALISATION
+then
+    @init1_1 collected_odds ≔ ∅ 
+    @init1_2 max_odd ≔ 0        
+end
+
+event addOdd
+    refines add 
+any
+    c 
+where
+    @grd1_1 c∈ℕ       
+    @grd1_2 c mod 2=1 
+then
+    @act1_1 collected_odds ≔ collected_odds∪{c} 
+end
+
+event ignoreEven
+    refines add 
+any
+    c 
+where
+    @grd1_1 c∈ℕ       
+    @grd1_2 c mod 2=0 
+end
+
+event findMax
+    refines findMax 
+where
+    @grd1_2 collected_odds≠∅ 
+then
+    @act1_1 max_odd ≔ max(collected_odds) 
+end
+
+end
+
+refinement Collect2
+    refines Collect1 
+
+variables
+    current_max 
+    found_odd   
+invariants
+    @inv2_1 current_max∈ℕ                                                    
+    @inv2_2 found_odd∈BOOL                                                   
+    @inv2_3 found_odd=FALSE⇒ collected_odds=∅                                
+    @inv2_4 found_odd=TRUE⇒ collected_odds≠∅∧max(collected_odds)=current_max 
+    @thm2_1 ∀p,s·p∈ℕ∧s⊆ℕ∧s≠∅∧finite(s)∧p≤max(s)⇒ max(s)=max(s∪{p})           
+    @thm2_2 ∀p,s·p∈ℕ∧s⊆ℕ∧s≠∅∧finite(s)∧p>max(s)⇒ p=max(s∪{p})                
+events
+event INITIALISATION
+then
+    @init2_0 current_max ≔ 0   
+    @init2_1 max_odd ≔ 0       
+    @init2_2 found_odd ≔ FALSE 
+end
+
+event firstOdd
+    refines addOdd 
+any
+    c 
+where
+    @grd2_0 c∈ℕ             
+    @grd2_1 found_odd=FALSE 
+    @grd2_2 c mod 2=1       
+then
+    @act2_0 current_max ≔ c  
+    @act2_1 found_odd ≔ TRUE 
+end
+
+event addOdd
+    refines addOdd 
+any
+    c 
+where
+    @grd2_0 c∈ℕ            
+    @grd2_1 found_odd=TRUE 
+    @grd2_2 c>current_max  
+    @grd2_3 c mod 2=1      
+then
+    @act2_0 current_max ≔ c 
+end
+
+event ignoreEven
+    refines ignoreEven 
+any
+    c 
+where
+    @grd1_1 c∈ℕ       
+    @grd1_2 c mod 2=0 
+end
+
+event findMax
+    refines findMax 
+where
+    @grd1_1 found_odd=TRUE 
+then
+    @act1_1 max_odd ≔ current_max 
+end
+
+end
+

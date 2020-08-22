@@ -1,0 +1,35 @@
+machine UnionMax
+
+variables
+    to_week  
+    to_month 
+    the_max  
+invariants
+    @inv_1 to_week∈ℕ⇸ ℕ                                   
+    @inv_2 finite(ran(to_week))                           
+    @inv_3 to_month∈ℕ⇸ ℕ                                  
+    @inv_4 finite(ran(to_month))                          
+    @inv_5 the_max∈ℕ                                      
+    @thm_1 ∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d)⇒ finite(s∪d) 
+events
+event INITIALISATION
+then
+    @init_1 to_week ≔ ∅  
+    @init_2 to_month ≔ ∅ 
+    @init_3 the_max ≔ 0  
+end
+
+event calc
+any
+    m 
+where
+    @grd_1 to_week≠∅                    
+    @grd_2 to_month≠∅                   
+    @grd_3 m=ran(to_week)∪ran(to_month) // To have act_1_WD autoprove add the guard: @grd_4 finite(m)
+    @grd_4 finite(m)                    
+then
+    @act_1 the_max ≔ max(m) 
+end
+
+end
+

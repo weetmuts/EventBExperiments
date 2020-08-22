@@ -1,0 +1,46 @@
+machine MoreMaxes
+
+variables
+    daily   
+    weekly  
+    monthly 
+    source  
+invariants
+    @inv_1  daily∈ℕ⇸ ℕ                                                      
+    @inv_2  weekly∈ℕ⇸ ℕ                                                     
+    @inv_3  monthly∈ℕ⇸ ℕ                                                    
+    @inv_4  finite(daily)                                                   
+    @inv_5  finite(weekly)                                                  
+    @inv_6  finite(monthly)                                                 
+    @inv_7  daily≠∅                                                         
+    @inv_8  weekly≠∅                                                        
+    @inv_9  monthly≠∅                                                       
+    @inv_10 source⊆ℕ                                                        
+    @inv_11 source≠∅                                                        
+    @inv_12 finite(source)                                                  
+    @inv_13 max(source)=max(ran(daily))                                     
+    @inv_14 max(source)=max(ran(weekly))                                    
+    @inv_15 max(source)=max(ran(monthly))                                   
+    @thm_1  ∀s·∀d·s⊆ℕ∧d⊆ℕ∧finite(s)∧finite(d)⇒ finite(s∪d)                  
+    @thm_2  ∀s·s∈ℕ⇸ ℕ∧s≠∅∧ran(s)≠∅∧finite(s)⇒ finite(dom(s))∧finite(ran(s)) 
+    @thm_3  ∀a,b·a⊆ℕ∧b⊆ℕ∧a≠∅∧b≠∅∧
+finite(a)∧finite(b)∧
+max(a)=max(b)⇒ max(a)=max(a∪b)         
+    @thm_4                             ∀a,b·a⊆ℕ∧b⊆ℕ∧a≠∅∧b≠∅∧
+finite(a)∧finite(b)⇒ max(a∪b)=max(b∪a) 
+events
+event INITIALISATION
+then
+    @init_1 daily ≔ {0↦0}   
+    @init_2 weekly ≔ {0↦0}  
+    @init_3 monthly ≔ {0↦0} 
+    @init_4 source ≔ {0}    
+end
+
+event done
+then
+    @act_1 source ≔ ran(daily)∪ran(weekly)∪ran(monthly) 
+end
+
+end
+

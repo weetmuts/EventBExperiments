@@ -160,6 +160,6 @@ Useful theorem: `@thm1_0 ∀p,s·p∈ℕ ∧ s⊆ℕ ∧ s≠∅ ∧ finite(s) �
 
 thm1_0/WD proof: robot, then for b in goal: `∃b·∀x·x∈s∪{p} ⇒ b≥x` supply max(s) in yellow box.
 
-**Experiment 1:** split event
+**Experiment 1:** split event [Camilles/Experiment001_SplitEvent.txt](source)
 
 Split a single copy event into two separate copy events.

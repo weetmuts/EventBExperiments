@@ -1,0 +1,4 @@
+Could not parse formula:
+    collection ∈ GURKA
+
+While using symbol table:

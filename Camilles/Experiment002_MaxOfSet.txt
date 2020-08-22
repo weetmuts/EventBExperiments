@@ -1,0 +1,125 @@
+machine Maximum
+
+variables
+    points    
+    max_point 
+invariants
+    @inv_0 points⊆ℕ       
+    @inv_1 finite(points) 
+    @inv_2 max_point∈ℕ    
+events
+event INITIALISATION
+then
+    @init_0 points ≔ ∅    
+    @init_1 max_point ≔ 0 
+end
+
+event addPoint
+any
+    p 
+where
+    @grd_0 p∈ℕ 
+    @grd_1 p>0 
+then
+    @act_0 points ≔ points∪{p} 
+end
+
+event maxPoint
+any
+    m 
+where
+    @grd_0 points≠∅      
+    @grd_1 m=max(points) 
+then
+    @act_0 max_point ≔ m 
+end
+
+end
+
+refinement Maximum1
+    refines Maximum 
+
+variables
+    current_max 
+invariants
+    @inv1_0 points≠∅⇒ current_max=max(points)                      
+    @inv1_1 current_max≥0                                          
+    @thm1_0 ∀p,s·p∈ℕ∧s⊆ℕ∧s≠∅∧finite(s)∧p≤max(s)⇒ max(s)=max(s∪{p}) 
+    @thm1_1 current_max≠0⇒ points≠∅                                
+events
+event INITIALISATION
+    extends INITIALISATION 
+then
+    @init1_0 current_max ≔ 0 
+end
+
+event addPointNewMax
+    refines addPoint 
+any
+    p 
+where
+    @grd1_0 p∈ℕ           
+    @grd1_2 p>current_max 
+then
+    @act_0  points ≔ points∪{p} 
+    @act1_0 current_max ≔ p     
+end
+
+event addPointNoNewMax
+    refines addPoint 
+any
+    p 
+where
+    @grd1_0 p∈ℕ           
+    @grd1_2 p≤current_max 
+    @grd1_3 p>0           
+    @grd1_4 points≠∅      
+then
+    @act1_0 points ≔ points∪{p} 
+end
+
+event maxPoint
+    refines maxPoint 
+where
+    @grd1_0 current_max≠0 
+then
+    @act1_0 max_point ≔ current_max 
+end
+
+end
+
+refinement Maximum2
+    refines Maximum1 
+
+variables
+events
+event INITIALISATION
+then
+    @init1_0 current_max ≔ 0 
+    @init1_1 max_point ≔ 0   
+end
+
+event addPointNewMax
+    refines addPointNewMax 
+any
+    p 
+where
+    @grd2_0 p∈ℕ           
+    @grd2_1 p>current_max 
+    @grd2_2 p>0           
+then
+    @act2_0 current_max ≔ p 
+end
+
+event addPointNoNewMax
+    refines addPointNoNewMax 
+any
+    p 
+where
+    @grd2_0 p∈ℕ           
+    @grd2_1 p≤current_max 
+    @grd2_2 p>0           
+end
+
+end
+
