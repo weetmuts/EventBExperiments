@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1595948024573" org.eventb.texttools.text_representation="machine TestBananas&#10;&#10;variables collection // A gurka collection&#10;          speed // A real value&#10;&#10;&#10;invariants&#10;  @inv1 collection ∈ GURKA&#10;  @inv2 speed ∈ RRR&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @init1 collection :∈ GURKA&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_6Cb-MNDhEeqm2u-VwalHag" org.eventb.core.assignment="collection :∈ GURKA" org.eventb.core.generated="false" org.eventb.core.label="init1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_z3nNYM3xEeqob-tafVd_OA" org.eventb.core.comment="A gurka collection" org.eventb.core.generated="false" org.eventb.core.identifier="collection"/>
+<org.eventb.core.invariant name="_z3n0cM3xEeqob-tafVd_OA" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="collection ∈ GURKA"/>
+<org.eventb.core.variable name="_0nrlsNDhEeqm2u-VwalHag" org.eventb.core.comment="A real value" org.eventb.core.generated="false" org.eventb.core.identifier="speed"/>
+<org.eventb.core.invariant name="_0nsMwNDhEeqm2u-VwalHag" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="speed ∈ ℝ"/>
+</org.eventb.core.machineFile>
